@@ -27,6 +27,7 @@ return;
 submitForm();
 }
 
+
 function submitForm() {
 let submitButton = document.querySelector("button[type='submit']");
 let spinner = document.getElementById("loadingSpinner");
@@ -71,3 +72,39 @@ spinner.classList.add("d-none"); // Hide spinner
 }
 
 
+
+
+// recaptcha
+
+
+
+
+
+document.getElementById("bookingForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Check if reCAPTCHA is completed
+    let recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+        alert("Please complete the reCAPTCHA.");
+        return;
+    }
+
+    let formData = new FormData(this);
+    formData.append("g-recaptcha-response", recaptchaResponse);
+
+    fetch("https://script.google.com/macros/s/AKfycbz_DsMi9ecu7BQ84yblKlgUcvves2tuCIXCxmV9JFfn1JEHSxgbG9f4Jatcikjdu1J0Pw/exec", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        alert("Your trip has been booked!");
+        document.getElementById("bookingForm").reset(); // Reset form
+        grecaptcha.reset(); // Reset reCAPTCHA
+    })
+    .catch(error => {
+        alert("Error submitting form.");
+        console.error("Error:", error);
+    });
+});
