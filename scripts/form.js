@@ -28,6 +28,19 @@ submitForm();
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 function submitForm() {
 let submitButton = document.querySelector("button[type='submit']");
 let spinner = document.getElementById("loadingSpinner");
@@ -79,9 +92,8 @@ spinner.classList.add("d-none"); // Hide spinner
 
 
 
-
 document.getElementById("bookingForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Stop default form submission
 
     // Check if reCAPTCHA is completed
     let recaptchaResponse = grecaptcha.getResponse();
@@ -90,21 +102,51 @@ document.getElementById("bookingForm").addEventListener("submit", function(event
         return;
     }
 
-    let formData = new FormData(this);
-    formData.append("g-recaptcha-response", recaptchaResponse);
+    // Show loading spinner
+    let submitButton = document.querySelector("button[type='submit']");
+    let spinner = document.getElementById("loadingSpinner");
+    submitButton.disabled = true;
+    spinner.classList.remove("d-none");
 
-    fetch("https://script.google.com/macros/s/AKfycbz_DsMi9ecu7BQ84yblKlgUcvves2tuCIXCxmV9JFfn1JEHSxgbG9f4Jatcikjdu1J0Pw/exec", {
+    let formData = {
+        fromDate: document.getElementById("fromDate").value,
+        toDate: document.getElementById("toDate").value,
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        persons: document.getElementById("persons").value,
+        kids: document.getElementById("kids").value,
+        contact: document.getElementById("contact").value,
+        emergency: document.getElementById("emergency").value,
+        departure: document.getElementById("departure").value,
+        destination: document.getElementById("destination").value,
+        transport: document.getElementById("transport").value,
+        accommodation: document.getElementById("accommodation").value,
+        budget: document.getElementById("budget").value,
+        payment: document.getElementById("payment").value,
+        special: document.getElementById("special").value,
+        "g-recaptcha-response": recaptchaResponse // Send reCAPTCHA response
+    };
+
+    let sheetURL = "https://script.google.com/macros/s/AKfycbz_DsMi9ecu7BQ84yblKlgUcvves2tuCIXCxmV9JFfn1JEHSxgbG9f4Jatcikjdu1J0Pw/exec";
+
+    fetch(sheetURL, {
         method: "POST",
-        body: formData
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
     })
-    .then(response => response.text())
-    .then(data => {
+    .then(() => {
         alert("Your trip has been booked!");
-        document.getElementById("bookingForm").reset(); // Reset form
+        document.getElementById("bookingForm").reset();
         grecaptcha.reset(); // Reset reCAPTCHA
     })
     .catch(error => {
-        alert("Error submitting form.");
+        alert("Error submitting form. Please try again.");
         console.error("Error:", error);
+    })
+    .finally(() => {
+        submitButton.disabled = false;
+        spinner.classList.add("d-none"); // Hide spinner
     });
 });
+
