@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1{
+    color: white;
+    font-weight: 700;
+}
+/* color */
+.cus-color{
+    color: #DF6951;
+}
+.cus-bg{
+    background-color: #DF6951;
+}
+
+/* All buttons */
+.btn{
+    background-color: #DF6951;
+    padding: 10px 20px;
+    border: none;
+    font-size: 13px;
+    color: white;
+}
+.btn:hover{
+    opacity: 0.9;
+    color: rgb(245, 241, 241);
+    background-color: #e16e57;
+}
+
+/* Active navbar link */
+.active{
+    border-bottom: 3.5px solid #DF6951;
+}
+
+body{
+    font-family: sans-serif;
+    background-image: url(./images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* navbar links */
+nav .container .navbar-nav .nav-link{
+    font-size: 13px;
+    color: white;
+}
+
+/* Services DropDown Button bychatt / Dropdown Button Styling*/
+.nav-container ul li.dropdown {
+    position: relative; /* Ensure dropdown aligns properly */
+}
+.nav-container ul li .dropdown-menu {
+    position: absolute;
+    top: 100%; /* Position dropdown below the "Services" button */
+    left: 0;
+    background-color: #333; /* Match the background color of the navbar */
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    display: none; /* Hide by default */
+    z-index: 1000;
+}
+.nav-container ul li:hover .dropdown-menu {
+    display: block; /* Show on hover */
+}
+.nav-container ul li .dropdown-menu .dropdown-item {
+    color: #fff; /* Text color for dropdown items */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s; 
+}
+.nav-container ul li .dropdown-menu .dropdown-item:hover {
+    background-color: #df6f59; /* Highlight color on hover */
+    color: #fff;
+}
+
+
+/* hero section */
+#hero .container .fixed-left{
+    width: 200px;
+}
+
+.my-image {
+    position: absolute;
+    top: 230px !important; /* Decrease to move it up */
+
+}
+
+
+                /* .small-img {
+                    width: 25%; 
+                    height: auto;
+                }
+                
+                .carousel-item p {
+                    font-size: 16px; 
+                    max-width: 600px;
+                    margin: 10px auto;
+                }
+            
+                .carousel-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    min-height: 500px;
+                } */
+
+                .small-img {
+                    width: 25%; /* Reduce image size */
+                    height: auto;
+                }
+            
+                .carousel-item {
+                    text-align: center;
+                }
+            
+                .min-vh-50 {
+                    min-height: 50vh; /* Ensure content is centered properly */
+                }
+
+
+
+
+@media screen and (max-width: 768px){
+    body{
+        background-image: url(./images/bg.png);
+        background-repeat: no-repeat;
+        background-clip: border-box;
+        background-position: center;
+        background-image: image-set(#DF6951);
+    }
+
+}
+
