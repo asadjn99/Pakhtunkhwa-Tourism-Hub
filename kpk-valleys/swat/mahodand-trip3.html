@@ -1,0 +1,1629 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pakhtunkhwa Tourism Hub</title>
+    <!-- <link rel="icon" href="./images/logo12.png" type="image/png" > -->
+    <link rel="icon" href="./images/icon-pk.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
+    <!--  -->
+     <!-- Font awesome | back-to-top icons and more -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+<!-- broadcrumb sticky -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
+body {
+  font-family: "Barlow", sans-serif !important;
+}
+
+        #custom-trip-btn {
+            font-size: 14px;
+            padding: 8px 16px;
+            background-color: #DF6951;
+            color: white;
+            border: none;
+            transition: background-color 0.3s ease !important;
+            border-radius: 0 !important;
+        }
+        
+        #custom-trip-btn:hover {
+            background-color: #c6533d;
+        }
+        .custom-color{
+            color: #DF6951 !important;
+        }
+        .custom-background{
+            background-color: #DF6951 !important;
+        }
+        .navbar {
+            transition: background-color 0.3s ease-in-out;
+        }
+    
+
+   
+    /* Dropdown item hover effect */
+    .dropdown-item:hover {
+        background-color: #DF6951 !important;
+        color: white !important;
+    }
+/* Navbar adjustments */
+
+.navbar {
+    transition: background-color 0.3s ease-in-out;
+}
+
+.scrolled {
+    background-color: black !important; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+}
+.navbar-collapse {
+    justify-content: center !important; 
+}
+
+.navbar-nav .nav-item {
+    padding: 0 2px;
+}
+
+/* Center the navbar-collapse content */
+.navbar-collapse {
+    justify-content: center !important;
+    text-align: center; 
+}
+/* customize trip btn on small screens */
+@media (max-width: 768px) {
+    #trip-btn {
+        width: fit-content !important;
+        padding: 4px 8px !important;
+        font-size: 13px !important;
+        text-align: center !important;
+    }
+}
+
+
+/*  toggle right */
+.navbar-toggler {
+    margin-left: auto; 
+    margin-top: 4% !important;
+    padding: 5px 8px; 
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 10px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+
+
+
+/* Custom Trip Button */
+#trip-btn {
+    white-space: nowrap;
+}
+/* Custom active state for hamburger icon */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none;
+    border-color: #DF6951;
+    background-color: #DF6951;
+}
+
+/* Custom color for the hamburger icon bars */
+.navbar-toggler .navbar-toggler-icon {
+    width: 24px;
+    height: 24px;
+    background-size: contain;
+}
+
+/* Hover effect for the hamburger icon */
+.navbar-toggler:hover {
+    border-color: #DF6951;
+    background-color: rgba(223, 105, 81, 0.1);
+}
+
+/*  hover for dropdowns on large screens */
+@media (min-width: 991px) {
+    .navbar .nav-item.dropdown:hover .dropdown-menu {
+        display: block !important;
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .navbar .dropdown-menu {
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .navbar-collapse {
+        text-align: center;
+    }
+    .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    #trip-btn {
+        margin: 10px auto;
+        display: block;
+        width: fit-content;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+
+}
+
+
+
+
+
+/* Custom button Contact us form */
+        .custom-btn {
+        width: 100%; /* Default: Full width */
+    }
+    @media (min-width: 992px) { /* Large screens (lg) */
+        .custom-btn {
+            width: 25%; /* Set to 25% on large screens */
+        }
+    }
+        .hero {
+            height: 100vh;
+            background-image: url('./images/bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
+        
+
+/* kpk */
+
+.hero-kpk {
+    background: url('./../../images/KPK-Valleys/Swat/Kalam2.jpeg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0px 0;
+}
+.hero-kpk .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+}
+.hero-kpk h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.hero-kpk p {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+/* Responsive Fixes */
+@media (max-width: 992px) { /* Tablets */
+    .hero-kpk {
+        height: 50vh;
+        padding: 60px 0;
+    }
+    .hero-kpk h1 {
+        font-size: 2.5rem;
+    }
+    .hero-kpk p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .hero-kpk {
+        height: 80vh;
+        padding: 40px 0;
+    }
+    .hero-kpk h1 {
+        font-size: 2rem;
+    }
+    .hero-kpk p {
+        font-size: 1rem;
+    }
+    .hero-kpk .btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+
+/* Custom Button Styles */
+.btn-primary-custom {
+    /* padding: 12px 30px;
+    background-color: #DF6951 !important;
+    border: none;
+    color: white !important;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out; */
+
+    background-color: #DF6951 !important;
+    border: none;
+    color: rgb(255, 255, 255) !important;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px !important;
+    letter-spacing: 1px;
+    /* border-radius: 10px !important;  */
+    transition: all 0.3s ease-in-out;
+}
+.btn-primary-custom:hover {
+    background-color: #C65540 !important;
+    transform: translateY(-2px);
+    color: white !important;
+}
+/* Secondary Button */
+.btn-secondary-custom {
+    background-color: #28a745 !important;
+    border: none;
+    color: rgb(255, 255, 255) !important;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px !important;
+    letter-spacing: 1px;
+    /* border-radius: 10px !important;  */
+    transition: all 0.3s ease-in-out;
+}
+.btn-secondary-custom:hover {
+    background-color: #269740 !important;
+    transform: translateY(-2px);
+
+}
+
+
+
+
+/* National Tours card design   | Interntional Countries */*/
+         .tour-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            z-index: 1;
+        }
+        .tour-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            z-index: 10;
+        }
+        .tour-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease-in-out;
+        }
+        .tour-card:hover img {
+            transform: scale(1.1);
+        }
+        .card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(100%);
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    pointer-events: none;
+    z-index: 2;  /* Ensures it stays within the card */
+    }
+    .tour-card:hover .card-overlay {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+    /* For Mobile Tap */
+    .tour-card:hover .card-overlay,
+    .tour-card.active .card-overlay {  
+    transform: translateY(0);
+    }
+    .tour-card:not(:hover) .card-overlay {
+    opacity: 0 !important;
+    transform: translateY(100%) !important;
+    transition: none !important; 
+    }
+    .tour-card {
+        position: relative;
+        z-index: 1;
+    }
+        /* for Mobile Optimization */
+        @media (max-width: 768px) {
+            .tour-card {
+                transform: none !important;
+            }
+            .tour-card img {
+                transform: none !important;
+                filter: brightness(100%) !important;
+            }
+            .card-overlay {
+                transform: translateY(0);
+            }
+        }
+
+
+/* Khyber Pakhtunkhwa Valleys section design */
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 20px 20px 0 0;
+        }
+        .image-wrapper img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+        .trip-info {
+            font-size: 0.9rem;
+        }
+        .tour-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            border-radius: 20px;
+        }
+        .tour-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+
+
+/* Booking Form Style */
+        form {
+            padding: 20px;
+            width: 100%;
+            max-width: 450px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(223, 105, 81, 0.1);
+            border-radius: 8px;
+        }
+        h4 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        }
+        input {
+            width: 100%;
+            padding: 6px;
+            margin-top: 8px;
+            border: 1px solid #f0a090;
+            font-size: 16px;
+            color: #333;
+            box-sizing: border-box;
+        }
+
+
+        input:focus {
+            border-color: #DF6951;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 6px;
+            margin-top: 20px;
+            font-size: 18px;
+            color: #fff;
+            /* background-color: #007bff; */
+            border: none;
+            border-radius: 0 !important;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .d-none {
+            display: none;
+        }
+        .spinner-border {
+                color: #1d2c4d !important;
+            }
+            #loadingSpinner {
+                display: inline-block; /* Ensure it is visible when d-none is removed */
+                visibility: hidden; /* Initially hidden, but will be shown dynamically */
+            }
+
+        #total-price {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0 0;
+            display: inline-block; 
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            border-bottom: 1px solid #DF6951; 
+
+        }
+
+        #payment-methods {
+            margin-top: 20px;
+            padding: 20px !important;
+        }
+
+        #payment-methods label {
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        #payment-methods input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        #payment-methods .btn-primary-custom {
+            width: 100% !important;
+        }
+
+        /* Media Query for Mobile Screens */
+        @media (max-width: 768px) {
+            .col-md-5 {
+                width: 100%;
+            }
+
+            form {
+                width: 100%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            label {
+                font-size: 14px;
+            }
+
+            input {
+                font-size: 14px;
+            }
+
+            button {
+                font-size: 16px;
+            }
+        }
+
+/* END Booking Form Style */
+
+        
+/* info alignmnent */
+        .heading {
+        text-align: left;  /* Align heading to the left */
+        }
+        .info p {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+        .info strong {
+            width: 170px; 
+            display: inline-block;
+        }
+        .info span {
+            flex-grow: 1;  
+        }
+
+/* Gallery responsive / img*/
+        .gallery-img:hover{
+            cursor: pointer;
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+        }
+       @media (max-width: 768px) {
+          h2 {
+        font-size: 22px; 
+        }
+         p {
+        font-size: 14px;
+        padding: 0 15px; 
+         }
+        .img-fluid {
+        margin-top: 10px; 
+        }
+        }
+/* END Gallery responsive */
+
+
+    .breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: center; */
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+    gap: 5px;
+}
+.breadcrumb-item {
+    font-size: 14px;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+.breadcrumb-item a {
+    transition: color 0.3s;
+}
+.breadcrumb-item a:hover {
+    color: #DF6951 !important;
+}
+
+/* Responsive Breadcrumbs */
+@media (max-width: 768px) {
+    .breadcrumb {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start !important;
+        padding: 5px 10px;
+    }
+    .breadcrumb-item {
+        margin-bottom: 0;
+    }
+}
+
+
+
+
+/* trip information  breadcrumb */
+        .breadcrumb-box .breadcrumb-item { cursor: pointer; background-color: #f8f9fa; padding: 10px; border-bottom: 2px solid transparent; }
+        .breadcrumb-box .breadcrumb-item.active { background-color: white; font-weight: bold; }
+
+        .breadcrumb-box {
+        padding: 10px 0;
+    }
+
+    /* body {
+            height: 2000px;
+            padding-top: 50px; 
+        } */
+        .breadcrumb-box {
+            transition: all 0.3s ease-in-out;
+            padding: 10px;
+            box-shadow: none;
+        }
+        .sticky {
+            position: fixed;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+        .breadcrumb-item::before {
+            content: none !important; /* Removes the slash */
+        }
+
+
+    /* Mobile: Stack items vertically */
+    @media (max-width: 576px) {
+    .trip-breadcrumb-box {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .trip-breadcrumb-item {
+        width: 35%; /* Two items per row */
+        padding: 4px;
+        font-size: 14px;
+        /* margin: 2px; */
+    }
+    .breadcrumb-box .breadcrumb-item{
+        padding: 5px;
+        font-size: 12px;
+        margin: 2px;
+    }
+    .sticky {
+            top: 30px;
+           
+    }
+}
+/* End Trip info breadcrumb */
+
+
+/* Tour plan box design */
+        .tour-plan {
+            max-width: 800px;
+            margin: 50px auto;
+        }
+        .tour-item {
+            display: flex;
+            align-items: flex-start;
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .tour-number {
+            background-color: #DF6951;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 18px;
+            text-align: center;
+            min-width: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        .tour-content {
+            margin-left: 20px;
+        }
+        .tour-content h4 {
+            color: #1d2c4d;
+            font-weight: bold;
+        }
+        .tour-content p {
+            color: #555;
+            font-size: 14px;
+        }
+        .tour-content ul {
+            padding-left: 20px;
+        }
+        .dashed-line {
+            position: absolute;
+            left: 24px;
+            top: 40px;
+            bottom: -60px;
+            width: 2px;
+            background: repeating-linear-gradient(
+                to bottom,
+                #DF6951,
+                #DF6951 5px,
+                transparent 5px,
+                transparent 10px
+            );
+            z-index: 0;
+        }
+        .tour-item:last-child .dashed-line {
+            display: none;
+        }
+
+
+
+
+
+
+
+
+        /* Fullscreen Modal with Dark Background */
+.custom-modal {
+    background-color: transparent;
+    padding: 2px;
+    border: none; 
+    border-radius: 0; 
+}
+
+
+
+
+
+ /* Success Toast/popup message for contact us form */
+ #tripSuccessToast {
+    z-index: 1050; 
+    position: fixed;
+    top: 80%;
+    margin-top: 100px !important;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto; 
+    max-width: 90%;
+    min-width: 250px; 
+    text-align: center; 
+    padding: 10px; 
+}
+
+ /* Toast Header */
+ .toast-header {
+    background-color: #DF6951 !important;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+
+ /* Toast Body */
+ .toast-body {
+    background-color: #fff !important;
+    color: #333 !important;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+    /* Toast Close Button */
+    .btn-close {
+        color: white !important;
+        opacity: 1 !important;
+    }
+/* End Form */
+
+
+/* responsive map section in trip info */
+.map-container {
+    position: relative;
+    width: 100%; 
+    padding-bottom: 75%; 
+    height: 0;
+    overflow: hidden;
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* End responsive map section in trip info */
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav id="home" class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm">
+    <div class="container">
+        <!-- Logo and Toggle Button Wrapper -->
+        <div class="d-flex flex-grow-1 w-lg-50 w-sm-100">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#home">
+                <img src="./../../images/logo.png" style="width: 120px;" alt="logo">
+            </a>
+
+            <!-- Navbar Toggle Button -->
+            <button class="navbar-toggler custom-hamburger ms-auto p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav fw-bold me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">Home</a>
+                </li>
+
+                <!-- National Tours Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" href="#" id="nationalDropdown" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">National Tours</a>
+                    <ul class="dropdown-menu" aria-labelledby="nationalDropdown">
+                        <li><a class="dropdown-item active" style="background-color: #DF6951 !important;" href="#kpk">Khyber Pakhtunkhwa</a></li>
+                        <li><a class="dropdown-item" href="#balochistan">Balochistan</a></li>
+                        <li><a class="dropdown-item" href="#sindh">Sindh</a></li>
+                        <li><a class="dropdown-item" href="#punjab">Punjab</a></li>
+                        <li><a class="dropdown-item" href="#gilgit-baltistan">Gilgit-Baltistan</a></li>
+                        <li><a class="dropdown-item" href="#azad-kashmir">Azad Kashmir</a></li>
+                    </ul>
+                </li>
+
+                <!-- Foreign Tours Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="foreignDropdown" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">Foreign Tours</a>
+                    <ul class="dropdown-menu" aria-labelledby="foreignDropdown">
+                        <li><a class="dropdown-item" href="#dubai">Dubai</a></li>
+                        <li><a class="dropdown-item" href="#malaysia">Malaysia</a></li>
+                        <li><a class="dropdown-item" href="#turkey">Turkey</a></li>
+                        <li><a class="dropdown-item" href="#other">Other</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Upcoming Packages</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gallery</a>
+                </li>
+            </ul>
+
+            <!-- Custom Trip Button -->
+            <a id="trip-btn" class="btn btn-primary-custom fw-bold mx-auto ms-lg-3 d-block d-lg-inline-block text-center" href="form.html">Build Your Trip</a>
+        </div>
+    </div>
+</nav>
+<!-- Navbar end -->
+
+<!-- Hero Section for Swat -->
+<section class="hero-kpk d-flex align-items-center justify-content-center text-white text-center position-relative">
+    <div class="overlay"></div> <!-- Dark overlay for better text visibility -->
+    <div class="container position-relative">
+        <h1 class="display-3 fw-bold">Explore the Beauty of Swat Valley</h1>
+        <p class="lead fw-semibold mt-3">The Switzerland of Pakistan, where nature and adventure unite</p>
+        <a class="btn btn-primary-custom mt-3 p-3" href="https://wa.me/+923075993029" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="btn btn-secondary-custom mt-3 p-3" href="tel:+923075993029" role="button">
+            <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+    </div>
+</section>
+<!-- End of Hero Section for Swat -->
+
+
+
+<!-- Breadcrumb Navigation -->
+<nav aria-label="breadcrumb" class="sticky-top bg-white shadow-sm">
+    <ol class="breadcrumb mt-2 mx-3">
+        <li class="breadcrumb-item"><a href="../../kpk.html" class="text-decoration-none text-dark">Khyber Pakhtunkhwa</a></li>
+        <li class="breadcrumb-item"><a href="./swat.html" class="text-decoration-none text-dark">Swat Valley</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a href="./kpk-valleys/swat/swat-2days.html" class="text-decoration-none custom-color fw-bold">Trip</a></li>
+    </ol>
+</nav>
+<!-- End of Breadcrumb Navigation -->
+
+
+   
+<!-- Booking information and Form Section -->
+<section>
+    <div class="container mt-4">
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="p-4 shadow-sm position-relative">
+
+                    <div class="d-flex justify-content-center">
+                        <div id="breadcrumb" class="breadcrumb-box d-flex flex-wrap w-100 bg-white">
+                            <div class="breadcrumb-item flex-fill m-0 active" onclick="showTab('information')">
+                                <i class="fa-solid fa-file"></i> Information
+                            </div>
+                            <div class="breadcrumb-item flex-fill m-0" onclick="showTab('tour-plan')">
+                                <i class="fa-solid fa-calendar-days"></i> Tour Plan
+                            </div>
+                            <div class="breadcrumb-item flex-fill m-0" onclick="showTab('location')">
+                                <i class="fa-solid fa-location-dot"></i> Location
+                            </div>
+                            <div class="breadcrumb-item flex-fill m-0" onclick="showTab('gallery')">
+                                <i class="fa-solid fa-images"></i> Gallery
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row mt-5">
+                        <div class="col-md-6 mt-4">
+                            <!-- Information  -->
+                            <div id="information" class="tab-content">
+                                <h2 class="heading">Mahodand &nbsp;  
+                                    <span class="custom-color fs-6 fs-md-5">11,999 PKR / Per Person</span>
+                                </h2>
+                                <br><br>
+                                <p class="p-0">Mahodand lake is one of the main attractions in kalam. It's about 3 hrs jeep ride which takes quite a toll on your body. You can do horse riding and boating here.</p>
+                            
+                                <div class="info">
+                                    <p class="p-0"><strong class="custom-color">Departure:</strong> <span>Peshawar</span></p><br>
+                                    <p class="p-0"><strong class="custom-color">Destination:</strong> <span>Kalam (Mahodand), Swat</span></p><br>
+                                    <p class="p-0"><strong class="custom-color">Departure Time:</strong> <span>04:00 PM, 25 Jul, 2025</span></p><br>
+                                    <p class="p-0"><strong class="custom-color">Return Time:</strong> <span>04:00 PM, 29 Jul, 2025</span></p><br>
+                                    <p class="p-0"><strong class="custom-color">Dress Code:</strong> <span>Casual, Comfortable</span></p><br>
+                                    <p class="p-0"><strong class="custom-color">Included:</strong> <span>Breakfast, Lunch</span></p><br>
+                                    <p class="p-0"><strong class="custom-color">Not Included:</strong> <span>Entry Tickets</span></p>
+                                </div>
+                            </div>
+                            <!-- End of Information -->
+
+<!-- Tour Plan -->
+    <div id="tour-plan" class="tab-content d-none">
+                                <h2 class="custom-color">Tour Plan</h2>
+                                <div class="tour-plan">                            
+                                    <div class="tour-item">
+                                        <div class="tour-number">01</div>
+                                        <div class="dashed-line"></div>
+                                        <div class="tour-content">
+                                            <h4>Day 0: Departure</h4>
+                                            <p>Night Journey & Rest on the Way.</p>
+                                            <ul>
+                                                <li>Departure from Peshawar at 7:00 PM</li>
+                                                <li>Overnight Travel</li>
+                                                <li>Sleep, Relax & Enjoy the Night Drive</li>
+                                                <li>Tea Breaks at Scenic Stops</li>
+                                                <li>Comfortable Travel with Cozy Rest Stops</li>
+                                                <li>Wake Up Refreshed & Ready for the Adventure</li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="tour-item">
+                                        <div class="tour-number">02</div>
+                                        <div class="dashed-line"></div>
+                                        <div class="tour-content">
+                                            <h4>Day 1: Arrival & Mahodand Exploration</h4>
+                                            <p>Explore Kalam, visit Mahodand Lake.</p>
+                                            <ul>
+                                                <li>Breakfast with a Beautiful View</li>
+                                                <li>Explore Kalam & Surroundings</li>
+                                                <li>Visit Mahodand Lake (Boating, Photography & Nature Walks)</li>
+                                                <li>Bonfire Night & Stay at 5-Star Accommodation</li>
+                                                <li>Guided Tour</li>
+                                                <li>Hiking to Mahodand & Adventure</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                            
+                                    <div class="tour-item">
+                                        <div class="tour-number">03</div>
+                                        <div class="dashed-line"></div>
+                                        <div class="tour-content">
+                                            <h4>Day 2: More Adventures & Cultural Experience</h4>
+                                            <p>Explore Ushu Forest, enjoy hiking, visit local markets, and experience the rich culture of Kalam.</p>
+                                            <ul>
+                                                <li>Breakfast at the Hotel</li>
+                                                <li>Visit Ushu Forest (Hiking & Nature Walks)</li>
+                                                <li>Local Handicraft Shopping (Explore Kalam Bazaar)</li>
+                                                <li>Photography Stops at Waterfalls & Viewpoints</li>
+                                                <li>Relaxing Evening & Cultural Interactions</li>
+                                                <li>Night Stay at Kalam</li>
+                                                <li>Traditional Food Tasting</li>
+                                                <li>Campfire & Music Night</li>
+                                                <li>Explore Hidden Gems of Kalam</li>
+                                                <li>Visit Ushu Forest and Mahodand (Hiking & Nature Walks)</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="tour-item">
+                                        <div class="tour-number">04</div>
+                                        <div class="dashed-line"></div>
+                                        <div class="tour-content">
+                                            <h4>Day 3: Return Journey & Farewell Moments</h4>
+                                            <p>Scenic return with final stops.</p>
+                                            <ul>
+                                                <li>Early Morning Breakfast</li>
+                                                <li>Departure from Kalam</li>
+                                                <li>Stop at Famous Viewpoints for Final Photography</li>
+                                                <li>Lunch at Mingora (Swat)</li>
+                                                <li>Arrival Back in Peshawar by Evening</li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                            
+                                </div>
+    </div>
+<!-- End Tour Plan -->
+
+<!-- Location -->
+    
+    <div id="location" class="tab-content d-none">
+        <h2>Location</h2>
+        <p>Mahodand is located in the Swat Valley (Kalam), known for its beautiful scenery and historical significance.</p>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1678716.6762977971!2d70.7300611812884!3d34.73685909272564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x38d9175f515d1083%3A0x3e268d3110a9eea5!2sAgriculture%20University%20Peshawar%2C%20Unnamed%20Road%2C%20Rahat%20Abad%2C%20Peshawar!3m2!1d34.022129!2d71.4850699!4m5!1s0x38dcfb006f461f6f%3A0xcb27a07df0fe3e7d!2sKalam%20valley%2C%20Kalam!3m2!1d35.4902022!2d72.5796331!5e0!3m2!1sen!2s!4v1742655588886!5m2!1sen!2s" width="430" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+<!-- End of Location -->
+
+<!-- Gallery Section -->
+    <div id="gallery" class="tab-content d-none">
+                                <h2>Gallery</h2>
+                                <div class="row mt-4">
+                                    <!-- Image Thumbnails -->
+                                    <div class="col-md-6 col-12 mb-3">
+                                        <img src="./../../images/KPK-Valleys/Swat/kalam3.jpg" alt="Scenic view" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                    </div>
+                                    <div class="col-md-6 col-12 mb-3">
+                                        <img src="./../../images/KPK-Valleys/Swat/kalam3.jpg" alt="Another scenic view" class="img-fluid rounded shadow gallery-img" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                    </div>
+                                    <!-- Add more images as needed -->
+                                </div>
+        </div>
+        <!-- Bootstrap Modal for Enlarged Image -->
+        <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered modal-lg">
+                                            <div class="modal-content custom-modal">
+                                                <div class="modal-header border-0 p-0">
+                                                    <button type="button" class="btn-close custom-background custom-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body text-center p-0">
+                                                    <img id="modalImage" class="img-fluid rounded shadow-lg w-100" src="" alt="Enlarged Image">
+                                                </div>
+                                            </div>
+                                        </div>
+        </div>
+    </div>
+<!-- End Gallery Section -->
+
+
+
+<!-- Booking Form Section -->
+<div class="col-md-5 mt-2 ms-auto">
+    <div class="shadow bg-light w-100">
+        <div class="card-body  position-relative">
+            <!-- <div class="position-sticky top-0" style="z-index: 10;"> -->
+                <div>
+
+                <form id="booking-form">
+            <h4 class="text-center fw-bold">Book This Tour</h4>
+
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <span id="name-error" class="error-message d-none">Please enter your name.</span>
+                
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <span id="email-error" class="error-message d-none">Please enter a valid email.</span>
+                
+                    <label for="phone">Your Phone:</label>
+                    <input type="text" id="phone" name="phone" required pattern="[0-9]{10,15}">
+                    <span id="phone-error" class="error-message d-none">Please enter a valid phone number.</span>
+                
+                    <label for="persons">Persons/Tickets:</label>
+                    <input type="number" id="persons" name="persons" min="1" max="15" required onchange="updateTotalPrice()">
+                    <span id="persons-error" class="error-message d-none">Please select number of persons.</span>
+                
+                    <!-- Hidden input for trip name change in js--> 
+                    <input type="hidden" id="trip-name" name="trip_name" readonly>
+                
+                    <button class="btn-primary-custom" type="button" onclick="proceedBooking()">Proceed</button>
+                   
+                    <p id="total-price">₨ 0</p>
+                </form>
+                
+                <!-- <p id="total-price">₨ 0</p> -->
+                
+                <!-- Payment Methods Section -->
+                <div id="payment-methods" class="d-none payment-options">
+                    <p> <span style="font-weight: 500;">Select Payment Method:</span> <br>
+                        Acc No: 03313238210 <br>
+                        Title : Asad Ullah
+                    </p>
+                    
+                    <label>
+                        <input type="radio" name="paymentMethod" value="easypaisa" style="width: 15px;"> Easypaisa
+                    </label>
+                    <label>
+                        <input type="radio" name="paymentMethod" value="jazzcash" style="width: 15px;"> JazzCash
+                    </label>
+                    <label>
+                        <input type="radio" name="paymentMethod" value="otherbank" style="width: 15px;"> Other Banks
+                    </label>
+                
+                    <span id="payment-error" class="error-message d-none">Please select a payment method.</span>
+                
+                    <label for="tid">Enter TID:</label>
+                    <input type="text" id="tid" name="tid">
+                    <span id="tid-error" class="error-message d-none">Please enter a valid TID.</span>
+                
+                    <button class="btn-primary-custom submit-payment-btn" type="button" onclick="submitPayment()">Submit Payment
+                        <span id="loadingSpinner" class="spinner-border spinner-border-sm d-none"></span>
+                    </button>
+                </div>
+                
+                <!-- Bootstrap Toast (Hidden by Default) -->
+                    <div id="tripSuccessToast" class="toast align-items-center position-fixed top-0 end-50 m-3 p-3" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="10000">
+                        <div class="toast-header bg-success text-white">
+                            <strong class="me-auto">Thank You!</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            Thank you for choosing us. We’ll be in touch soon with the details. Safe travels!
+                        </div>
+                    </div>
+
+                <!-- Error Toast -->
+                    <div id="tripErrorToast" class="toast align-items-center position-fixed top-0 end-50 m-3 p-3" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="10000">
+                        <div class="toast-header bg-danger text-white">
+                            <strong class="me-auto">Booking Failed!</strong>
+                            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                        </div>
+                        <div class="toast-body">
+                            Failed to book. Try again later.
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- form end -->
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Booking information and Form Section -->
+
+
+
+
+
+<!-- Swat Valley Trip Packages Section -->
+<section>
+    <div class="container mt-4">
+        <h2 class="fw-bold mb-4">Related Trips</h2>
+        <div class="row g-4">
+    
+            <!-- 3-Day Swat Trip
+            <div class="col-md-4">
+                <div class="card tour-card shadow border-0">
+                    <div class="image-wrapper">
+                        <img src="./../../images/KPK-Valleys/Swat/Mahodand-lake-kalam.jpg" class="card-img-top" alt="3-Day Swat Trip">
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="trip-info d-flex justify-content-center align-items-center opacity-50">
+                            <i class="fa-solid fa-clock me-2"></i> 3 Days 
+                            <span class="mx-3">|</span> 
+                            <i class="fa-solid fa-users me-2"></i> Max 25 People
+                        </div>
+                        <h5 class="fw-bold mt-2">MAHODAND LAKE</h5>
+                        <p class="custom-color fw-bold fs-5">PKR 11,999</p>
+                        <p class="card-text">A journey to the stunning alpine lake, surrounded by towering mountains and lush greenery, offering a truly magical experience.</p>
+                        <a href="./../../trip-not-available.html" class="btn btn-primary-custom w-100">Explore</a>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- 2-Day Swat Trip -->
+        <div class="col-md-4">
+            <div class="card tour-card shadow border-0 bg-white">
+                <div class="image-wrapper">
+                    <img src="../../images/KPK-Valleys/Swat/Kalam2.jpeg" class="card-img-top" alt="2-Day Swat Trip">
+                </div>
+                <div class="card-body text-center">
+                    <div class="trip-info d-flex justify-content-center align-items-center opacity-50">
+                        <i class="fa-solid fa-clock me-2"></i> 2 Days 
+                        <span class="mx-3">|</span> 
+                        <i class="fa-solid fa-users me-2"></i> Max 20 People
+                    </div>
+                    <h5 class="fw-bold mt-2">KALAM</h5>
+                    <p class="custom-color fw-bold fs-5">PKR 9,999</p>
+                    <p class="card-text">Explore the heart of Swat, with mesmerizing rivers, pine forests, and stunning landscapes that make Kalam a must-visit destination.</p>
+                    <a href="./swat-2days.html" class="btn btn-primary-custom w-100">Explore</a>
+                </div>
+            </div>
+        </div>
+    
+            <!-- 5-Day Swat Trip -->
+            <div class="col-md-4">
+                <div class="card tour-card shadow border-0">
+                    <div class="image-wrapper">
+                        <img src="./../../images/KPK-Valleys/Swat/Malam-Jabba.jpg" class="card-img-top" alt="5-Day Swat Trip">
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="trip-info d-flex justify-content-center align-items-center opacity-50">
+                            <i class="fa-solid fa-clock me-2"></i> 5 Days 
+                            <span class="mx-3">|</span> 
+                            <i class="fa-solid fa-users me-2"></i> Max 30 People
+                        </div>
+                        <h5 class="fw-bold mt-2">MALAMJABBA</h5>
+                        <p class="custom-color fw-bold fs-5">PKR 21,999</p>
+                        <p class="card-text">Enjoy the thrill of Pakistan’s famous ski resort, featuring snow-capped peaks, adventure activities, and a peaceful retreat into nature.</p>
+                        <a href="./../../trip-not-available.html" class="btn btn-primary-custom w-100">Explore</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 5-Day Swat Trip -->
+            <div class="col-md-4">
+                <div class="card tour-card shadow border-0">
+                    <div class="image-wrapper">
+                        <img src="./../../images/KPK-Valleys/Swat/Gabin_Jabba_swat_valley.jpg" class="card-img-top" alt="5-Day Swat Trip">
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="trip-info d-flex justify-content-center align-items-center opacity-50">
+                            <i class="fa-solid fa-clock me-2"></i> 4 Days 
+                            <span class="mx-3">|</span> 
+                            <i class="fa-solid fa-users me-2"></i> Max 30 People
+                        </div>
+                        <h5 class="fw-bold mt-2">GABIN JABBA</h5>
+                        <p class="custom-color fw-bold fs-5">PKR 14,499</p>
+                        <p class="card-text">A serene escape into lush green meadows, crystal-clear streams, and breathtaking mountain views, perfect for nature lovers.</p>
+                        <a href="./../../trip-not-available.html" class="btn btn-primary-custom w-100">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 5-Day Swat Trip -->
+            <div class="col-md-4">
+                <div class="card tour-card shadow border-0">
+                    <div class="image-wrapper">
+                        <img src="./../../images/KPK-Valleys/Swat/Madyan-bahrain.jpg" class="card-img-top" alt="5-Day Swat Trip">
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="trip-info d-flex justify-content-center align-items-center opacity-50">
+                            <i class="fa-solid fa-clock me-2"></i> 5 Days 
+                            <span class="mx-3">|</span> 
+                            <i class="fa-solid fa-users me-2"></i> Max 35 People
+                        </div>
+                        <h5 class="fw-bold mt-2">BAHRAIN & MADYAN</h5>
+                        <p class="custom-color fw-bold fs-5">PKR 9,499</p>
+                        <p class="card-text">A cultural and scenic trip through charming hill stations, known for their fresh springs, riverside beauty, and vibrant local markets.</p>
+                        <a href="./../../trip-not-available.html" class="btn btn-primary-custom w-100">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 5-Day Swat Trip -->
+            <div class="col-md-4">
+                <div class="card tour-card shadow border-0">
+                    <div class="image-wrapper">
+                        <img src="./../../images/KPK-Valleys/Swat/Malam-Jabba-6.jpg" class="card-img-top" alt="5-Day Swat Trip">
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="trip-info d-flex justify-content-center align-items-center opacity-50">
+                            <i class="fa-solid fa-clock me-2"></i> 8 Days 
+                            <span class="mx-3">|</span> 
+                            <i class="fa-solid fa-users me-2"></i> Max 21 People
+                        </div>
+                        <h5 class="fw-bold mt-2">MALAMJABBA</h5>
+                        <p class="custom-color fw-bold fs-5">PKR 27,499</p>
+                        <p class="card-text">Malam Jabba is a hill station and ski resort in the Swat Valley of Khyber Pakhtunkhwa, Pakistan, within the Hindu Kush mountain</p>
+                        <a href="./../../trip-not-available.html" class="btn btn-primary-custom w-100">Explore</a>
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+    
+        </div>
+    </div>
+    </section>
+    <!-- End Swat Valley Trip Packages Section -->
+    
+    
+<!-- End Swat Valley Trip Packages Section -->
+
+
+
+
+
+
+
+
+
+
+<div class="container p-5"></div>
+
+<!-- Footer -->
+<footer id="footer" class="p-4 bg-dark text-white text-center position-relative">
+    <!-- About | Contact | Map  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-start">
+                <img src="./../../images/logo.png" style="width: 120px;" alt="logo">
+                <p class="mt-3 fw-light text-white-50 p-0"> 
+                    Pakhtunkhwa Tourism Hub – your gateway to unforgettable adventures! Discover breathtaking destinations, plan seamless trips, and explore the rich culture and landscapes of Pakhtunkhwa. From sightseeing and group tours to hiking, camping, and solo journeys, we bring you the best travel experiences with ease and comfort.
+                </p>
+            </div>
+            <div class="col-md-4">
+
+        <!-- Map here -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d616.8613250576617!2d71.4813661250838!3d34.020035223282584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1742396871453!5m2!1sen!2s" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            </div>
+            <div class="col-md-4 text-start">
+                <p class="lead fw-bold p-0">Contact Info</p>
+                <p class="p-0 text-white-50">Pakhtunkwa Tourism Hub, Peshawar 25130, Khyber Pakhtunkhwa, Pakistan</p>
+                <p class="p-0">+92 307 5993029</p>
+                <p class="p-0">+92 331 3238210</p>
+                <!-- Social Media Icons -->
+                <p class="lead mt-4 p-0">
+                    <a href="https://www.facebook.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-facebook text-white"></i>
+                    </a>
+                    <a href="https://www.instagram.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.twitter.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </p> 
+                <!-- End of Social Media Icons -->
+            </div>
+        </div>
+    </div>
+    <hr>
+
+<!-- Copyright and devloper -->
+    <div class="row justify-content-center">
+        <!-- Copyright sec -->
+        <div class="col-md-4">
+            <p class="p-0 m-0 text-white-50">Copyright &copy; 2025 Pakhtunkwa Tourism Hub</p>
+        <a href="#" class="position-absolute bottom-0 end-0 p-3">
+            <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+        </div>
+        <!-- Developer sec -->
+        <div class="col-md-4 m-0">
+            <p class="m-0 p-0 text-white-50">Developed by <a href="https://www.facebook.com/asadjn99" target="_blank" class="text-white">Asad Ullah</a></p>
+        </div>
+    </div>
+
+    <!-- back to home/top icon -->
+    <a href="#" id="backToTop" class="position-fixed bottom-3 end-3 p-3 text-white">
+        <i class="bi bi-arrow-up-circle h1"></i>
+    </a>
+</footer>
+
+
+<script>
+    // Change Navbar Background on Scroll
+    window.addEventListener("scroll", function () {
+        let navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+    // End Navbar Background Change on Scroll
+
+    // Back to Home Button
+    document.getElementById("backToTop").addEventListener("click", function (event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    // End Back to Home Button
+
+
+
+
+
+// Booking Form
+
+let pricePerPerson = 11999; //  price per person (in PKR)
+
+function updateTotalPrice() {
+    let persons = document.getElementById("persons").value;
+    if (persons >= 1 && persons <= 15) {
+        let totalPrice = persons * pricePerPerson;
+        document.getElementById("total-price").textContent = "₨ " + totalPrice;
+    } else {
+        document.getElementById("total-price").textContent = "₨ 0";
+    }
+}
+// change the name here
+function proceedBooking() {
+    // Hide previous error messages
+    resetErrors();
+
+    // Get values from the form
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let tripName = document.getElementById("trip-name").value.trim();
+    let persons = document.getElementById("persons").value.trim();
+    let totalPrice = document.getElementById("total-price").textContent.trim();
+
+    let isValid = true;
+
+    // Validate fields and show inline errors
+    if (name === "") {
+        document.getElementById("name-error").classList.remove("d-none");
+        isValid = false;
+    }
+
+    if (email === "" || !validateEmail(email)) {
+        document.getElementById("email-error").classList.remove("d-none");
+        isValid = false;
+    }
+
+    if (phone === "" || !validatePhone(phone)) {
+        document.getElementById("phone-error").classList.remove("d-none");
+        isValid = false;
+    }
+
+    if (persons === "" || totalPrice === "₨ 0") {
+        document.getElementById("persons-error").classList.remove("d-none");
+        isValid = false;
+    }
+
+    if (!isValid) {
+        return; // Stop further processing if validation fails
+    }
+
+    // Set the trip name for submission as I/we want  ..................................................
+    document.getElementById("trip-name").value = "Mahodand";
+
+    // Hide the form and show payment options
+    document.getElementById("booking-form").classList.add("d-none");
+    document.getElementById("payment-methods").classList.remove("d-none");
+}
+
+function validateEmail(email) {
+    // Simple email validation regex
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return emailRegex.test(email);
+}
+
+function validatePhone(phone) {
+    // Simple phone validation regex
+    const phoneRegex = /^[0-9]{10,15}$/;
+    return phoneRegex.test(phone);
+}
+
+function resetErrors() {
+    // Reset all error messages
+    document.querySelectorAll(".error-message").forEach((error) => {
+        error.classList.add("d-none");
+    });
+}
+
+function submitPayment() {
+    let paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+    let tid = document.getElementById("tid").value.trim();
+    let persons = document.getElementById("persons").value;
+
+    if (!paymentMethod) {
+        document.getElementById("payment-error").classList.remove("d-none");
+        return;
+    }
+
+    if (tid === "") {
+        document.getElementById("tid-error").classList.remove("d-none");
+        return;
+    }
+    if (!/^\d{10,20}$/.test(tid)) {
+    document.getElementById("tid-error").classList.remove("d-none");
+    return;
+    }
+
+    let submitButton = document.querySelector(".submit-payment-btn");
+    let spinner = document.getElementById("loadingSpinner");
+    let successMessage = document.getElementById("success-message");
+    let errorMessage = document.getElementById("error-message");
+    let bookingForm = document.getElementById("booking-form");
+    let paymentMethods = document.getElementById("payment-methods");
+
+    submitButton.disabled = true;
+    spinner.classList.remove("d-none");
+    spinner.style.visibility = "visible";
+
+    //  Calculate Total Price 
+    let pricePerPerson = 9999;
+    let totalPrice = persons * pricePerPerson;  
+
+    let formData = {
+        formType: "tripBooking",
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        trip_name: document.getElementById("trip-name").value,
+        persons: persons,
+        total_price: totalPrice,  
+        payment_method: paymentMethod.value,
+        tid: tid
+    };
+
+    // console.log("Form Data Sent:", formData); // Debugging (Check in Console)
+
+    let sheetURL = "https://script.google.com/macros/s/AKfycbxyDqyPxLv95147lVj3imPzYqvAK8ANNuq2VjnBaDjuEJYx2IlMnboaWDIT09KweVbPJA/exec";
+
+    fetch(sheetURL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+    })
+    .then(() => {
+        document.getElementById("booking-form").reset();
+        paymentMethods.classList.add("d-none");
+        bookingForm.classList.remove("d-none");
+        // Reset calculated values/total-price
+            document.getElementById("total-price").innerText = ''; // Assuming you have a div/span with id 'total-price' to show the price
+            document.getElementById("total-price").value = ''; // If it's an input field, reset its value
+
+        // Success Toast
+        const successToastEl = document.getElementById("tripSuccessToast");
+        if (successToastEl) {
+            const successToast = new bootstrap.Toast(successToastEl);
+            successToast.show();
+        }
+    })
+    .catch(() => {
+        //  Error Toast
+        const errorToastEl = document.getElementById("tripErrorToast");
+        if (errorToastEl) {
+            const errorToast = new bootstrap.Toast(errorToastEl);
+            errorToast.show();
+        }
+    })
+    .finally(() => {
+        submitButton.disabled = false;
+        spinner.style.visibility = "hidden"; 
+        spinner.classList.add("d-none");
+    });
+}
+// End Booking Form
+
+
+
+
+
+
+
+
+
+// broadcrumb navigation
+function showTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(tab => {
+            tab.classList.add('d-none');
+        });
+        document.getElementById(tabId).classList.remove('d-none');
+        
+        document.querySelectorAll('.breadcrumb-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        document.querySelector(`.breadcrumb-item[onclick="showTab('${tabId}')"]`).classList.add('active');
+    }
+// End of broadcrumb navigation
+// bread crumb sticky
+        document.addEventListener("DOMContentLoaded", function () {
+            const breadcrumb = document.getElementById("breadcrumb");
+            const viewportHeight = window.innerHeight; // Get 100vh height
+
+            window.addEventListener("scroll", function () {
+                const scrollY = window.scrollY;
+
+                if (scrollY >= viewportHeight * 0.99) { // When scrolled 90% of 100vh
+                    breadcrumb.classList.add("sticky");
+                } else {
+                    breadcrumb.classList.remove("sticky");
+                }
+            });
+        });
+
+// Image Modal / gallery script to enlarge/view images/update 
+document.querySelectorAll('.gallery-img').forEach(img => {
+    img.addEventListener('click', function () {
+        document.getElementById('modalImage').src = this.src;
+    });
+});
+
+
+
+</script>
+
+<script src="./scripts/form.js"></script>
+<script src="./scripts/contact-form.js"></script>
+<!-- Icons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script> -->
+
+
+</body>
+</html>

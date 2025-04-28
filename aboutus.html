@@ -1,0 +1,1361 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pakhtunkhwa Tourism Hub</title>
+    <!-- <link rel="icon" href="./images/logo12.png" type="image/png"> -->
+    <link rel="icon" href="./images/icon-pk.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--  -->
+     <!-- Font awesome | back-to-top icons and more -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <!--  Yesteryear -->
+    <link href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap" rel="stylesheet">
+
+<style>
+@import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
+body {
+  font-family: "Barlow", sans-serif !important;
+}
+
+         #custom-trip-btn {
+            font-size: 14px;
+            padding: 8px 16px;
+            background-color: #DF6951;
+            color: white;
+            border: none;
+            transition: background-color 0.3s ease !important;
+            border-radius: 0 !important;
+        }
+        
+        #custom-trip-btn:hover {
+            background-color: #c6533d;
+        }
+        .custom-color{
+            color: #DF6951 !important;
+        }
+        .custom-background{
+            background-color: #DF6951 !important;
+        }
+    
+
+
+
+
+
+/* Navbar start here................. */
+
+        @media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* prevent jump effect */
+  }
+}
+
+
+/* Dropdown item hover effect */
+.dropdown-item:hover {
+  background-color: #DF6951 !important;
+  color: white !important;
+}
+
+/* Default navbar styles */
+.navbar {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.navbar .nav-link:hover {
+  color: white !important;
+  border-bottom: 3px solid #DF6951 !important;
+    padding-bottom: 5px !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #DF6951 !important;
+  color: white !important;
+}
+
+.btn-outline-light:hover {
+  background-color: #DF6951 !important;
+  color: white !important;
+  border-color: #DF6951 !important;
+}
+
+ .dropdown-menu {
+  background-color: white !important;
+  border-radius: 0.25rem;
+}
+/*
+.dropdown-item {
+  padding: 10px 20px;
+} */
+
+
+
+/* Small screen styles */
+@media (max-width: 991px) {
+  /* Ensure dropdown menu visibility on small screens */
+  .dropdown-menu {
+    display: none;  /* Hide by default */
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  /* Show dropdown menu when toggled */
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  /* Navbar collapse styles */
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-left: 15px;
+  }
+
+  .navbar-nav .nav-link {
+    /* color: white !important; */
+    font-size: 16px;
+  }
+  .dropdown-menu .dropdown-item{
+    color: black !important;
+    background-color: white !important;
+  }
+
+  #custom-trip-btn {
+    display: block !important;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+
+
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+
+
+
+/* Navbar when scrolled */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Dropdown hover effect */
+/* .navbar .nav-link:hover, .dropdown-item:hover {
+  color: #DF6951 !important;
+} */
+
+/* Ensure proper visibility on small screens */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: static;
+    margin: 0;
+  }
+
+  /* .dropdown-item {
+    color: white !important;
+    background-color: black;
+  } */
+
+  #custom-trip-btn {
+    display: block;
+    width: 100% !important;
+    margin-top: 20px;
+    text-align: center;
+    
+  }
+}
+/* navbar customize btn font size */
+#primary-btn-nav{
+        font-size: 14px !important;
+    }
+
+    @media (max-width: 768px){
+        #primary-btn-nav{
+            margin-top: 5px !important;
+            padding: 5px 75px !important;
+            font-size: 13x !important;
+        }
+    }
+
+
+.active-nav-link{ 
+  border-bottom: 3px solid #DF6951 !important;
+      padding-bottom: 5px !important;
+}
+
+
+/* Nabar end here ..............*/
+
+
+
+
+
+
+
+
+
+
+
+ /* Custom button */
+        .custom-btn {
+        width: 100%; 
+    }
+    @media (min-width: 992px) {
+        .custom-btn {
+            width: 25%; 
+        }
+    }
+        .hero {
+            height: 100vh;
+            background-image: url('./images/bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
+  
+
+#hero-paragraph{
+    font-size: 1.5rem !important;
+        }
+
+
+/* Typewriting effect hero section heading */
+
+.hero-heading {
+  font-size: 3em;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.animated-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.typewriter-text {
+  color: #DF6951;
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  padding-bottom: 5px;
+  font-size: 1em;
+}
+
+.static-text {
+  color: #fff;
+  padding-top: 5px;
+  font-size: 1em;
+}
+
+/* Responsive Fixes */
+@media (max-width: 576px) {
+  .hero-heading {
+    font-size: 1.2em !important;
+    width: 70%;
+    margin: 0 auto;
+    height: 40px !important;
+  }
+
+  .typewriter-text {
+    font-size: 1em;
+    color: black !important;
+  }
+
+  .static-text {
+    font-size: .8em;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+    #hero-paragraph{
+        font-size: .7rem !important;
+        font-weight: 500 !important;
+        width: 60%;
+        margin: 40px auto !important;
+        text-wrap: wrap !important;
+    }
+}
+
+
+#hero {
+        height: 100vh; 
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        position: relative; 
+        overflow: hidden; 
+    }
+
+    
+    @media (max-width: 1024px) {
+        #hero {
+            height: 85vh; 
+        }
+    }
+
+    
+    @media (min-width: 1400px) {
+        #hero {
+            height: 87vh; 
+        }
+    }
+
+
+
+
+/* Hero section end here.......................................... */
+
+
+
+
+
+    
+        
+        
+/* Custom Button Styles */
+.btn-primary-custom {
+    background-color: #DF6951 !important;
+    border: none;
+    color: white !important;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px !important;
+    letter-spacing: 1px;
+    /* border-radius: 10px !important; */
+    transition: all 0.3s ease-in-out !important;
+}
+.btn-primary-custom:hover {
+    background-color: #C65540 !important;
+    transform: translateY(-2px);
+    color: white !important;
+}
+/* Secondary Button */
+.btn-secondary-custom {
+    background-color: #28a745 !important;
+    border: none;
+    color: rgb(255, 255, 255) !important;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px !important;
+    letter-spacing: 1px;
+    /* border-radius: 10px !important;  */
+    transition: all 0.3s ease-in-out;
+}
+.btn-secondary-custom:hover {
+    background-color: #269740 !important;
+    transform: translateY(-2px);
+
+}
+
+@media (max-width: 768px) {
+   
+    
+    .btn-primary-custom {
+    background-color: #DF6951 !important;
+    border: none;
+    color: white !important;
+    font-size: .8rem;
+    /* font-weight: 600; */
+    padding: 10px 20px !important;
+    letter-spacing: 1px;
+    /* border-radius: 10px !important; */
+    transition: all 0.3s ease-in-out !important;
+}
+
+
+    .btn-secondary-custom {
+    background-color: #28a745 !important;
+    border: none;
+    color: rgb(255, 255, 255) !important;
+    font-size: .8rem;
+    /* font-weight: 600; */
+    padding: 10px 20px !important;
+    letter-spacing: 1px;
+    /* border-radius: 10px !important;  */
+    transition: all 0.3s ease-in-out;
+}
+}
+
+
+
+
+
+
+
+/* Contact us form in the bottom of the page */
+        form {
+            padding: 20px;
+            width: 100%;
+            /* max-width: 450px; */
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 8px rgba(223, 105, 81, 0.1);
+            border-radius: 8px;
+        }
+        /* label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+        } */
+        #contact .row input,
+        #contact .row textarea {
+            width: 100%;
+            padding: 6px;
+            margin-top: 8px;
+            border: 1px solid #f0a090 ;
+            border-radius: 0 !important;
+            font-size: 16px;
+            color: #333;
+            box-sizing: border-box;
+        }
+        input:focus {
+            border-color: #DF6951;
+            outline: none !important;
+        }
+/* Success Toast/popup message for contact us form */
+    #tripSuccessToast {
+    z-index: 1050; 
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto; 
+    max-width: 90%;
+    min-width: 250px; 
+    text-align: center; 
+    padding: 10px; 
+}
+ /* Toast Header */
+ .toast-header {
+    background-color: #DF6951 !important;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+
+ /* Toast Body */
+ .toast-body {
+    background-color: #fff !important;
+    color: #333 !important;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+    /* Toast Close Button */
+    .btn-close {
+        color: white !important;
+        opacity: 1 !important;
+    }
+
+
+
+
+/* End of Contact us form */
+        
+/* National Tours card design   | International Countries */
+.tour-card {
+    position: relative;
+    overflow: hidden;
+    /* border-radius: 15px; */
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tour-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tour-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tour-card:hover img {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(100%);
+    pointer-events: none;
+}
+
+/*  overlay on hover show hoga for larger screens */
+.tour-card:hover .card-overlay {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* overlay visible hoga on mobile */
+@media (max-width: 768px) {
+    .tour-card .card-overlay {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        pointer-events: auto !important;
+    }
+}
+
+
+
+
+
+/* featured tRIPS section design */
+.image-wrapper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 20px 20px 0 0;
+        }
+        .image-wrapper img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .trip-info {
+            font-size: 0.9rem;
+        }
+
+        .tour-card {
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            /* border-radius: 20px; */
+    border-radius: 10px 10px 0 0;
+
+        }
+
+        .tour-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+/* end/////////////////////////////// */
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Customer Reviews design */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #DF6951; 
+            border-radius: 50%; 
+            
+        }
+        /* hover effect for arrows */
+        .carousel-control-prev-icon:hover,
+        .carousel-control-next-icon:hover {
+            background-color: #C65540;
+        }
+        /* arrow size ba dlta na cntrol kw*/
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 40px;
+            height: 40px;
+        }
+    /* End Testimonials Sec Design */
+
+
+/* Whatsapp icon for assistance  */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 9999; /* Ensures it's above other elements */
+        }
+        .whatsapp-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .whatsapp-icon:hover {
+            transform: scale(1.1);
+        }
+
+        /* Floating WhatsApp */
+        .whatsapp-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            text-align: center;
+            z-index: 1000;
+            width: 100px;
+        }
+        .curved-text {
+            position: absolute;
+            top: -60px; 
+            left: 0;
+            width: 250px; 
+            height: 100px;
+            overflow: hidden;
+            pointer-events: none;
+            font-size: 3rem !important;
+            font-weight: bold;
+            color: #25d366;
+            text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .whatsapp-icon img {
+            width: 60px; /* Adjust icon size */
+            height: 60px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .whatsapp-icon img:hover {
+            box-shadow: 0px 0px 10px rgba(37, 211, 102, 0.8);
+            transform: scale(1.1);
+            transition: 0.3s ease-in-out;
+        }
+    /* animate */ 
+         @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .whatsapp-icon img {
+            animation: pulse 1.5s infinite ease-in-out;
+        }
+        @media (max-width: 768px) {
+            .whatsapp-icon img {
+            width: 40px; /* Adjust icon size */
+            height: 40px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        .curved-text {
+            position: absolute;
+            top: -60px; 
+            left: 0;
+            width: 250px; 
+            height: 100px;
+            overflow: hidden;
+            pointer-events: none;
+            font-size: 3rem !important;
+            font-weight: bold;
+            color: #25d366;
+            text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        }
+            
+        
+/* End of Floating WhatsApp */
+
+
+
+
+
+
+
+
+
+
+.featured-tours .card {
+    border: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.featured-tours .card:hover {
+    transform: translateY(-10px);
+}
+
+.featured-tours img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.featured-tours .btn-primary {
+    background-color: #28A745;
+    border: none;
+}
+
+.featured-tours .btn-primary:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .featured-tours .card img {
+        height: 180px;
+    }
+    .about-us-hero{
+        font-size: 1.7rem !important;
+    }
+}
+
+
+/* hero section */
+.read-text-size{
+    font-size: 0.7rem !important;
+}
+
+.hero-image-wrapper {
+  max-width: 400px; 
+}
+
+/* promotion img under hero section */
+.border-dashed {
+  border: 2px dashed #DF6951; 
+  padding: 10px;
+  border-radius: 50%; 
+}
+
+
+
+
+
+
+
+
+
+/* achievement sec */
+.achievement-section {
+      padding: 80px 0;
+      text-align: center;
+      background-color: #fff;
+    }
+    .achievement-section h2 {
+      font-weight: 700;
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .achievement-section p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 50px;
+    }
+    .counter-card {
+      padding: 40px 20px;
+      border: 1px solid #eee;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      background-color: #fff;
+    }
+    .counter-card:hover {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .counter-card h3 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #DF6951; 
+    }
+    .counter-card p {
+      font-size: 18px;
+      margin: 0;
+      color: #333;
+    }
+    /* resp */
+    @media (max-width: 992px) {
+  .achievement-section h2 {
+    font-size: 36px;
+  }
+  .counter-card h3 {
+    font-size: 36px;
+  }
+  .counter-card p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievement-section {
+    padding: 60px 0;
+  }
+  .achievement-section h2 {
+    font-size: 32px;
+  }
+  .counter-card {
+    padding: 30px 15px;
+  }
+  .counter-card h3 {
+    font-size: 32px;
+  }
+  .counter-card p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .achievement-section h2 {
+    font-size: 28px;
+  }
+  .achievement-section p {
+    font-size: 16px;
+  }
+  .counter-card {
+    padding: 20px 10px;
+  }
+  .counter-card h3 {
+    font-size: 28px;
+  }
+  .counter-card p {
+    font-size: 14px;
+  }
+}
+
+/* achievement end here///////////////// */
+
+
+/* video sec css */
+.custom-video {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .custom-video {
+      height: 250px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .custom-video {
+      height: 200px;
+    }
+  }
+    </style>
+</head>
+<body>
+
+
+<!-- whatsapp btn -->
+<div class="whatsapp-container">
+    <svg viewBox="0 0 700 50" class="curved-text">
+        <defs>
+            <path id="curvePath" d="M50,90 A100,100 0 1,1 250,90" />
+        </defs>
+        <text width="500" fill="#25d366" font-size="30" font-weight="bold">
+            <textPath href="#curvePath" startOffset="20%">
+                We Are Here! 👋
+            </textPath>
+        </text>
+    </svg>
+    
+        <a href="https://wa.me/923075993029" target="_blank" class="whatsapp-icon">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+</div>
+
+
+
+
+
+<!-- Navbar start here............... -->
+<nav id="home" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="./../../index.html">
+        <img src="./images/logo.png" style="width: 120px;" alt="logo">
+      </a>
+  
+      <!-- Hamburger Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto fw-bold">
+          <li class="nav-item"><a class="nav-link " href="./index.html">Home</a></li>
+  
+          <!-- National Tours Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="./index.html" id="nationalDropdown" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              National Tours
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="nationalDropdown">
+              <li><a class="dropdown-item" href="./kpk.html">Khyber Pakhtunkhwa</a></li>
+              <li><a class="dropdown-item" href="./comming-soon.html">Balochistan</a></li>
+              <li><a class="dropdown-item" href="./comming-soon.html">Sindh</a></li>
+              <li><a class="dropdown-item" href="./comming-soon.html">Punjab</a></li>
+              <li><a class="dropdown-item" href="./comming-soon.html">Gilgit-Baltistan</a></li>
+              <li><a class="dropdown-item" href="./comming-soon.html">Azad Kashmir</a></li>
+            </ul>
+          </li>
+  
+          <!-- Foreign Tours Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="./index.html" id="foreignDropdown" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Foreign Tours
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="foreignDropdown">
+              <li><a class="dropdown-item" href="./comming-soon.html">Dubai</a></li>
+              <li><a class="dropdown-item" href="./comming-soon.html">Malaysia</a></li>
+              <li><a class="dropdown-item" href="./comming-soon.html">Turkey</a></li>
+              <li><a class="dropdown-item" href="./comming-soon.html">Singapore</a></li>
+              <li><a class="dropdown-item" href="./comming-soon.html">Other</a></li>
+            </ul>
+          </li>
+  
+          <li class="nav-item"><a class="nav-link" href="#">Upcoming Packages</a></li>
+          <li class="nav-item"><a class="nav-link active active-nav-link" href="#">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+        </ul>
+  
+        <!-- Custom Trip Button -->
+        <a id="primary-btn-nav" class="btn btn-primary-custom fw-small" href="./form.html">Build Your Trip</a>
+      </div>
+    </div>
+</nav>
+  <!-- Navbar end here............... -->
+  
+  
+  
+  
+
+<!-- <div class="container bg-primary p-4"></div> -->
+
+<!-- Hero Section -->
+<section class="hero d-flex align-items-center justify-content-center text-white text-center" id="hero">
+    <div class="container mt-5">
+        <!-- <h1 class="display-lg-4 fw-bold">Explore the World with Us</h1> -->
+        <!-- <h1 class="ml12">A new production</h1> -->
+        <h1 class="hero-heading text-white text-uppercase">
+            <div class="animated-heading"><span class="read-text-size" >Read</span>
+                <span class=" custom-color about-us-hero" style="font-family: Yesteryear; font-size: 4rem;">About Us </span>
+              
+             
+            </div>
+          </h1>
+          
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+          
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+        <!-- <p id="hero-paragraph" class="lead fw-bold mt-4 ">No matter where you’re going to,<br> we’ll take you there</p> -->
+        
+        <!-- <a class="btn btn-primary-custom mt-0 mt-lg-4 p-2 " href="https://wa.me/+923075993029" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="btn btn-secondary-custom mt-0 mt-lg-4 p-2 " href="tel:+923075993029" role="button">
+            <i class="fa-solid fa-phone"></i> Call Now
+        </a> -->
+    </div>
+</section>
+<!-- Hero Section end -->
+
+
+
+   
+<!-- Promotion Section under Hero sec -->
+    <section class="about-promotion-section py-5">
+        <div class="container">
+          <div class="row align-items-center">
+      
+            <!-- Text Side -->
+            <div class="col-lg-6 mb-5 mb-lg-0 text-center text-lg-start">
+              <div class="promotion-title custom-color fw-bold">Promotion</div>
+              <h2 class="main-heading">We Provide You Best<br>Pakhtunkhwa's Sightseeing Tours</h2>
+              <p class="hero-text">
+                Experience the breathtaking beauty of Pakhtunkhwa with our expertly curated sightseeing tours. From majestic mountains to serene valleys, we offer unforgettable journeys that showcase the region's rich culture and natural wonders. Join us for an adventure of a lifetime!<br><br>
+              </p>
+              <a href="./upcoming-packages.html" class="btn btn-primary-custom">View Packages</a>
+            </div>
+      
+            <!-- Image Side -->
+            <div class="col-lg-6 d-flex justify-content-center ">
+                <div class="hero-image-wrapper border-dashed border-dashed1">
+                  <img src="./images/aboutus-hero-img.png" alt="Sightseeing Tours" class="img-fluid">
+                </div>
+              </div>
+      
+          </div>
+        </div>
+      </section>
+      
+
+
+<!-- Video Section -->
+<div class="container-fluid p-0">
+    <video class="custom-video" autoplay muted loop playsinline>
+      <source src="./images/aboutus-tourism1.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+
+
+
+
+<!-- Achievement Section -->
+
+<section class="achievement-section" id="achievement-section">
+    <div class="container">
+      <h2 class="custom-color">Our Achievements</h2>
+      <p>This is a great site for exploring the world, specially Pakhtunkhwa. See our milestones as we journey across the globe!</p>
+      <div class="row gy-4">
+        <div class="col-md-3 col-sm-6">
+          <div class="counter-card">
+            <h3 class="counter" data-target="7">0</h3>
+            <p>Continents Visited</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="counter-card">
+            <h3 class="counter" data-target="120000">0</h3>
+            <p>Miles Traveled</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="counter-card">
+            <h3 class="counter" data-target="2000">0</h3>
+            <p>Days Traveling</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="counter-card">
+            <h3 class="counter" data-target="500">0</h3>
+            <p>Places Explored</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<script>
+    // Counter Animation Script
+    const counters = document.querySelectorAll('.counter');
+    let counterStarted = false;
+  
+    function startCounters() {
+      counters.forEach(counter => {
+        counter.innerText = '0';
+        const updateCounter = () => {
+          const target = +counter.getAttribute('data-target');
+          const current = +counter.innerText;
+          const increment = target / 200; // Smaller = slower
+  
+          if (current < target) {
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCounter, 10);
+          } else {
+            counter.innerText = target.toLocaleString(); // I cn add here commas for 1000+
+          }
+        };
+        updateCounter();
+      });
+    }
+  
+    // Detect if section is in viewport
+    function handleScroll() {
+      const section = document.getElementById('achievement-section');
+      const sectionTop = section.getBoundingClientRect().top;
+      const screenHeight = window.innerHeight;
+      if (sectionTop < screenHeight && !counterStarted) {
+        startCounters();
+        counterStarted = true;
+      }
+    }
+  
+    window.addEventListener('scroll', handleScroll);
+  </script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">What Our Travelers Say</h2>
+
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
+            <div class="carousel-inner">
+                <!-- 1st Review Slide-->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-12 col-sm-12 text-center px-4">
+                            <img src="images/asadjn99-pic.jpg" alt="Customer 1" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
+                            <p class="lead">"The trip was absolutely amazing! The tour guides were so knowledgeable, and the scenery was breathtaking. Highly recommended!"</p>
+                            <h5 class="fw-bold">Anees Ahmad</h5>
+                            <p class="text-muted">Khyber Pakhtunkhwa Explorer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- dusra Review Slide -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-12 col-sm-12 text-center px-4">
+                            <img src="images/asadjn99-pic.jpg" alt="Customer 2" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
+                            <p class="lead">"A truly unforgettable experience. I loved every moment of my trip, from the food to the sightseeing. Thank you for making it special!"</p>
+                            <h5 class="fw-bold">Ali Khan</h5>
+                            <p class="text-muted">Balochistan Traveler</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3rd Review Slide -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-12 col-sm-12 text-center px-4">
+                            <img src="images/asadjn99-pic.jpg" alt="Customer 3" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
+                            <p class="lead">"Excellent service and the best destinations! Everything was well-organized, and I had a fantastic time exploring new places."</p>
+                            <h5 class="fw-bold">Kamal Khan</h5>
+                            <p class="text-muted">Gilgit Adventurer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+<!-- End Testimonials/crousel Section -->
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="p-1 p-md-5">
+    <div class="container  p-0 ">
+        <h3 class="text-center">Get in Touch</h3>
+        <form onsubmit="validateContactForm(event)" method="POST" id="contactForm2" class="mt-4" novalidate>
+            <!-- Hidden Field to Identify the Form Type -->
+            <input type="hidden" name="formType" value="contactForm2">
+        
+            <div class="row g-4 mx-auto">
+                <div class="col-md-4 p-0 p-md-3 ">
+                    <input type="text" name="name" id="contactName" placeholder="Full Name" required class="form-control">
+                </div>
+                <div class="col-md-4 p-0  p-md-3">
+                    <input type="email" name="email" id="contactEmail" placeholder="Email" required class="form-control">
+                </div>
+                <div class="col-md-4 p-0  p-md-3">
+                    <input type="text" name="contact" id="contactPhone" placeholder="Phone" class="form-control">
+                </div>
+                <div class="col-md-12 p-0 p-md-3 ">
+                    <textarea name="message" id="contactMessage" class="form-control" rows="3" placeholder="Your Message"></textarea>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary-custom custom-btn py-1 fw-normal d-block mx-auto rounded-0">
+                    <span id="loadingSpinner2" class="spinner-border spinner-border-sm d-none"></span>
+                    Send Message
+                </button>
+            </div>
+        </form>
+        <div id="tripSuccessToast" class="toast m-3 p-3" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-success text-white">
+                <strong class="me-auto">Thank you for reaching out!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body custom-color">
+                We've received your message and will get back to you as soon as possible. Stay tuned! 😊
+            </div>
+        </div>
+        <!-- <p id="contactSuccessMessage" class="text-success d-none">Your message has been sent successfully!</p> -->
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="p-4 bg-dark text-white text-center position-relative">
+    <!-- About | Contact | Map  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-start">
+                <img src="./images/logo.png" style="width: 120px;" alt="logo">
+                <p class="mt-3 fw-light text-white-50"> 
+                    Pakhtunkhwa Tourism Hub – your gateway to unforgettable adventures! Discover breathtaking destinations, plan seamless trips, and explore the rich culture and landscapes of Pakhtunkhwa. From sightseeing and group tours to hiking, camping, and solo journeys, we bring you the best travel experiences with ease and comfort.
+                </p>
+            </div>
+            <div class="col-md-4">
+
+        <!-- Map here -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d616.8613250576617!2d71.4813661250838!3d34.020035223282584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1742396871453!5m2!1sen!2s" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            </div>
+            <div class="col-md-4 text-start">
+                <p class="lead fw-bold">Contact Info</p>
+                <p class="text-white-50">Pakhtunkwa Tourism Hub, Peshawar 25130, Khyber Pakhtunkhwa, Pakistan</p>
+                <p class="">+92 307 5993029</p>
+                <p class="">+92 331 3238210</p>
+                <!-- Social Media Icons -->
+                <p class="lead mt-4">
+                    <a href="https://www.facebook.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-facebook text-white"></i>
+                    </a>
+                    <a href="https://www.instagram.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.twitter.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </p> 
+                <!-- End of Social Media Icons -->
+            </div>
+        </div>
+    </div>
+    <hr>
+
+<!-- Copyright and devloper -->
+    <div class="row justify-content-center">
+        <!-- Copyright sec -->
+        <div class="col-md-4">
+            <p class="p-0 m-0 text-white-50">Copyright &copy; 2025 Pakhtunkwa Tourism Hub</p>
+        <a href="#" class="position-absolute bottom-0 end-0 p-3">
+            <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+        </div>
+        <!-- Developer sec -->
+        <div class="col-md-4 m-0">
+            <p class="m-0 p-0 text-white-50">Developed by <a href="https://www.facebook.com/asadjn99" target="_blank" class="text-white">Asad Ullah</a></p>
+        </div>
+    </div>
+
+    <!-- back to home/top icon -->
+    <a href="#" id="backToTop" class="position-fixed bottom-3 end-3 p-3 text-white">
+        <i class="bi bi-arrow-up-circle h1"></i>
+    </a>
+</footer>
+
+
+<script>
+    // Change Navbar Background on Scroll
+    window.addEventListener("scroll", function () {
+      let navbar = document.querySelector(".navbar");
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  
+  
+    
+
+//  toggle the navbar on hamburger click
+    document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item').forEach(link => {
+  link.addEventListener('click', function () {
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+
+    if (bsCollapse && window.innerWidth < 992) {
+      bsCollapse.hide(); // Close the navbar
+    }
+  });
+});
+
+
+
+
+
+
+
+  
+    // Back to Home Button
+    document.getElementById("backToTop").addEventListener("click", function (event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+  
+
+<script src="./scripts/form.js"></script>
+<script src="./scripts/contact-form.js"></script>
+<!-- Icons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+

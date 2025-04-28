@@ -4,229 +4,305 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trip Booking Form</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-          
+    <!-- <link rel="icon" href="./images/logo12.png" type="image/png"> -->
+    <link rel="icon" href="./images/icon-pk.png" type="image/png">
+     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
+    <!--  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+     <!-- Font awesome | back-to-top icons and more -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+   
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
 
-    <style>
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
+body {
+  font-family: "Barlow", sans-serif !important;
+}
+
+    .custom-color{
+            color: #DF6951 !important;
+        }
+        .custom-background{
+            background-color: #DF6951 !important;
+        }
+
         body {
             background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(./images/form-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    filter: brightness(100%);
-    background-attachment: fixed; 
-    background-color: #3f9679;
-}
-
-/* background for smaller screens */
-    @media (max-width: 768px) {
-        body {
-            background-size: contain; 
-            background-attachment: fixed; 
-        }
-    }
-
-    @media (max-width: 480px) {
-        body {
+            background-repeat: no-repeat;
+            background-position: center;
             background-size: cover;
-            background-position: top;
+            position: relative;
+            filter: brightness(100%);
+            background-attachment: fixed; 
+            background-color: #3f9679;
         }
-    }
-        #loading {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 1.5rem;
-            font-weight: bold;
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
+
+        @media (max-width: 768px) {
+            body {
+                background-size: contain; 
+                background-attachment: fixed; 
+            }
         }
-    </style>
-    <!-- reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script> 
-    <script src="./scripts/form.js"></script>
-    <!-- <script>
-        function validateForm(event) {
-    event.preventDefault(); // Prevents direct submission
 
-    let email = document.getElementById('email').value;
-    let contact = document.getElementById('contact').value;
-    let emergency = document.getElementById('emergency').value;
-    let fromDate = document.getElementById('fromDate').value;
-    let toDate = document.getElementById('toDate').value;
+        @media (max-width: 480px) {
+            body {
+                background-size: cover;
+                background-position: top;
+            }
+        }
 
-    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    let phonePattern = /^[0-9]{10,}$/;
 
-    if (!emailPattern.test(email)) {
-        alert('Invalid email address');
-        return;
+  @media (max-width: 768px) {
+    
+    form{
+                width: 100% !important;
+                padding: 0px;
+            }
+
+      }
+
+
+/* Customize trip form  */
+    form {
+        padding: 20px;
+        width: 70%;
+        margin: 0 auto;
+        background-color: rgba(0, 0, 0, 0.1);  
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        color: white; 
     }
-    if (!phonePattern.test(contact) || !phonePattern.test(emergency)) {
-        alert('Invalid phone number (must be at least 10 digits).');
-        return;
+
+    /* Input Fields */
+    #tripForm input,
+    #tripForm textarea,
+    #tripForm select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 8px;
+        border: 1px solid #f0a090;
+        border-radius: 5px !important;
+        font-size: 16px;
+        color: #333;
+        background: rgba(255, 255, 255, 0.9); /* Better contrast */
+        box-sizing: border-box;
     }
-    if (new Date(fromDate) > new Date(toDate)) {
-        alert('Invalid date range');
-        return;
+    /* Focus Effect */
+    #tripForm input:focus,
+    #tripForm textarea:focus,
+    #tripForm select:focus {
+        border-color: #DF6951;
+        outline: none !important;
+        box-shadow: 0 0 5px rgba(223, 105, 81, 0.5);
+    }
+    /* Labels */
+    #tripForm label {
+        font-weight: bold;
+        font-size: 16px;
+        color: white; /* Labels should contrast with the background */
+    }
+    .div .col-md-6 .select .option{
+        background-color: #DF6951 !important;
     }
 
-    submitForm();
+    
+ /* Success Toast/popup message for contact us form */
+ #tripSuccessToast {
+    z-index: 1050; 
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto; 
+    max-width: 90%;
+    min-width: 250px; 
+    text-align: center; 
+    padding: 10px; 
 }
 
-function submitForm() {
-    let submitButton = document.querySelector("button[type='submit']");
-    let spinner = document.getElementById("loadingSpinner");
-
-    submitButton.disabled = true;
-    spinner.classList.remove("d-none"); // Show loading spinner
-
-    let formData = {
-        fromDate: document.getElementById("fromDate").value,
-        toDate: document.getElementById("toDate").value,
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        persons: document.getElementById("persons").value,
-        kids: document.getElementById("kids").value,
-        contact: document.getElementById("contact").value,
-        emergency: document.getElementById("emergency").value,
-        departure: document.getElementById("departure").value,
-        destination: document.getElementById("destination").value,
-        transport: document.getElementById("transport").value,
-        accommodation: document.getElementById("accommodation").value,
-        budget: document.getElementById("budget").value,
-        payment: document.getElementById("payment").value,
-        special: document.getElementById("special").value
-    };
-
-    let sheetURL = "https://script.google.com/macros/s/AKfycbz_DsMi9ecu7BQ84yblKlgUcvves2tuCIXCxmV9JFfn1JEHSxgbG9f4Jatcikjdu1J0Pw/exec"; // Replace with actual URL
-
-    fetch(sheetURL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData)
-    }).then(response => {
-        alert("Your trip has been booked!");
-        document.querySelector("form").reset(); // Clear form after submission
-    }).catch(error => {
-        alert("Error submitting form.");
-    }).finally(() => {
-        submitButton.disabled = false;
-        spinner.classList.add("d-none"); // Hide spinner
-    });
+ /* Toast Header */
+ .toast-header {
+    background-color: #DF6951 !important;
+    color: white !important;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
 }
 
-    </script> -->
+ /* Toast Body */
+ .toast-body {
+    background-color: #fff !important;
+    color: #333 !important;
+    border-radius: 0 0 5px 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+    /* Toast Close Button */
+    .btn-close {
+        color: white !important;
+        opacity: 1 !important;
+    }
+/* End Form */
+
+
+
+
+/* Custom Button Styles */
+.btn-primary-custom {
+    background-color: #DF6951 !important;
+    border: none;
+    color: white !important;
+    font-size: 1rem;
+    padding: 10px 20px !important;
+    /* font-weight: 600; */
+    letter-spacing: 1px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.btn-primary-custom:hover {
+    background-color: #C65540 !important;
+    transform: translateY(-2px);
+    color: white !important;
+}
+/* Secondary Button */
+.btn-secondary-custom {
+    background-color: #28a745 !important;
+    border: none;
+    color: rgb(255, 255, 255) !important;
+    font-size: 1rem;
+    padding: 10px 35px !important;
+    /* font-weight: 600; */
+    letter-spacing: 1px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.btn-secondary-custom:hover {
+    background-color: #269740 !important;
+    transform: translateY(-2px);
+}
+
+
+
+</style>
     
 </head>
 <body>
-    <div class="container text-light">
-        <img src="./images/logo.png" class="mx-auto d-block img-fluid" style="width: 20%;" alt="">
-        <h2 class="text-center">Plan Your Customize Trip</h2>
-        <p class="text-center">Please fill out the form below to plan your trip and we will get back to you.</p>
-        <form id="bookingForm" action="submit.php" method="POST">
-            <div class="row g-4">
+    <div class="container text-light text-center ">
+            <a href="./index.html"> 
+                <img src="./images/logo.png" class="img-fluid p-3" style="max-width: 200px;" alt="Logo">
+            </a>
+            <h2 class="fw-bold">Your Dream Trip, Your Way!</h2>
+            <!-- <p class="lead">Exciting adventures are just a form away! Let us plan a trip that matches your dreams and desires.</p> -->
+            <p class="lead">Customize your travel experience with ease. Fill in your details, and we'll handle the rest!</p>
+            <!-- <p class="lead">The world is waiting for you! Share your travel plans, and we'll design a journey you'll never forget.</p> -->
+    </div>
+        <form onsubmit="validateTripForm(event)" method="POST" id="tripForm" class="mt-4" novalidate>
+            <input type="hidden" name="formType" value="tripBooking">
+        
+            <div class="row g-3">
+               
+                <div class="col-md-4">
+                    <label for="tripName" class="form-label">Full Name</label>
+                    <input type="text" name="name" id="tripName" class="form-control" placeholder="Full Name" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="tripEmail" class="form-label">Email</label>
+                    <input type="email" name="email" id="tripEmail" class="form-control" placeholder="Email" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="tripPhone" class="form-label">Contact</label>
+                    <input type="text" name="contact" id="tripPhone" class="form-control" pattern="[0-9]{10,15}" placeholder="Phone" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="tripEmergency" class="form-label">Emergency Contact</label>
+                    <input type="text" name="emergency" id="tripEmergency" class="form-control" pattern="[0-9]{10,15}"  placeholder="Emergency Contact" required>
+                </div>
+                <div class="col-md-4">
+                    <label for="tripFromDate" class="form-label">Date From</label>
+                    <input type="date" name="fromDate" id="tripFromDate" class="form-control"    required>
+                </div>
+                <div class="col-md-4">
+                    <label for="tripToDate" class="form-label">Date To</label>
+                    <input type="date" name="toDate" id="tripToDate" class="form-control" required>
+                </div>
                 <div class="col-md-6">
-                    <label for="fromDate" class="form-label">Date From</label>
-                    <input type="date" name="fromDate" id="fromDate" class="form-control" required>
+                    <label for="tripDeparture" class="form-label">Departure</label>
+                    <input type="text" name="departure" id="tripDeparture" class="form-control" placeholder="کہاں سے جانا ہے" required>
                 </div>
                 <div class="col-md-6">
-                    <label for="toDate" class="form-label">Date To</label>
-                    <input type="date" name="toDate" id="toDate" class="form-control" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="name" class="form-label">Full Name</label>
-                    <input type="text" name="name" id="name" class="form-control" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="email" class="form-label">Email</label>
-                    <input type="email" name="email" id="email" class="form-control" required>
+                    <label for="tripDestination" class="form-label">Destination</label>
+                    <input type="text" name="destination" id="tripDestination" class="form-control" placeholder="کہاں جانا ہے" required>
                 </div>
                 <div class="col-md-4">
-                    <label for="persons" class="form-label">No. of Persons</label>
-                    <input type="number" name="persons" id="persons" class="form-control" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="kids" class="form-label">No. of Kids</label>
-                    <input type="number" name="kids" id="kids" class="form-control">
-                </div>
-                <div class="col-md-4">
-                    <label for="contact" class="form-label">Contact</label>
-                    <input type="text" name="contact" id="contact" class="form-control" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="emergency" class="form-label">Emergency Number</label>
-                    <input type="text" name="emergency" id="emergency" class="form-control" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="departure" class="form-label">Departure</label>
-                    <input type="text" name="departure" id="departure" class="form-control" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="destination" class="form-label">Destination</label>
-                    <input type="text" name="destination" id="destination" class="form-control" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="transport" class="form-label">Preferred Transport</label>
-                    <select name="transport" id="transport" class="form-select">
+                    <label for="tripTransport" class="form-label">Preferred Transport</label>
+                    <select name="transport" id="tripTransport" class="form-select " required>
+                        <option value="">Select Transport</option>
                         <option>Bus</option>
                         <option>Car</option>
                         <option>Other</option>
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <label for="accommodation" class="form-label">Accommodation Type</label>
-                    <select name="accommodation" id="accommodation" class="form-select">
+                    <label for="tripAccommodation" class="form-label">Accommodation Type</label>
+                    <select name="accommodation" id="tripAccommodation" class="form-select " required>
+                        <option value="">Select Accommodation</option>
                         <option>Hotel</option>
                         <option>Resort</option>
                         <option>Airbnb</option>
-                        <option>None</option>
+                        <option>Other</option>
                     </select>
                 </div>
                 <div class="col-md-4">
-                    <label for="budget" class="form-label">Budget Range</label>
-                    <select name="budget" id="budget" class="form-select">
+                    <label for="tripBudget" class="form-label">Budget Range</label>
+                    <select name="budget" id="tripBudget" class="form-select" required>
+                        <option value="">Select Budget</option>
                         <option>Low</option>
                         <option>Medium</option>
                         <option>High</option>
                     </select>
                 </div>
                 <div class="col-md-12">
-                    <label for="special" class="form-label">Special Requirements</label>
-                    <textarea name="special" id="special" class="form-control" rows="3"></textarea>
+                    <label for="tripSpecialRequests" class="form-label">Special Requirements</label>
+                    <textarea name="special" id="tripSpecialRequests" class="form-control" rows="3" placeholder="Type here..."></textarea>
                 </div>
             </div>
         
-            <!-- Google reCAPTCHA -->
-            <div class="mb-3">
-                <div class="g-recaptcha" data-sitekey="6LfO2vcqAAAAAFV5mnlySfAcPO8HmEFE4Svatwh5"></div>
-            </div>
-    
-            <div class="text-center mt-4 mb-4">
-                <button type="submit" class="btn btn-primary">
-                    <span id="loadingSpinner" class="spinner-border spinner-border-sm d-none"></span>Book Trip
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary-custom  w-md-25">
+                    <span id="loadingSpinnerTrip" class="spinner-border spinner-border-sm d-none"></span>
+                    Book Now
                 </button>
-                <button type="reset" class="btn btn-secondary">Reset</button>
+                <button type="reset" class="btn btn-secondary-custom  w-md-25">Reset</button>
+                
             </div>
         </form>
+        <!-- <p id="contactSuccessMessag" class="text-success d-none">Your message has been sent successfully!</p> -->
         
-       
+        <div id="tripSuccessToast" class="toast m-3 p-3" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-success text-white">
+                <strong class="me-auto">Thank You!</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body custom-color">
+                Thank you for choosing us. We’ll be in touch soon with the details. Safe travels!
+            </div>
+        </div>
+        
+        
+        
         
     </div>
+    <!-- Form end -->
     
-     
 
-    <!-- <script src="https://www.google.com/recaptcha/enterprise.js?render=6LfO2vcqAAAAAFV5mnlySfAcPO8HmEFE4Svatwh5"></script> -->
+    <script src="./scripts/form.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>
-

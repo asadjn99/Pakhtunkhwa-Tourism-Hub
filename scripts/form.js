@@ -1,129 +1,147 @@
+function validateTripForm(event) {
+    event.preventDefault(); // Prevent direct form submission
 
-function validateForm(event) {
-event.preventDefault(); // Prevents direct submission
-
-let email = document.getElementById('email').value;
-let contact = document.getElementById('contact').value;
-let emergency = document.getElementById('emergency').value;
-let fromDate = document.getElementById('fromDate').value;
-let toDate = document.getElementById('toDate').value;
-
-let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-let phonePattern = /^[0-9]{10,}$/;
-
-if (!emailPattern.test(email)) {
-alert('Invalid email address');
-return;
-}
-if (!phonePattern.test(contact) || !phonePattern.test(emergency)) {
-alert('Invalid phone number (must be at least 10 digits).');
-return;
-}
-if (new Date(fromDate) > new Date(toDate)) {
-alert('Invalid date range');
-return;
-}
-
-submitForm();
-}
-
-
-
-
-
-
-
-
-
-
-
-document.getElementById("bookingForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent direct submission
-
-    // Validate the form
-    if (!validateForm()) return; 
-
-    // Check if reCAPTCHA is completed
-    let recaptchaResponse = grecaptcha.getResponse();
-    if (!recaptchaResponse) {
-        alert("Please complete the reCAPTCHA.");
-        return;
-    }
-
-    // Call submitForm with reCAPTCHA response
-    submitForm(recaptchaResponse);
-});
-
-function validateForm() {
-    let email = document.getElementById('email').value;
-    let contact = document.getElementById('contact').value;
-    let emergency = document.getElementById('emergency').value;
-    let fromDate = document.getElementById('fromDate').value;
-    let toDate = document.getElementById('toDate').value;
+    let name = document.getElementById("tripName");
+    let email = document.getElementById("tripEmail");
+    let phone = document.getElementById("tripPhone");
+    let emergency = document.getElementById("tripEmergency");
+    let departure = document.getElementById("tripDeparture");
+    let destination = document.getElementById("tripDestination");
+    let transport = document.getElementById("tripTransport");
+    let accommodation = document.getElementById("tripAccommodation");
+    let budget = document.getElementById("tripBudget");
+    let specialRequests = document.getElementById("tripSpecialRequests");
+    let fromDate = document.getElementById("tripFromDate");
+    let toDate = document.getElementById("tripToDate");
+    let spinner = document.getElementById("loadingSpinnerTrip");
 
     let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     let phonePattern = /^[0-9]{10,}$/;
 
-    if (!emailPattern.test(email)) {
-        alert('Invalid email address');
-        return false;
+    document.querySelectorAll(".error-msg").forEach(msg => msg.remove());
+
+    let isValid = true;
+
+    if (name.value.trim() === "") {
+        showError(name, "Full name is required.");
+        isValid = false;
     }
-    if (!phonePattern.test(contact) || !phonePattern.test(emergency)) {
-        alert('Invalid phone number (must be at least 10 digits).');
-        return false;
+    if (!emailPattern.test(email.value.trim())) {
+        showError(email, "Enter a valid email.");
+        isValid = false;
     }
-    if (new Date(fromDate) > new Date(toDate)) {
-        alert('Invalid date range');
-        return false;
+    if (!phonePattern.test(phone.value.trim())) {
+        showError(phone, "Enter a valid phone number (at least 10 digits).");
+        isValid = false;
+    }
+    if (fromDate.value.trim() === "" || toDate.value.trim() === "") {
+        showError(fromDate, "Both dates are required.");
+        isValid = false;
     }
 
-    return true; // Return true if validation passes
+    if (!isValid) return;
+
+    submitTripForm();
 }
 
-function submitForm(recaptchaResponse) {
-    let submitButton = document.querySelector("button[type='submit']");
-    let spinner = document.getElementById("loadingSpinner");
+function showError(input, message) {
+    let errorMsg = document.createElement("small");
+    errorMsg.className = "text-danger error-msg";
+    errorMsg.textContent = message;
+    input.parentElement.appendChild(errorMsg);
+}
+
+// function submitTripForm() {
+//     let submitButton = document.querySelector("#tripForm button[type='submit']");
+//     let spinner = document.getElementById("loadingSpinnerTrip");
+//     let successMessage = document.getElementById("contactSuccessMessag");
+
+
+//     submitButton.disabled = true;
+//     spinner.classList.remove("d-none");
+
+//     let formData = {
+//         formType: "tripBooking",
+//         name: document.getElementById("tripName").value.trim(),
+//         email: document.getElementById("tripEmail").value.trim(),
+//         contact: document.getElementById("tripPhone").value.trim(),
+//         emergency: document.getElementById("tripEmergency").value.trim(),
+//         departure: document.getElementById("tripDeparture").value.trim(),
+//         destination: document.getElementById("tripDestination").value.trim(),
+//         transport: document.getElementById("tripTransport").value.trim(),
+//         accommodation: document.getElementById("tripAccommodation").value.trim(),
+//         budget: document.getElementById("tripBudget").value.trim(),
+//         special: document.getElementById("tripSpecialRequests").value.trim(),
+//         fromDate: document.getElementById("tripFromDate").value.trim(),
+//         toDate: document.getElementById("tripToDate").value.trim(),
+//     };
+
+//     let sheetURL = "https://script.google.com/macros/s/AKfycbzSnCqtD5sPBjxVQ3Mlkh72kKc7Qdi7G4dqLV1hjRqq-qAwdHj9SvWfHsRRW6CoaYGqdw/exec";
+
+//     fetch(sheetURL, {
+//         method: "POST",
+//         mode: "no-cors",
+//         headers: { "Content-Type": "application/json" },
+//         body: JSON.stringify(formData)
+//     }).then(response => {
+//         document.getElementById("tripForm").reset(); // Clear form after submission
+//         if (successMessage) successMessage.classList.remove("d-none"); // Show success message
+//     }).catch(error => {
+//         console.error("Error submitting form:", error);
+//     }).finally(() => {
+//         submitButton.disabled = false;
+//         spinner.classList.add("d-none"); // Hide spinner
+//     });
+
+    
+
+// }
+
+
+function submitTripForm() {
+    let submitButton = document.querySelector("#tripForm button[type='submit']");
+    let spinner = document.getElementById("loadingSpinnerTrip");
+    let successToastEl = document.getElementById("tripSuccessToast");
+    let successToast = new bootstrap.Toast(successToastEl);
 
     submitButton.disabled = true;
-    spinner.classList.remove("d-none"); // Show loading spinner
+    spinner.classList.remove("d-none");
 
     let formData = {
-        fromDate: document.getElementById("fromDate").value,
-        toDate: document.getElementById("toDate").value,
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        persons: document.getElementById("persons").value,
-        kids: document.getElementById("kids").value,
-        contact: document.getElementById("contact").value,
-        emergency: document.getElementById("emergency").value,
-        departure: document.getElementById("departure").value,
-        destination: document.getElementById("destination").value,
-        transport: document.getElementById("transport").value,
-        accommodation: document.getElementById("accommodation").value,
-        budget: document.getElementById("budget").value,
-        payment: document.getElementById("payment").value,
-        special: document.getElementById("special").value,
-        "g-recaptcha-response": recaptchaResponse // Send reCAPTCHA response
+        formType: "tripBooking",
+        name: document.getElementById("tripName").value.trim(),
+        email: document.getElementById("tripEmail").value.trim(),
+        contact: document.getElementById("tripPhone").value.trim(),
+        emergency: document.getElementById("tripEmergency").value.trim(),
+        departure: document.getElementById("tripDeparture").value.trim(),
+        destination: document.getElementById("tripDestination").value.trim(),
+        transport: document.getElementById("tripTransport").value.trim(),
+        accommodation: document.getElementById("tripAccommodation").value.trim(),
+        budget: document.getElementById("tripBudget").value.trim(),
+        special: document.getElementById("tripSpecialRequests").value.trim(),
+        fromDate: document.getElementById("tripFromDate").value.trim(),
+        toDate: document.getElementById("tripToDate").value.trim(),
     };
 
-    let sheetURL = "https://script.google.com/macros/s/AKfycbz_DsMi9ecu7BQ84yblKlgUcvves2tuCIXCxmV9JFfn1JEHSxgbG9f4Jatcikjdu1J0Pw/exec";
+    let sheetURL = "https://script.google.com/macros/s/AKfycbzSnCqtD5sPBjxVQ3Mlkh72kKc7Qdi7G4dqLV1hjRqq-qAwdHj9SvWfHsRRW6CoaYGqdw/exec";
 
     fetch(sheetURL, {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData)
-    })
-    .then(() => {
-        alert("Your trip has been booked!");
-        document.getElementById("bookingForm").reset();
-        grecaptcha.reset(); // Reset reCAPTCHA
-    })
-    .catch(error => {
-        alert("Error submitting form. Please try again.");
-        console.error("Error:", error);
-    })
-    .finally(() => {
+    }).then(() => {
+        document.getElementById("tripForm").reset(); // form clear hota hai
+
+        successToast.show(); 
+
+        // Hide the msg after 10 seconds
+        setTimeout(() => {
+            successToast.hide();
+        }, 10000);
+    }).catch(error => {
+        console.error("Error submitting form:", error);
+    }).finally(() => {
         submitButton.disabled = false;
         spinner.classList.add("d-none"); // Hide spinner
     });
