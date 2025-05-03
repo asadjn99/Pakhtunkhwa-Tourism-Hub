@@ -973,6 +973,24 @@ body {
 /* gallery end here */
 
 
+
+
+/* Responsive Font Size Utilities */
+.fs-xs-6  { font-size: 0.75rem !important; }  /* Extra small */
+.fs-sm-5  { font-size: 1.1rem !important; }     /* Small */
+.fs-md-4  { font-size: 1.25rem !important; }  /* Medium */
+.fs-lg-3  { font-size: 1.5rem !important; }   /* Large */
+.fs-xl-2  { font-size: 2rem !important; }     /* Extra large */
+
+@media (max-width: 576px) {
+    .fs-responsive { font-size: 1rem !important; }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    .fs-responsive { font-size: 1.25rem !important; }
+}
+@media (min-width: 769px) {
+    .fs-responsive { font-size: 1.5rem !important; }
+}
     </style>
 </head>
 <body>
@@ -996,7 +1014,7 @@ body {
 
         <!-- Navbar Links -->
         <div class="collapse navbar-collapse " id="navbarNav">
-            <ul class="navbar-nav fw-bold me-auto">
+            <ul class="navbar-nav fw-bold me-auto fs-sm-5">
                 <li class="nav-item">
                     <a class="nav-link" href="../../index.html">Home</a>
                 </li>

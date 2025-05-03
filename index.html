@@ -131,8 +131,8 @@ body {
   }
 
   .navbar-nav .nav-link {
-    /* color: white !important; */
-    font-size: 16px;
+    
+    font-size: 18px !important;
   }
   .dropdown-menu .dropdown-item{
     color: black !important;
@@ -166,10 +166,7 @@ body {
   background-color: rgba(0, 0, 0, 0.9) !important;
 }
 
-/* Dropdown hover effect */
-/* .navbar .nav-link:hover, .dropdown-item:hover {
-  color: #DF6951 !important;
-} */
+
 
 /* Ensure proper visibility on small screens */
 @media (max-width: 991px) {
@@ -212,8 +209,8 @@ body {
 
 
 .active-nav-link{ 
-  border-bottom: 3px solid #DF6951 !important;
-      padding-bottom: 5px !important;
+    border-bottom: 3px solid #DF6951 !important;
+    padding-bottom: 5px !important;
 }
 
 
@@ -752,6 +749,22 @@ body {
 
 
 
+/* Responsive Font Size Utilities */
+.fs-xs-6  { font-size: 0.75rem !important; }  /* Extra small */
+.fs-sm-5  { font-size: 1.1rem !important; }     /* Small */
+.fs-md-4  { font-size: 1.25rem !important; }  /* Medium */
+.fs-lg-3  { font-size: 1.5rem !important; }   /* Large */
+.fs-xl-2  { font-size: 2rem !important; }     /* Extra large */
+
+@media (max-width: 576px) {
+    .fs-responsive { font-size: 1rem !important; }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    .fs-responsive { font-size: 1.25rem !important; }
+}
+@media (min-width: 769px) {
+    .fs-responsive { font-size: 1.5rem !important; }
+}
 
 
 
@@ -801,7 +814,7 @@ body {
   
       <!-- Navbar Links -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav mx-auto fw-bold">
+        <ul class="navbar-nav mx-auto fw-bold fs-sm-5">
           <li class="nav-item"><a class="nav-link active active-nav-link" href="./index.html">Home</a></li>
   
           <!-- National Tours Dropdown -->
@@ -811,12 +824,12 @@ body {
               National Tours
             </a>
             <ul class="dropdown-menu" aria-labelledby="nationalDropdown">
-              <li><a class="dropdown-item" href="#kpk">Khyber Pakhtunkhwa</a></li>
-              <li><a class="dropdown-item" href="#balochistan">Balochistan</a></li>
-              <li><a class="dropdown-item" href="#sindh">Sindh</a></li>
-              <li><a class="dropdown-item" href="#punjab">Punjab</a></li>
-              <li><a class="dropdown-item" href="#gilgit-baltistan">Gilgit-Baltistan</a></li>
-              <li><a class="dropdown-item" href="#azad-kashmir">Azad Kashmir</a></li>
+              <li><a class="dropdown-item" href="./kpk.html">Khyber Pakhtunkhwa</a></li>
+              <li><a class="dropdown-item" href="./pak-provinces/balochistan.html">Balochistan</a></li>
+              <li><a class="dropdown-item" href="./pak-provinces/sindh.html">Sindh</a></li>
+              <li><a class="dropdown-item" href="./pak-provinces/punjab.html">Punjab</a></li>
+              <li><a class="dropdown-item" href="./pak-provinces/baltistan.html">Gilgit-Baltistan</a></li>
+              <li><a class="dropdown-item" href="./pak-provinces/kashmir.html">Azad Kashmir</a></li>
             </ul>
           </li>
   
