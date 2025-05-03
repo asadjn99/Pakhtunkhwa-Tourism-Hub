@@ -88,7 +88,7 @@ body {
 
 /* Small screen styles */
 @media (max-width: 991px) {
-  /* Ensure dropdown menu visibility on small screens */
+  /*  dropdown menu visibility on small screens */
   .dropdown-menu {
     display: none;  /* Hide by default */
     position: absolute;
@@ -594,6 +594,15 @@ body {
 
 
 
+.btn-outline-custom{
+    border: 1px solid #DF6951 !important;
+    color: #DF6951 !important;
+    transition: all 0.3s ease-in-out;
+}
+.btn-outline-custom:hover{
+    background-color: #DF6951 !important;
+    color: white !important;
+}
 
     </style>
 </head>
@@ -648,13 +657,13 @@ body {
             </ul>
           </li>
   
-          <li class="nav-item"><a class="nav-link" href="#">Upcoming Packages</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="./../../upcoming-trips.html">Upcoming Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="./../../aboutus.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="./../../gallery.html">Gallery</a></li>
         </ul>
   
         <!-- Custom Trip Button -->
-        <a id="primary-btn-nav" class="btn btn-primary-custom fw-bold" href="form.html">Build Your Trip</a>
+        <a id="primary-btn-nav" class="btn btn-primary-custom fw-bold" href="./../../form.html">Build Your Trip</a>
 
       </div>
     </div>
@@ -681,6 +690,14 @@ body {
 <!-- End of Hero Section for Swat -->
 
 
+<!-- Swat Description Section -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">About Swat</h2>
+    <p class="text-justify" style="font-size: 1.1rem; line-height: 1.8;">
+        Swat is known as the Switzerland of Pakistan. The River Swat is a clear-water river that starts from the Ushu range of mountains and flows through the valley of Swat. It is one of the greenest valleys in Northern Pakistan and is well connected to the rest of the country. There are regular flights from Islamabad to Swat and back. One can also reach Swat from Peshawar (160 km) or Islamabad (250 km). The valley of Swat is located in the foothills of the Hindu Kush mountain range. The main towns of the valley are Mingora and Saidu Sharif. Swat is a place for leisure lovers, hikers, and archaeologists.
+    </p>
+  </section>
+  
 
 
 <!-- Breadcrumb Navigation -->
@@ -700,130 +717,107 @@ body {
 
 
 
-<!-- Swat Valley Trip Packages Section -->
+<!-- Swat Valley Trips information Section -->
  <section>
 <div class="container mt-4">
-    <h2 class="fw-bold mb-4">Upcoming Trips</h2>
+    <h2 class="fw-bold mb-4">Swat Tour Information</h2>
 
     <div class="row g-4">
-        <!-- 2-Day Swat Trip -->
+        <!-- 3-8 Days kalam Trip -->
         <div class="col-md-4">
             <div class="card tour-card shadow border-0 bg-white">
                 <div class="image-wrapper">
-                    <img src="../../images/KPK-Valleys/Swat/Kalam2.jpeg" class="card-img-top" alt="2-Day Swat Trip">
+                    <img src="../../images/KPK-Valleys/Swat/Kalam2.jpeg" class="card-img-top" alt="Kalam, Swat Valley">
                 </div>
                 <div class="card-body text-center">
                     <div class="trip-info d-flex justify-content-center align-items-center opacity-50">
-                        <i class="fa-solid fa-clock me-2"></i> 2 Days 
-                        <span class="mx-3">|</span> 
-                        <i class="fa-solid fa-users me-2"></i> Max 20 People
+                        <i class="fa-solid fa-clock me-2"></i> Trip Plans: 3 – 8 Days
                     </div>
-                    <h5 class="fw-bold mt-2">KALAM</h5>
-                    <p class="custom-color fw-bold fs-5">PKR 9,999</p>
-                    <p class="card-text">Explore the heart of Swat, with mesmerizing rivers, pine forests, and stunning landscapes that make Kalam a must-visit destination.</p>
-                    <a href="./swat-2days.html" class="btn btn-primary-custom w-100">Explore</a>
+                    <h5 class="fw-bold mt-2 custom-color">KALAM</h5>
+                    <!-- Price removed for information-only display -->
+                    <p class="card-text">Kalam is one of the most beautiful parts of Swat Valley, known for its cool climate, lush pine forests, and breathtaking riverside views. A perfect escape for nature lovers and explorers.</p>
+                    <a href="./kalam-info.html" class="btn btn-outline-custom w-100">Learn More</a>
                 </div>
             </div>
         </div>
 
-        <!-- 3-Day Swat Trip -->
+
+        <!-- 4-8 Days Mahodand Lake Trip -->
         <div class="col-md-4">
-            <div class="card tour-card shadow border-0">
+            <div class="card tour-card shadow border-0 bg-white">
                 <div class="image-wrapper">
-                    <img src="./../../images/KPK-Valleys/Swat/Mahodand-lake-kalam.jpg" class="card-img-top" alt="3-Day Swat Trip">
+                    <img src="./../../images/KPK-Valleys/Swat/Mahodand-lake-kalam.jpg" class="card-img-top" alt="Mahodand Lake, Swat Valley">
                 </div>
                 <div class="card-body text-center">
                     <div class="trip-info d-flex justify-content-center align-items-center opacity-50">
-                        <i class="fa-solid fa-clock me-2"></i> 3 Days 
-                        <span class="mx-3">|</span> 
-                        <i class="fa-solid fa-users me-2"></i> Max 25 People
+                        <i class="fa-solid fa-clock me-2"></i> Trip Plans: 4 – 8 Days
                     </div>
-                    <h5 class="fw-bold mt-2">MAHODAND LAKE</h5>
-                    <p class="custom-color fw-bold fs-5">PKR 11,999</p>
-                    <p class="card-text">A journey to the stunning alpine lake, surrounded by towering mountains and lush greenery, offering a truly magical experience.</p>
-                    <!-- <a href="./mahodand-trip3.html" class="btn btn-primary-custom w-100">Explore</a> -->
-                    <a href="./../../trip-not-available.html" class="btn btn-primary-custom w-100">Explore</a>
+                    <h5 class="fw-bold mt-2 custom-color">MAHODAND LAKE</h5>
+                    <!-- Price removed for information-only display -->
+                    <p class="card-text">A journey to the stunning alpine lake, surrounded by towering mountains and lush greenery, offering a truly magical experience for nature lovers and adventurers alike.</p>
+                    <a href="./mahodand-info.html" class="btn btn-outline-custom w-100">Learn More</a>
                 </div>
             </div>
         </div>
 
-        <!-- 5-Day Swat Trip -->
+
+        <!-- 3-8 Days Malam Jabba Trip -->
         <div class="col-md-4">
-            <div class="card tour-card shadow border-0">
+            <div class="card tour-card shadow border-0 bg-white">
                 <div class="image-wrapper">
-                    <img src="./../../images/KPK-Valleys/Swat/Malam-Jabba.jpg" class="card-img-top" alt="5-Day Swat Trip">
+                    <img src="./../../images/KPK-Valleys/Swat/Malam-Jabba.jpg" class="card-img-top" alt="Malam Jabba, Swat Valley">
                 </div>
                 <div class="card-body text-center">
                     <div class="trip-info d-flex justify-content-center align-items-center opacity-50">
-                        <i class="fa-solid fa-clock me-2"></i> 5 Days 
-                        <span class="mx-3">|</span> 
-                        <i class="fa-solid fa-users me-2"></i> Max 30 People
+                        <i class="fa-solid fa-clock me-2"></i> Trip Plans: 3 - 8 Days
                     </div>
-                    <h5 class="fw-bold mt-2">MALAMJABBA</h5>
-                    <p class="custom-color fw-bold fs-5">PKR 21,999</p>
-                    <p class="card-text">Enjoy the thrill of Pakistan’s famous ski resort, featuring snow-capped peaks, adventure activities, and a peaceful retreat into nature.</p>
-                    <a href="./../../trip-not-available.html" class="btn btn-primary-custom w-100">Explore</a>
+                    <h5 class="fw-bold mt-2 custom-color">MALAMJABBA</h5>
+                    <!-- Price removed for information-only display -->
+                    <p class="card-text">Enjoy the thrill of Pakistan’s famous ski resort, featuring snow-capped peaks, adventure activities,featuring snow-capped peaks, adventure activities, and a peaceful retreat into nature.</p>
+                    <a href="./malamjabba-info.html" class="btn btn-outline-custom w-100">Learn More</a>
                 </div>
             </div>
         </div>
+
         
-        <!-- 5-Day Swat Trip -->
+        <!-- 3-7 Days Gabin Jabba Trip -->
         <div class="col-md-4">
-            <div class="card tour-card shadow border-0">
+            <div class="card tour-card shadow border-0 bg-white">
                 <div class="image-wrapper">
-                    <img src="./../../images/KPK-Valleys/Swat/Gabin_Jabba_swat_valley.jpg" class="card-img-top" alt="5-Day Swat Trip">
+                    <img src="./../../images/KPK-Valleys/Swat/Gabin_Jabba_swat_valley.jpg" class="card-img-top" alt="Gabin Jabba, Swat Valley">
                 </div>
                 <div class="card-body text-center">
                     <div class="trip-info d-flex justify-content-center align-items-center opacity-50">
-                        <i class="fa-solid fa-clock me-2"></i> 4 Days 
-                        <span class="mx-3">|</span> 
-                        <i class="fa-solid fa-users me-2"></i> Max 30 People
+                        <i class="fa-solid fa-clock me-2"></i> Trip Plans: 3 – 7 Days
                     </div>
-                    <h5 class="fw-bold mt-2">GABIN JABBA</h5>
-                    <p class="custom-color fw-bold fs-5">PKR 14,499</p>
-                    <p class="card-text">A serene escape into lush green meadows, crystal-clear streams, and breathtaking mountain views, perfect for nature lovers.</p>
-                    <a href="./../../trip-not-available.html" class="btn btn-primary-custom w-100">Explore</a>
+                    <h5 class="fw-bold mt-2 custom-color">GABIN JABBA</h5>
+                    <!-- Price removed for information-only display -->
+                    <p class="card-text">A serene escape into lush green meadows, crystal-clear streams, and breathtaking mountain,views—perfect for nature, views—perfect for nature lovers and hikers seeking peace and beauty.</p>
+                    <a href="./gabinjabba-info.html" class="btn btn-outline-custom w-100">Learn More</a>
                 </div>
             </div>
         </div>
-        <!-- 5-Day Swat Trip -->
+
+
+
+        <!-- 4-6 Days Bahrain & Madyan Trip -->
         <div class="col-md-4">
-            <div class="card tour-card shadow border-0">
+            <div class="card tour-card shadow border-0 bg-white">
                 <div class="image-wrapper">
-                    <img src="./../../images/KPK-Valleys/Swat/Madyan-bahrain.jpg" class="card-img-top" alt="5-Day Swat Trip">
+                    <img src="./../../images/KPK-Valleys/Swat/Madyan-bahrain.jpg" class="card-img-top" alt="Bahrain and Madyan, Swat Valley">
                 </div>
                 <div class="card-body text-center">
                     <div class="trip-info d-flex justify-content-center align-items-center opacity-50">
-                        <i class="fa-solid fa-clock me-2"></i> 5 Days 
-                        <span class="mx-3">|</span> 
-                        <i class="fa-solid fa-users me-2"></i> Max 35 People
+                        <i class="fa-solid fa-clock me-2"></i> Trip Plans: 4 – 6 Days
                     </div>
-                    <h5 class="fw-bold mt-2">BAHRAIN & MADYAN</h5>
-                    <p class="custom-color fw-bold fs-5">PKR 9,499</p>
-                    <p class="card-text">A cultural and scenic trip through charming hill stations, known for their fresh springs, riverside beauty, and vibrant local markets.</p>
-                    <a href="./../../trip-not-available.html" class="btn btn-primary-custom w-100">Explore</a>
+                    <h5 class="fw-bold mt-2 custom-color">BAHRAIN & MADYAN</h5>
+                    <!-- Price removed for information-only display -->
+                    <p class="card-text">A cultural and scenic journey through charming hill stations, famous for their fresh springs, riverside beauty, and vibrant local bazaars offering a taste of Swat’s traditions.</p>
+                    <a href="./bahrain-info.html" class="btn btn-outline-custom w-100">Learn More</a>
                 </div>
             </div>
         </div>
-        <!-- 5-Day Swat Trip -->
-        <div class="col-md-4">
-            <div class="card tour-card shadow border-0">
-                <div class="image-wrapper">
-                    <img src="./../../images/KPK-Valleys/Swat/Malam-Jabba-6.jpg" class="card-img-top" alt="5-Day Swat Trip">
-                </div>
-                <div class="card-body text-center">
-                    <div class="trip-info d-flex justify-content-center align-items-center opacity-50">
-                        <i class="fa-solid fa-clock me-2"></i> 8 Days 
-                        <span class="mx-3">|</span> 
-                        <i class="fa-solid fa-users me-2"></i> Max 21 People
-                    </div>
-                    <h5 class="fw-bold mt-2">MALAMJABBA</h5>
-                    <p class="custom-color fw-bold fs-5">PKR 27,499</p>
-                    <p class="card-text">Malam Jabba is a hill station and ski resort in the Swat Valley of Khyber Pakhtunkhwa, Pakistan, within the Hindu Kush mountain</p>
-                    <a href="./../../trip-not-available.html" class="btn btn-primary-custom w-100">Explore</a>
-                </div>
-            </div>
-        </div>
+
 
 
 
@@ -832,6 +826,7 @@ body {
 </div>
 </section>
 <!-- End Swat Valley Trip Packages Section -->
+
 
 
 <!-- National Tours -->
@@ -1003,7 +998,7 @@ body {
 
 
 
-
+<script type="text/plain">
 <!-- Featured Trip Packages Section -->
 <section>
     <div class="container mt-3 mt-md-4">
@@ -1103,7 +1098,7 @@ body {
     </div>
     </section>
 <!-- End Swat Valley Trip Packages Section -->
-    
+</script>
    
 
 
@@ -1111,7 +1106,7 @@ body {
 <div class="container p-5"></div>
 
 <!-- Footer -->
-<footer class="p-4 bg-dark text-white text-center position-relative"
+<footer class="p-4 bg-dark text-white text-center position-relative">
     <!-- About | Contact | Map  -->
     <div class="container">
         <div class="row">

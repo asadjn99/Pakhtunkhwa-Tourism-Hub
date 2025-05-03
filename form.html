@@ -24,6 +24,12 @@ body {
   font-family: "Barlow", sans-serif !important;
 }
 
+
+
+
+
+
+
     .custom-color{
             color: #DF6951 !important;
         }
@@ -32,7 +38,7 @@ body {
         }
 
         body {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(./images/form-bg.jpg);
+            /* background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url(./images/form-bg.jpg); */
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
@@ -67,8 +73,197 @@ body {
       }
 
 
+
+
+
+
+
+
+/* Navbar start here................. */
+
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* prevent jump effect */
+  }
+}
+
+
+/* Dropdown item hover effect */
+.dropdown-item:hover {
+  background-color: #DF6951 !important;
+  color: white !important;
+}
+
+/* Default navbar styles */
+.navbar {
+  transition: background-color 0.3s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    padding: 10px 20px !important;
+    border-radius: 0 !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5) !important;
+    z-index: 1000 !important;
+    
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.navbar .nav-link:hover {
+  color: white !important;
+  border-bottom: 3px solid #DF6951 !important;
+    padding-bottom: 5px !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #DF6951 !important;
+  color: white !important;
+}
+
+.btn-outline-light:hover {
+  background-color: #DF6951 !important;
+  color: white !important;
+  border-color: #DF6951 !important;
+}
+
+ .dropdown-menu {
+  background-color: white !important;
+  border-radius: 0.25rem;
+}
+/*
+.dropdown-item {
+  padding: 10px 20px;
+} */
+
+
+
+/* Small screen styles */
+@media (max-width: 991px) {
+  /* Ensure dropdown menu visibility on small screens */
+  .dropdown-menu {
+    display: none;  /* Hide by default */
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  /* Show dropdown menu when toggled */
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  /* Navbar collapse styles */
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-left: 15px;
+  }
+
+  .navbar-nav .nav-link {
+    /* color: white !important; */
+    font-size: 16px;
+  }
+  .dropdown-menu .dropdown-item{
+    color: black !important;
+    background-color: white !important;
+  }
+
+  #custom-trip-btn {
+    display: block !important;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+
+
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+
+
+
+/* Navbar when scrolled */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+
+/* Ensure proper visibility on small screens */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: static;
+    margin: 0;
+  }
+
+
+  #custom-trip-btn {
+    display: block;
+    width: 100% !important;
+    margin-top: 20px;
+    text-align: center;
+    
+  }
+}
+
+/* navbar customize btn font size */
+#primary-btn-nav{
+        font-size: 14px !important;
+    }
+
+    @media (max-width: 768px){
+        #primary-btn-nav{
+            margin-top: 5px !important;
+            padding: 5px 75px !important;
+            font-size: 13x !important;
+        }
+    }
+
+
+.active-nav-link{ 
+  border-bottom: 3px solid #DF6951 !important;
+      padding-bottom: 5px !important;
+}
+
+
+/* Nabar end here ..............*/
+
+
+
+
+
+
+
+
+
+      
+
 /* Customize trip form  */
-    form {
+form {
         padding: 20px;
         width: 70%;
         margin: 0 auto;
@@ -151,6 +346,7 @@ body {
 
 
 
+
 /* Custom Button Styles */
 .btn-primary-custom {
     background-color: #DF6951 !important;
@@ -160,9 +356,18 @@ body {
     padding: 10px 20px !important;
     /* font-weight: 600; */
     letter-spacing: 1px;
-    border-radius: 10px;
+    border-radius: 8px;
     transition: all 0.3s ease-in-out;
 }
+.btn-primary-custom.active {
+    /* background-color: white !important; */
+    background-color: transparent !important;
+    border: 1px solid white !important;
+    /* box-shadow: 0 0 10px rgba(223, 105, 81, 0.6); */
+    color: #ffffff !important;
+    /* transform: scale(1.05); */
+}
+
 .btn-primary-custom:hover {
     background-color: #C65540 !important;
     transform: translateY(-2px);
@@ -185,119 +390,226 @@ body {
     transform: translateY(-2px);
 }
 
+.btn-outline-custom{
+    border: 1px solid #DF6951 !important;
+    color: #DF6951 !important;
+    transition: all 0.3s ease-in-out;
+}
 
 
 </style>
     
 </head>
 <body>
-    <div class="container text-light text-center ">
-            <a href="./index.html"> 
-                <img src="./images/logo.png" class="img-fluid p-3" style="max-width: 200px;" alt="Logo">
-            </a>
-            <h2 class="fw-bold">Your Dream Trip, Your Way!</h2>
-            <!-- <p class="lead">Exciting adventures are just a form away! Let us plan a trip that matches your dreams and desires.</p> -->
-            <p class="lead">Customize your travel experience with ease. Fill in your details, and we'll handle the rest!</p>
-            <!-- <p class="lead">The world is waiting for you! Share your travel plans, and we'll design a journey you'll never forget.</p> -->
-    </div>
-        <form onsubmit="validateTripForm(event)" method="POST" id="tripForm" class="mt-4" novalidate>
-            <input type="hidden" name="formType" value="tripBooking">
-        
-            <div class="row g-3">
-               
-                <div class="col-md-4">
-                    <label for="tripName" class="form-label">Full Name</label>
-                    <input type="text" name="name" id="tripName" class="form-control" placeholder="Full Name" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="tripEmail" class="form-label">Email</label>
-                    <input type="email" name="email" id="tripEmail" class="form-control" placeholder="Email" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="tripPhone" class="form-label">Contact</label>
-                    <input type="text" name="contact" id="tripPhone" class="form-control" pattern="[0-9]{10,15}" placeholder="Phone" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="tripEmergency" class="form-label">Emergency Contact</label>
-                    <input type="text" name="emergency" id="tripEmergency" class="form-control" pattern="[0-9]{10,15}"  placeholder="Emergency Contact" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="tripFromDate" class="form-label">Date From</label>
-                    <input type="date" name="fromDate" id="tripFromDate" class="form-control"    required>
-                </div>
-                <div class="col-md-4">
-                    <label for="tripToDate" class="form-label">Date To</label>
-                    <input type="date" name="toDate" id="tripToDate" class="form-control" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="tripDeparture" class="form-label">Departure</label>
-                    <input type="text" name="departure" id="tripDeparture" class="form-control" placeholder="کہاں سے جانا ہے" required>
-                </div>
-                <div class="col-md-6">
-                    <label for="tripDestination" class="form-label">Destination</label>
-                    <input type="text" name="destination" id="tripDestination" class="form-control" placeholder="کہاں جانا ہے" required>
-                </div>
-                <div class="col-md-4">
-                    <label for="tripTransport" class="form-label">Preferred Transport</label>
-                    <select name="transport" id="tripTransport" class="form-select " required>
-                        <option value="">Select Transport</option>
-                        <option>Bus</option>
-                        <option>Car</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <label for="tripAccommodation" class="form-label">Accommodation Type</label>
-                    <select name="accommodation" id="tripAccommodation" class="form-select " required>
-                        <option value="">Select Accommodation</option>
-                        <option>Hotel</option>
-                        <option>Resort</option>
-                        <option>Airbnb</option>
-                        <option>Other</option>
-                    </select>
-                </div>
-                <div class="col-md-4">
-                    <label for="tripBudget" class="form-label">Budget Range</label>
-                    <select name="budget" id="tripBudget" class="form-select" required>
-                        <option value="">Select Budget</option>
-                        <option>Low</option>
-                        <option>Medium</option>
-                        <option>High</option>
-                    </select>
-                </div>
-                <div class="col-md-12">
-                    <label for="tripSpecialRequests" class="form-label">Special Requirements</label>
-                    <textarea name="special" id="tripSpecialRequests" class="form-control" rows="3" placeholder="Type here..."></textarea>
-                </div>
-            </div>
-        
-            <div class="text-center mt-4">
-                <button type="submit" class="btn btn-primary-custom  w-md-25">
-                    <span id="loadingSpinnerTrip" class="spinner-border spinner-border-sm d-none"></span>
-                    Book Now
-                </button>
-                <button type="reset" class="btn btn-secondary-custom  w-md-25">Reset</button>
-                
-            </div>
-        </form>
-        <!-- <p id="contactSuccessMessag" class="text-success d-none">Your message has been sent successfully!</p> -->
-        
-        <div id="tripSuccessToast" class="toast m-3 p-3" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header bg-success text-white">
-                <strong class="me-auto">Thank You!</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-            <div class="toast-body custom-color">
-                Thank you for choosing us. We’ll be in touch soon with the details. Safe travels!
-            </div>
-        </div>
-        
-        
-        
-        
-    </div>
-    <!-- Form end -->
     
+
+
+
+<!-- Navbar start here............... -->
+<nav id="home" class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="./../../index.html">
+        <img src="./images/logo.png" style="width: 120px;" alt="logo">
+      </a>
+  
+      <!-- Hamburger Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto fw-bold">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+  
+          <!-- National Tours Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="nationalDropdown" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              National Tours
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="nationalDropdown">
+              <li><a class="dropdown-item" href="#kpk">Khyber Pakhtunkhwa</a></li>
+              <li><a class="dropdown-item" href="#balochistan">Balochistan</a></li>
+              <li><a class="dropdown-item" href="#sindh">Sindh</a></li>
+              <li><a class="dropdown-item" href="#punjab">Punjab</a></li>
+              <li><a class="dropdown-item" href="#gilgit-baltistan">Gilgit-Baltistan</a></li>
+              <li><a class="dropdown-item" href="#azad-kashmir">Azad Kashmir</a></li>
+            </ul>
+          </li>
+  
+          <!-- Foreign Tours Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="foreignDropdown" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Foreign Tours
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="foreignDropdown">
+              <li><a class="dropdown-item" href="#dubai">Dubai</a></li>
+              <li><a class="dropdown-item" href="#malaysia">Malaysia</a></li>
+              <li><a class="dropdown-item" href="#turkey">Turkey</a></li>
+              <li><a class="dropdown-item" href="#singapore">Singapore</a></li>
+              <li><a class="dropdown-item" href="#other">Other</a></li>
+            </ul>
+          </li>
+  
+          <li class="nav-item"><a class="nav-link" href="./upcoming-trips.html">Upcoming Trips</a></li>
+          <li class="nav-item"><a class="nav-link" href="./aboutus.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+        </ul>
+  
+        <!-- Custom Trip Button -->
+        <a id="primary-btn-nav" class="nav-link btn fw-bold btn-primary-custom active" href="form.html">Build Your Trip</a>
+      </div>
+    </div>
+</nav>
+  <!-- Navbar end here............... -->
+  <!-- <div class="container mb-5 mt-5 p-5"></div> -->
+
+
+  
+
+
+
+<!-- <section class="container mb-5 mt-5 p-5"> -->
+    <!-- <div class="container">     -->
+        <!-- <script type="text"> -->
+  <div class="container text-light text-center mt-5">
+          <!-- <a href="./index.html">  -->
+              <!-- <img src="./images/logo.png" class="img-fluid p-3" style="max-width: 200px;" alt="Logo"> -->
+          </a>
+          <h2 class="fw-bold">Your Dream Trip, Your Way!</h2>
+          <!-- <p class="lead">Exciting adventures are just a form away! Let us plan a trip that matches your dreams and desires.</p> -->
+          <p class="fs-lg-3">Customize your travel experience with ease. Fill in your details, and we'll handle the rest!</p>
+          <!-- <p class="lead">The world is waiting for you! Share your travel plans, and we'll design a journey you'll never forget.</p> -->
+  </div>
+<!-- </script> -->
+
+      <form onsubmit="validateTripForm(event)" method="POST" id="tripForm" class="mt-4" novalidate >
+          <input type="hidden" name="formType" value="tripBooking">
+      
+          <div class="row g-3">
+
+              <div class="col-md-4">
+                  <label for="tripName" class="form-label">Full Name</label>
+                  <input type="text" name="name" id="tripName" class="form-control" placeholder="Full Name" required>
+              </div>
+          
+              <div class="col-md-4">
+                  <label for="tripEmail" class="form-label">Email</label>
+                  <input type="email" name="email" id="tripEmail" class="form-control" placeholder="Email" required>
+              </div>
+          
+              <div class="col-md-4">
+                  <label for="tripPhone" class="form-label">Contact</label>
+                  <input type="text" name="contact" id="tripPhone" class="form-control" pattern="[0-9]{10,15}" placeholder="Phone" required>
+              </div>
+          
+              <div class="col-md-4">
+                  <label for="tripEmergency" class="form-label">Emergency Contact</label>
+                  <input type="text" name="emergency" id="tripEmergency" class="form-control" pattern="[0-9]{10,15}" placeholder="Emergency Contact" required>
+              </div>
+          
+              <div class="col-md-4">
+                  <label for="tripFromDate" class="form-label">Date From</label>
+                  <input type="date" name="fromDate" id="tripFromDate" class="form-control" required>
+              </div>
+          
+              <div class="col-md-4">
+                  <label for="tripToDate" class="form-label">Date To</label>
+                  <input type="date" name="toDate" id="tripToDate" class="form-control" required>
+              </div>
+          
+              <div class="col-md-6">
+                  <label for="tripDeparture" class="form-label">Departure</label>
+                  <select name="departure" id="tripDeparture" class="form-select" required>
+                      <option value="">Select Departure</option>
+                      <option value="Peshawar">Peshawar</option>
+                      <option value="Islamabad">Islamabad</option>
+                  </select>
+              </div>
+          
+              <div class="col-md-6">
+                  <label for="tripDestination" class="form-label">Destination</label>
+                  <input type="text" name="destination" id="tripDestination" class="form-control" placeholder="کہاں جانا ہے" required>
+              </div>
+          
+              <div class="col-md-4">
+                  <label for="tripTransport" class="form-label">Preferred Transport</label>
+                  <input type="text" name="transport" id="tripTransport" class="form-control" list="transportOptions" placeholder="Car, Bus, etc." required>
+                  <datalist id="transportOptions">
+                      <option value="Bus">
+                      <option value="Car">
+                      <option value="Van">
+                      <option value="Train">
+                      <option value="Other">
+                  </datalist>
+              </div>
+          
+              <!-- People breakdown -->
+              <div class="col-md-4">
+                  <label for="adults" class="form-label">Adults (Male)</label>
+                  <input type="number" name="tripAdults" id="Adults" class="form-control" placeholder="0" min="0" required>
+              </div>
+          
+              <div class="col-md-4">
+                  <label for="women" class="form-label">Women</label>
+                  <input type="number" name="women" id="Women" class="form-control" placeholder="0" min="0" required>
+              </div>
+          
+              <div class="col-md-4">
+                  <label for="children" class="form-label">Teenagers / Children</label>
+                  <input type="number" name="children" id="Children" class="form-control" placeholder="0" min="0" required>
+              </div>
+          
+              <div class="col-md-4">
+                  <label for="tripBudget" class="form-label">Budget Range</label>
+                  <select name="budget" id="tripBudget" class="form-select" required>
+                      <option value="">Select Budget</option>
+                      <option>Low</option>
+                      <option>Medium</option>
+                      <option>High</option>
+                  </select>
+              </div>
+          
+              <div class="col-md-12">
+                  <label for="tripSpecialRequests" class="form-label">Special Requirements</label>
+                  <textarea name="special" id="tripSpecialRequests" class="form-control" rows="3" placeholder="Type here..."></textarea>
+              </div>
+          
+          </div>
+          
+      
+          <div class="text-center mt-4">
+              <button type="submit" class="btn btn-primary-custom  w-md-25">
+                  <span id="loadingSpinnerTrip" class="spinner-border spinner-border-sm d-none"></span>
+                  Book Now
+              </button>
+              <button type="reset" class="btn btn-secondary-custom  w-md-25">Reset</button>
+              
+          </div>
+      </form>
+      <!-- <p id="contactSuccessMessag" class="text-success d-none">Your message has been sent successfully!</p> -->
+      
+      <div id="tripSuccessToast" class="toast m-3 p-3" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header bg-success text-white">
+              <strong class="me-auto">Thank You!</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body custom-color">
+              Thank you for choosing us. We’ll be in touch soon with the details. Safe travels!
+          </div>
+      </div>
+      
+      
+      
+      
+  </div>
+  <!-- Form end -->
+<!-- </div> -->
+</section>
+
 
     <script src="./scripts/form.js"></script>
 
