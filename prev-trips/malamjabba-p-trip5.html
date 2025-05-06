@@ -315,7 +315,7 @@ body {
     background-color: #DF6951 !important;
     border: none;
     color: rgb(255, 255, 255) !important;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 600;
     padding: 10px 20px !important;
     letter-spacing: 1px;
@@ -387,6 +387,29 @@ video {
         }
 /* End Testimonials Sec Design */
 
+
+
+
+/* Responsive Font Size Utilities */
+.fs-xs-6  { font-size: 0.75rem !important; }  /* Extra small */
+.fs-sm-5  { font-size: 1.1rem !important; }     /* Small */
+.fs-md-4  { font-size: 1.25rem !important; }  /* Medium */
+.fs-lg-3  { font-size: 1.5rem !important; }   /* Large */
+.fs-xl-2  { font-size: 2rem !important; }     /* Extra large */
+
+@media (max-width: 576px) {
+    .fs-responsive { font-size: 1rem !important; }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    .fs-responsive { font-size: 1.25rem !important; }
+}
+@media (min-width: 769px) {
+    .fs-responsive { font-size: 1.5rem !important; }
+}
+
+
+
+
     </style>
 
 </head>
@@ -411,7 +434,7 @@ video {
 
         <!-- Navbar Links -->
         <div class="collapse navbar-collapse " id="navbarNav">
-            <ul class="navbar-nav fw-bold me-auto">
+            <ul class="navbar-nav gap-1 me-auto fw-bold fs-sm-5">
                 <li class="nav-item">
                     <a class="nav-link" href="../../index.html">Home</a>
                 </li>
@@ -454,7 +477,7 @@ video {
             </ul>
 
             <!-- Custom Trip Button -->
-            <a id="trip-btn" class="btn btn-primary-custom fw-bold mx-auto ms-lg-3 d-block d-lg-inline-block text-center" href="form.html">Build Your Trip</a>
+            <a id="trip-btn" class="btn nav-link btn-primary-custom fw-small" href="form.html">Build Your Trip</a>
         </div>
     </div>
 </nav>
@@ -465,7 +488,7 @@ video {
 
 
 
-<!-- rip details section -->
+<!-- Trip details section -->
 <div class="container">
     <div class="container my-5 p-4 shadow rounded bg-light">
 

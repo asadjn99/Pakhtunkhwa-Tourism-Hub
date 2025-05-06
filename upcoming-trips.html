@@ -768,26 +768,6 @@ body {
       </div>
     </div>
 </section>
-  
-  
-  
-
-<!-- Breadcrumb Navigation -->
-<!-- <nav aria-label="breadcrumb ">
-    <ol class="breadcrumb mt-2 mx-3">
-
-        <li class="breadcrumb-item ">
-            <a href="../../kpk.html" class="text-decoration-none text-dark">Khyber Pakhtunkhwa</a>
-        </li>
-
-        <li class="breadcrumb-item " aria-current="page">
-            <a href="../kpk-valleys/swat/swat.html" class="text-decoration-none custom-color fw-bold">Swat Valley</a>
-        </li>
-    </ol>
-</nav> -->
-<!-- End of Breadcrumb Navigation -->
-
-
 
 
 
@@ -811,13 +791,13 @@ body {
                         <i class="fa-solid fa-clock me-2"></i> 3 Days 
                         <span class="mx-3">|</span> 
                         <i class="fa-solid fa-users me-2"></i> Max 20 People
+                        <span class="mx-3">|</span> 
+                        <i class="fa-solid fa-calendar me-2"></i> 25 July, 2025
                     </div>
                     <h5 class="fw-bold mt-2">KALAM</h5>
                     <p class="custom-color fw-bold fs-5">PKR 9,999</p>
                     <p class="card-text">Explore the heart of Swat, with mesmerizing rivers, pine forests, and stunning landscapes that make Kalam a must-visit destination.</p>
-                    <a href="./kpk-valleys/swat/swat-2days.html" class="btn btn-primary-custom w-100">Explore</a>
-                    <!-- <a href="#" onclick="loginWithGoogle('kpk-valleys/swat/swat-2days.html')" class="btn btn-primary-custom w-100">Explore</a> -->
-
+                    <a href="./upcomming-trips/kalam-3days.html" class="btn btn-primary-custom w-100">Explore</a>
                 </div>
             </div>
         </div>
@@ -834,12 +814,14 @@ body {
                         <i class="fa-solid fa-clock me-2"></i> 3 Days 
                         <span class="mx-3">|</span> 
                         <i class="fa-solid fa-users me-2"></i> Max 25 People
+                        <span class="mx-3">|</span> 
+                        <i class="fa-solid fa-calendar me-2"></i> 04 Aug, 2025
                     </div>
                     <h5 class="fw-bold mt-2">MAHODAND LAKE</h5>
                     <p class="custom-color fw-bold fs-5">PKR 11,999</p>
                     <p class="card-text">A journey to the stunning alpine lake, surrounded by towering mountains and lush greenery, offering a truly magical experience.</p>
                     <!-- <a href="./mahodand-trip3.html" class="btn btn-primary-custom w-100">Explore</a> -->
-                    <a href="./kpk-valleys/swat/mahodand-trip3.html" class="btn btn-primary-custom w-100">Explore</a>
+                    <a href="./upcomming-trips/mahodand-3days.html" class="btn btn-primary-custom w-100">Explore</a>
                 </div>
             </div>
         </div>
@@ -857,6 +839,8 @@ body {
                         <i class="fa-solid fa-clock me-2"></i> 5 Days 
                         <span class="mx-3">|</span> 
                         <i class="fa-solid fa-users me-2"></i> Max 30 People
+                        <span class="mx-3">|</span> 
+                        <i class="fa-solid fa-calendar me-2"></i> 10 May, 2025
                     </div>
                     <h5 class="fw-bold mt-2">MALAMJABBA</h5>
                     <p class="custom-color fw-bold fs-5">PKR 21,999</p>
@@ -1048,36 +1032,6 @@ body {
 </section>
 <!-- End of Foreign Tours Section -->
 
-
-
-<script>
-    const provider = new firebase.auth.GoogleAuthProvider();
-  
-    // Save trip page in localStorage before login
-    function loginWithGoogle(tripPage) {
-      localStorage.setItem("tripRedirect", tripPage);
-  
-      firebase.auth().signInWithPopup(provider)
-        .then((result) => {
-          const redirectPage = localStorage.getItem("tripRedirect");
-          window.location.href = redirectPage || "default-trip.html"; // fallback if missing
-        })
-        .catch((error) => {
-          console.error("Login failed:", error.message);
-          alert("Login failed. Please try again.");
-        });
-    }
-  
-    // If already logged in, redirect directly to stored trip
-    firebase.auth().onAuthStateChanged(function(user) {
-      if (user) {
-        const trip = localStorage.getItem("tripRedirect");
-        if (trip) {
-          window.location.href = trip;
-        }
-      }
-    });
-  </script>
   
 
 

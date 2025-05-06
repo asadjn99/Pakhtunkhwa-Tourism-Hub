@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Pakhtunkhwa Tourism Hub</title>
+    <title>Kalam Info - PK</title>
     <!-- <link rel="icon" href="./images/logo12.png" type="image/png" > -->
-    <link rel="icon" href="./images/icon-pk.png" type="image/png">
+    <link rel="icon" href="./../../images/icon-pk.png" type="image/png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
@@ -320,11 +320,10 @@ body {
     background-color: #DF6951 !important;
     border: none;
     color: rgb(255, 255, 255) !important;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 600;
     padding: 10px 20px !important;
     letter-spacing: 1px;
-    /* border-radius: 10px !important;  */
     transition: all 0.3s ease-in-out;
 }
 .btn-primary-custom:hover {
@@ -337,11 +336,10 @@ body {
     background-color: #28a745 !important;
     border: none;
     color: rgb(255, 255, 255) !important;
-    font-size: 1rem;
+    font-size: .9rem;
     font-weight: 600;
     padding: 10px 20px !important;
     letter-spacing: 1px;
-    /* border-radius: 10px !important;  */
     transition: all 0.3s ease-in-out;
 }
 .btn-secondary-custom:hover {
@@ -995,6 +993,9 @@ body {
 @media (min-width: 769px) {
     .fs-responsive { font-size: 1.5rem !important; }
 }
+
+
+
     </style>
 </head>
 <body>
@@ -1061,7 +1062,7 @@ body {
             </ul>
 
             <!-- Custom Trip Button -->
-            <a id="trip-btn" class="btn btn-primary-custom fw-bold mx-auto ms-lg-3 d-block d-lg-inline-block text-center" href="form.html">Build Your Trip</a>
+            <a id="trip-btn" class="btn nav-link btn-primary-custom" href="form.html">Build Your Trip</a>
         </div>
     </div>
 </nav>
@@ -1111,7 +1112,7 @@ body {
 </section>
 
 
-<!-- Nav Buttons for Days Tours -->
+<!-- Nav/Tab/breadcrumb Buttons for Days Tours -->
 <div class="container text-center my-4">
     <ul class="nav nav-pills justify-content-center" id="tourTabs">
       <li class="nav-item">
@@ -1124,11 +1125,54 @@ body {
         <button class="nav-link" onclick="showTour('5-days-tour', this)">5 Days Tour</button>
       </li>
       <li class="nav-item">
+        <button class="nav-link" onclick="showTour('6-days-tour', this)">6 Days Tour</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" onclick="showTour('7-days-tour', this)">7 Days Tour</button>
+      </li>
+      <li class="nav-item">
         <button class="nav-link" onclick="showTour('8-days-tour', this)">8 Days Tour</button>
       </li>
     </ul>
 </div>
+<!-- end -->
+
+
+<!-- cards for customize and organize trip links for users -->
+<div class="container mt-4">
+    <div class="row justify-content-end position-relative sticky">
+      <div class="col-lg-4 col-md-6 position-absolute end-0 d-none d-lg-block">
+        
+        <!-- Customize Trip Card -->
+        <div class="mb-4 p-4 bg-white shadow rounded border-start border-4 " style="border-left: 5px solid #DF6951 !important;">
+          <h5 class="mb-3 custom-color">
+            <i class="bi bi-pencil-square me-2"></i>Customize Your Adventure
+          </h5>
+          <p class="small text-muted mb-3">Tailor this trip exactly how you want it — flexible plans, personalized fun.</p>
+          <a href="./../../form.html" class="btn btn-primary-custom w-100">
+            <i class="bi bi-sliders me-1"></i> Customize Now
+          </a>
+        </div>
   
+        <!-- Upcoming Trips Card -->
+        <div class="p-4 bg-white shadow rounded border-start border-4 border-success">
+          <h5 class="mb-3 text-success">
+            <i class="bi bi-calendar-check me-2"></i>Upcoming & Organized Trips
+          </h5>
+          <p class="small text-muted mb-3">Browse exciting upcoming adventures, tours, and events near you.</p>
+          <a href="./../../upcoming-trips.html" class="btn btn-secondary-custom w-100">
+            <i class="bi bi-arrow-right-circle me-1"></i> Check Trips
+          </a>
+        </div>
+  
+      </div>
+    </div>
+  </div>
+  <!-- end -->
+  
+  
+  
+   
 
 
 <!-- 3 days -->
@@ -1335,7 +1379,7 @@ body {
 
 <!-- Gallery Section -->
 <div id="gallery" class="container mt-5">
-    <h2 class="p-2 custom-color text-center">Gallery</h2>
+    <h2 class="p-2 custom-color">Gallery</h2>
     <div class="row g-3 mt-3">
         <!-- Image Card -->
         <div class="col-6 col-md-4 col-lg-3">
@@ -1618,7 +1662,7 @@ body {
 
 <!-- Gallery Section -->
 <div id="gallery" class="container mt-5">
-    <h2 class="p-2 custom-color text-center">Gallery</h2>
+    <h2 class="p-2 custom-color">Gallery</h2>
     <div class="row g-3 mt-3">
         <!-- Image Card -->
         <div class="col-6 col-md-4 col-lg-3">
@@ -1921,7 +1965,7 @@ body {
 <!-- Gallery Section -->
 <!-- Gallery Section -->
 <div id="gallery" class="container mt-5">
-    <h2 class="p-2 custom-color text-center">Gallery</h2>
+    <h2 class="p-2 custom-color">Gallery</h2>
     <div class="row g-3 mt-3">
         <!-- Image Card -->
         <div class="col-6 col-md-4 col-lg-3">
@@ -1982,6 +2026,504 @@ body {
     </div>
 </div>
 <!-- End of Booking information and Form Section -->
+
+
+
+<!-- 6 days -->
+<!-- 6 Days Tour information and Form Section -->
+<div id="6-days-tour" class=" d-none container mt-4">
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="p-0 shadow-sm position-relative">
+
+                <div class="container mt-5">
+                    <strong class="heading mb-4 text-center fs-3 info-heading">6 Days Trip - Kalam</strong>
+                        <!-- <strong class="heading mb-4 fs-3 info-heading">Information</strong> -->
+                        <h2 class="custom-color  mb-4">Information</h2>
+                </div>
+                
+
+
+<!-- Info Section -->
+<div class="tab-content container mt-5 p-md-5 p-0" id="trip-info">
+
+
+<!-- Destination -->
+<div class="row mb-5 align-items-center">
+    
+    <div class="col-12 d-flex flex-column flex-md-row align-items-center gap-4">
+        <div class="rounded-circle custom-background text-white d-flex justify-content-center align-items-center shadow mx-auto mx-md-0 info-icon">
+            <strong>Destination</strong>
+        </div>
+        <p class="text-muted fs-4 text-center fw-bold custom-color text-md-start mb-0 info-text">Swat Valley – Kalam</p>
+    </div>
+</div>
+
+<!-- Best Time -->
+<div class="row mb-5 align-items-center">
+    <div class="col-12 d-flex flex-column flex-md-row align-items-center gap-4">
+        <div class="rounded-circle bg-success text-white d-flex justify-content-center align-items-center shadow mx-auto mx-md-0 info-icon">
+            <strong>Best Time</strong>
+        </div>
+        <p class="text-muted fs-5 text-center text-md-start mb-0 info-text">Mid-March to October is ideal for visiting.</p>
+    </div>
+</div>
+
+<!-- Main Attractions -->
+<div class="row mb-5">
+    <div class="col-12 d-flex flex-column flex-md-row align-items-center gap-4">
+        <div class="rounded-circle custom-background text-white d-flex justify-content-center align-items-center shadow mx-auto mx-md-0 info-icon">
+            <strong>Main<br>Attractions</strong>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-3">
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">Kalam Valley</span>
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">Mahodand Lake</span>
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">Ushu Forest</span>
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">Malam Jabba (Ski Resort)</span>
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">Boyun Village</span>
+        </div>
+    </div>
+</div>
+
+<!-- Activities -->
+<div class="row mb-5 align-items-center">
+    <div class="col-12 d-flex flex-column flex-md-row align-items-center gap-4">
+        <div class="rounded-circle bg-success text-white d-flex justify-content-center align-items-center shadow mx-auto mx-md-0 info-icon">
+            <strong>Activities</strong>
+        </div>
+        <p class="text-muted fs-5 text-center text-md-start mb-0 info-text">Sightseeing, hiking, boating, cable car at Malam Jabba, cultural photography & exploring local bazaars.</p>
+    </div>
+</div>
+
+<!-- Travel Mode -->
+<div class="row mb-5">
+    <div class="col-12 d-flex flex-column flex-md-row align-items-center gap-4 mb-4">
+        <div class="rounded-circle custom-background text-white d-flex justify-content-center align-items-center shadow mx-auto mx-md-0 info-icon">
+            <strong>Travel Mode</strong>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-3">
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">By Road</span>
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">AC Coaster</span>
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">Private Car</span>
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">4x4 Jeep for Valley</span>
+        </div>
+    </div>
+</div>
+
+</div>
+<!-- End Info Section -->
+
+
+
+
+
+                
+
+<!-- TOUR PLAN -->
+<div id="tour-plan-6" class="tour-plan-section">
+    <h2 class="custom-color p-2">Tour Plan</h2>
+    <div class="tour-plan">
+
+        <!-- Day 1 -->
+        <div class="tour-item">
+            <div class="tour-number">01</div>
+            <div class="dashed-line"></div>
+            <div class="tour-content">
+                <h4>Day 1: Departure & Arrival at Kalam</h4>
+                <ul>
+                    <li>09:00 AM: Departure from Islamabad/Peshawar</li>
+                    <li>01:00 PM: Lunch at Bahrain</li>
+                    <li>05:00 PM: Arrival in Kalam & hotel check-in</li>
+                    <li>Visit Kalam Bazaar & riverside walk</li>
+                    <li>09:00 PM: Dinner, BBQ, Bonfire</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Day 2 -->
+        <div class="tour-item">
+            <div class="tour-number">02</div>
+            <div class="dashed-line"></div>
+            <div class="tour-content">
+                <h4>Day 2: Jeep Safari to Mahodand Lake</h4>
+                <ul>
+                    <li>07:00 AM: Breakfast</li>
+                    <li>08:00 AM: Departure to Mahodand (Ushu Forest, Glacier Stop)</li>
+                    <li>Boating, photography & picnic</li>
+                    <li>Return by evening</li>
+                    <li>Dinner & Night Stay in Kalam</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Day 3 -->
+        <div class="tour-item">
+            <div class="tour-number">03</div>
+            <div class="dashed-line"></div>
+            <div class="tour-content">
+                <h4>Day 3: Blue Waterfall or Shahibagh</h4>
+                <ul>
+                    <li>08:00 AM: Breakfast</li>
+                    <li>09:00 AM: Trip to Blue Waterfall or Shahibagh</li>
+                    <li>Picnic & Relaxation</li>
+                    <li>03:00 PM: Return to Kalam</li>
+                    <li>Evening walk or shopping</li>
+                    <li>Dinner & Night Stay</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Day 4 -->
+        <div class="tour-item">
+            <div class="tour-number">04</div>
+            <div class="dashed-line"></div>
+            <div class="tour-content">
+                <h4>Day 4: Sightseeing & Short Hikes</h4>
+                <ul>
+                    <li>08:00 AM: Breakfast</li>
+                    <li>10:00 AM: Visit Utror/Matiltan or do leisure walk</li>
+                    <li>Relax & photography</li>
+                    <li>BBQ, music night</li>
+                    <li>Night Stay in Kalam</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Day 5 -->
+        <div class="tour-item">
+            <div class="tour-number">05</div>
+            <div class="dashed-line"></div>
+            <div class="tour-content">
+                <h4>Day 5: Visit Gabral or Falak Sar Viewpoint</h4>
+                <ul>
+                    <li>08:00 AM: Breakfast</li>
+                    <li>09:00 AM: Jeep ride to Gabral or Falak Sar view</li>
+                    <li>Picnic and exploration</li>
+                    <li>Return by 4 PM</li>
+                    <li>Dinner & rest</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Day 6 -->
+        <div class="tour-item">
+            <div class="tour-number">06</div>
+            <div class="tour-content">
+                <h4>Day 6: Return via Malam Jabba</h4>
+                <ul>
+                    <li>07:00 AM: Breakfast & check-out</li>
+                    <li>08:00 AM: Departure from Kalam</li>
+                    <li>01:00 PM: Stop at Malam Jabba (Chairlift optional)</li>
+                    <li>08:00 PM: Reach Islamabad/Peshawar</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- Location -->
+<div id="location" class="">
+    <h2 class="custom-color p-2">Location</h2>
+    <p class="p-3">Kalam is located in the Swat Valley, known for its beautiful mountains and rivers.</p>
+    <div class="container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1678716.6762977971!2d70.7300611812884!3d34.73685909272564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x38d9175f515d1083%3A0x3e268d3110a9eea5!2sAgriculture%20University%20Peshawar%2C%20Unnamed%20Road%2C%20Rahat%20Abad%2C%20Peshawar!3m2!1d34.022129!2d71.4850699!4m5!1s0x38dcfb006f461f6f%3A0xcb27a07df0fe3e7d!2sKalam%20valley%2C%20Kalam!3m2!1d35.4902022!2d72.5796331!5e0!3m2!1sen!2s!4v1742655588886!5m2!1sen!2s" style="border:0; width: 100%; height: 70vh" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+<!-- End of Location -->
+
+<!-- Gallery Section -->
+<!-- Gallery Section -->
+<div id="gallery" class="container mt-5">
+    <h2 class="p-2 custom-color">Gallery</h2>
+    <div class="row g-3 mt-3">
+        <!-- Image Card -->
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="gallery-wrapper">
+                <img src="./../../images/KPK-Valleys/Swat/kalam3.jpg" alt="Kalam"
+                    class="gallery-img" onclick="showModal(this)">
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="gallery-wrapper">
+                <img src="./../../images/KPK-Valleys/Swat/Gabin-Jabba-4.jpg" alt="Mahodand"
+                    class="gallery-img" onclick="showModal(this)">
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="gallery-wrapper">
+                <img src="./../../images/KPK-Valleys/Swat/gabin jabba 3.jpg" alt="View"
+                    class="gallery-img" onclick="showModal(this)">
+            </div>
+        </div>
+        <!-- Add more as needed -->
+    </div>
+</div>
+
+<!-- Modal for Enlarged Image -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0">
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            <div class="modal-body p-0">
+                <img id="modalImage" class="img-fluid rounded-3 w-100" src="" alt="Preview">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JS for Modal -->
+<script>
+    function showModal(element) {
+        const modalImage = document.getElementById('modalImage');
+        modalImage.src = element.src;
+        new bootstrap.Modal(document.getElementById('imageModal')).show();
+    }
+</script>
+<!-- End Gallery Section -->
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Booking information and Form Section -->
+
+
+
+
+<!-- 7 days -->
+<!-- 7 Days Tour information and Form Section -->
+<div id="7-days-tour" class=" d-none container mt-4">
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="p-0 shadow-sm position-relative">
+
+                <div class="container mt-5">
+                    <strong class="heading mb-4 text-center fs-3 info-heading">7 Days Trip - Kalam</strong>
+                        <!-- <strong class="heading mb-4 fs-3 info-heading">Information</strong> -->
+                        <h2 class="custom-color  mb-4">Information</h2>
+                </div>
+                
+
+
+<!-- Info Section -->
+<div class="tab-content container mt-5 p-md-5 p-0" id="trip-info">
+
+
+<!-- Destination -->
+<div class="row mb-5 align-items-center">
+    
+    <div class="col-12 d-flex flex-column flex-md-row align-items-center gap-4">
+        <div class="rounded-circle custom-background text-white d-flex justify-content-center align-items-center shadow mx-auto mx-md-0 info-icon">
+            <strong>Destination</strong>
+        </div>
+        <p class="text-muted fs-4 text-center fw-bold custom-color text-md-start mb-0 info-text">Swat Valley – Kalam</p>
+    </div>
+</div>
+
+<!-- Best Time -->
+<div class="row mb-5 align-items-center">
+    <div class="col-12 d-flex flex-column flex-md-row align-items-center gap-4">
+        <div class="rounded-circle bg-success text-white d-flex justify-content-center align-items-center shadow mx-auto mx-md-0 info-icon">
+            <strong>Best Time</strong>
+        </div>
+        <p class="text-muted fs-5 text-center text-md-start mb-0 info-text">Mid-March to October is ideal for visiting.</p>
+    </div>
+</div>
+
+<!-- Main Attractions -->
+<div class="row mb-5">
+    <div class="col-12 d-flex flex-column flex-md-row align-items-center gap-4">
+        <div class="rounded-circle custom-background text-white d-flex justify-content-center align-items-center shadow mx-auto mx-md-0 info-icon">
+            <strong>Main<br>Attractions</strong>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-3">
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">Kalam Valley</span>
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">Mahodand Lake</span>
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">Ushu Forest</span>
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">Malam Jabba (Ski Resort)</span>
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">Boyun Village</span>
+        </div>
+    </div>
+</div>
+
+<!-- Activities -->
+<div class="row mb-5 align-items-center">
+    <div class="col-12 d-flex flex-column flex-md-row align-items-center gap-4">
+        <div class="rounded-circle bg-success text-white d-flex justify-content-center align-items-center shadow mx-auto mx-md-0 info-icon">
+            <strong>Activities</strong>
+        </div>
+        <p class="text-muted fs-5 text-center text-md-start mb-0 info-text">Sightseeing, hiking, boating, cable car at Malam Jabba, cultural photography & exploring local bazaars.</p>
+    </div>
+</div>
+
+<!-- Travel Mode -->
+<div class="row mb-5">
+    <div class="col-12 d-flex flex-column flex-md-row align-items-center gap-4 mb-4">
+        <div class="rounded-circle custom-background text-white d-flex justify-content-center align-items-center shadow mx-auto mx-md-0 info-icon">
+            <strong>Travel Mode</strong>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center justify-content-md-start gap-3">
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">By Road</span>
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">AC Coaster</span>
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">Private Car</span>
+            <span class="badge bg-secondary fw-light fs-6 px-3 py-2">4x4 Jeep for Valley</span>
+        </div>
+    </div>
+</div>
+
+</div>
+<!-- End Info Section -->
+
+
+
+
+
+                
+
+<!--  TOUR PLAN -->
+<div id="tour-plan-7" class="tour-plan-section">
+    <h2 class="custom-color p-2">Tour Plan</h2>
+    <div class="tour-plan">
+
+        <!-- Days 1–5: Same as 6-Day Plan -->
+        <!-- Reuse Days 1–5 from the 6-day plan -->
+
+        <!-- Day 6 -->
+        <div class="tour-item">
+            <div class="tour-number">06</div>
+            <div class="dashed-line"></div>
+            <div class="tour-content">
+                <h4>Day 6: Explore Gabral Valley or Hike Trail</h4>
+                <ul>
+                    <li>08:00 AM: Breakfast</li>
+                    <li>09:00 AM: Jeep ride to Gabral Valley / Hike in Usho</li>
+                    <li>Lunch during excursion</li>
+                    <li>04:00 PM: Return to Kalam</li>
+                    <li>Free time for souvenirs or riverside</li>
+                    <li>Dinner & Last Night in Kalam</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Day 7 -->
+        <div class="tour-item">
+            <div class="tour-number">07</div>
+            <div class="tour-content">
+                <h4>Day 7: Return via Fizagat or Miandam Valley</h4>
+                <ul>
+                    <li>07:00 AM: Breakfast & departure</li>
+                    <li>12:00 PM: Stopover at Fizagat/Miandam</li>
+                    <li>02:00 PM: Lunch and continue travel</li>
+                    <li>07:00 PM: Reach Islamabad/Peshawar</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<!-- Location -->
+<div id="location" class="">
+    <h2 class="custom-color p-2">Location</h2>
+    <p class="p-3">Kalam is located in the Swat Valley, known for its beautiful mountains and rivers.</p>
+    <div class="container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d1678716.6762977971!2d70.7300611812884!3d34.73685909272564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x38d9175f515d1083%3A0x3e268d3110a9eea5!2sAgriculture%20University%20Peshawar%2C%20Unnamed%20Road%2C%20Rahat%20Abad%2C%20Peshawar!3m2!1d34.022129!2d71.4850699!4m5!1s0x38dcfb006f461f6f%3A0xcb27a07df0fe3e7d!2sKalam%20valley%2C%20Kalam!3m2!1d35.4902022!2d72.5796331!5e0!3m2!1sen!2s!4v1742655588886!5m2!1sen!2s" style="border:0; width: 100%; height: 70vh" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</div>
+<!-- End of Location -->
+
+<!-- Gallery Section -->
+<!-- Gallery Section -->
+<div id="gallery" class="container mt-5">
+    <h2 class="p-2 custom-color">Gallery</h2>
+    <div class="row g-3 mt-3">
+        <!-- Image Card -->
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="gallery-wrapper">
+                <img src="./../../images/KPK-Valleys/Swat/kalam3.jpg" alt="Kalam"
+                    class="gallery-img" onclick="showModal(this)">
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="gallery-wrapper">
+                <img src="./../../images/KPK-Valleys/Swat/Gabin-Jabba-4.jpg" alt="Mahodand"
+                    class="gallery-img" onclick="showModal(this)">
+            </div>
+        </div>
+        <div class="col-6 col-md-4 col-lg-3">
+            <div class="gallery-wrapper">
+                <img src="./../../images/KPK-Valleys/Swat/gabin jabba 3.jpg" alt="View"
+                    class="gallery-img" onclick="showModal(this)">
+            </div>
+        </div>
+        <!-- Add more as needed -->
+    </div>
+</div>
+
+<!-- Modal for Enlarged Image -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content border-0">
+            <button type="button" class="btn-close position-absolute top-0 end-0 m-3" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+            <div class="modal-body p-0">
+                <img id="modalImage" class="img-fluid rounded-3 w-100" src="" alt="Preview">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JS for Modal -->
+<script>
+    function showModal(element) {
+        const modalImage = document.getElementById('modalImage');
+        modalImage.src = element.src;
+        new bootstrap.Modal(document.getElementById('imageModal')).show();
+    }
+</script>
+<!-- End Gallery Section -->
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Booking information and Form Section -->
+
+
+
+
+
 
 
 
@@ -2273,7 +2815,7 @@ body {
 <!-- Gallery Section -->
 <!-- Gallery Section -->
 <div id="gallery" class="container mt-5">
-    <h2 class="p-2 custom-color text-center">Gallery</h2>
+    <h2 class="p-2 custom-color">Gallery</h2>
     <div class="row g-3 mt-3">
         <!-- Image Card -->
         <div class="col-6 col-md-4 col-lg-3">
@@ -2338,7 +2880,10 @@ body {
 
 
 
-<!-- Swat Valley Trip Packages Section -->
+
+
+
+<!-- Related Swat Valley Trip Packages Section -->
 <section>
     <div class="container mt-5">
         <h2 class="fw-bold mb-4">Related Trips</h2>
