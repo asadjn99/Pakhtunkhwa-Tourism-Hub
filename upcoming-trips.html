@@ -386,6 +386,34 @@ body {
     transform: translateY(-2px);
 }
 
+/* responsive  */
+@media (max-width: 768px) {
+   .btn-primary-custom {
+   background-color: #DF6951 !important;
+   border: none;
+   color: white !important;
+   font-size: .8rem;
+   /* font-weight: 600; */
+   padding: 10px 15px !important;
+   letter-spacing: 1px;
+   /* border-radius: 10px !important; */
+   transition: all 0.3s ease-in-out !important;
+}
+
+
+   .btn-secondary-custom {
+   background-color: #28a745 !important;
+   border: none;
+   color: rgb(255, 255, 255) !important;
+   font-size: .8rem;
+   /* font-weight: 600; */
+   padding: 10px 20px !important;
+   letter-spacing: 1px;
+   /* border-radius: 10px !important;  */
+   transition: all 0.3s ease-in-out;
+}
+}
+
 
 
 /* National Tours card design   | Interntional Countries */*/
@@ -613,16 +641,79 @@ body {
 .fs-xl-2  { font-size: 2rem !important; }     /* Extra large */
 
 @media (max-width: 576px) {
-    .fs-responsive { font-size: 1rem !important; }
+    .fs-responsive { font-size: .75rem !important; }
 }
 @media (min-width: 577px) and (max-width: 768px) {
-    .fs-responsive { font-size: 1.25rem !important; }
+    .fs-responsive { font-size: 1rem !important; }
 }
 @media (min-width: 769px) {
     .fs-responsive { font-size: 1.5rem !important; }
 }
 
 
+/* Card Date/Days/Travelers Responsive */
+@media (max-width: 576px) {
+    .card-date-responsive{
+        font-size: 0.7rem !important;
+    }
+}
+/* end */
+
+
+
+.hero-modern {
+  min-height: 100vh;
+  /* background: linear-gradient(120deg, #2b1055, #7597de, #2b1055); */
+  background: linear-gradient(120deg, #FF6B6B,  #28A745, #20C997);
+  background-size: 600% 600%;
+  animation: gradientFlow 12s ease infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-modern .hero-content {
+  max-width: 800px;
+  z-index: 2;
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #DF6951, #28A745);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+/* hero section img surface/saaaya */
+.hero-content-right img {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content-right::after {
+  content: "";
+  position: absolute;
+  bottom: 40px !important;
+  left: 47%;
+  transform: translateX(-50%);
+  width: 150px;
+  height: 30px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  z-index: 1;
+}
+/* hero section ig surface end */
+
+.hero-modern {
+  padding-top: 60px; /* adjust if your navbar is taller/shorter */
+}
     </style>
 </head>
 <body>
@@ -692,24 +783,35 @@ body {
 
 
 
-<!-- Hero Section for Upcoming Trips -->
-<section class="hero-kpk d-flex align-items-center justify-content-center text-white text-center position-relative">
-    <div class="overlay"></div> <!-- Dark overlay for better text visibility -->
-    <div class="container position-relative">
-        <h1 class="display-3 fw-bold display-md-4">Upcoming Adventures Await!</h1>
-        <p class="lead fw-semibold mt-3 fs-4 fs-md-5 fs-sm-6">Discover Chitral, Naran Kaghan, Dir Valley & More – Plan Your Next Escape Today</p>
-        <a class="btn btn-primary-custom mt-3 p-3 p-md-2 p-sm-1" href="https://wa.me/+923075993029" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+
+
+
+
+
+
+<!-- Hero Section: Live the Journey -->
+<section class="hero-modern text-white d-flex align-items-center justify-content-between px-3">
+    <div class="hero-content-left col-lg-5 mx-auto col-12 mt-5">
+      <h1 class="display-3 fw-bold mb-3">Live the <span class="text-gradient">Journey</span></h1>
+      <p class="lead fw-semibold mb-4">Upcoming escapes to <strong>Chitral</strong>, <strong>Naran</strong>, <strong>Dir Valley</strong> & beyond – Book your next memory!</p>
+      <p class="fw-normal mb-4">Explore breathtaking landscapes, discover hidden gems, and create unforgettable experiences with each new adventure. Whether it's a peaceful retreat or an adventurous escape, we’ve got the perfect journey waiting for you.</p>
+      <div class="d-flex flex-wrap justify-content-start gap-3">
+        <a class="btn btn-primary-custom mt-0 mt-lg-4 p-2 mb-lg-0 mb-3" href="https://wa.me/+923075993029" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
         </a>
-        <a class="btn btn-secondary-custom mt-3 p-3 p-md-2 p-sm-1" href="tel:+923075993029" role="button">
-            <i class="fa-solid fa-phone"></i> Call Now
+        <a class="btn btn-secondary-custom mt-0 mt-lg-4 p-2 mb-lg-0 mb-3" href="tel:+923075993029" role="button">
+          <i class="fa-solid fa-phone"></i> Call Now
         </a>
+      </div>
     </div>
-</section>
-<!-- End of Hero Section for Upcoming Trips -->
-
-
-
+  
+    <!-- Image on the Right -->
+    <div class="hero-content-right col-lg-6 col-12 text-center position-relative">
+      <img src="./images/hero-upcoming-01.png" alt="Scenic Trip" class="img-fluid rounded w-50">
+    </div>
+  </section>
+  <!-- Hero end -->
+  
 
 
 <!--  Why Book With Us -->
@@ -786,12 +888,13 @@ body {
                     <span class="badge bg-success  text-white fs-6 position-absolute top-0 start-0 z-index-10">Available...</span>
                     <img src="../../images/KPK-Valleys/Swat/Kalam2.jpeg" class="card-img-top" alt="2-Day Swat Trip">
                 </div>
+                <!-- card date travelers and days section -->
                 <div class="card-body text-center">
-                    <div class="trip-info d-flex justify-content-center align-items-center opacity-50">
+                    <div class="trip-info d-flex justify-content-center align-items-center opacity-50 card-date-responsive">
                         <i class="fa-solid fa-clock me-2"></i> 3 Days 
-                        <span class="mx-3">|</span> 
+                        <span class="mx-2">|</span> 
                         <i class="fa-solid fa-users me-2"></i> Max 20 People
-                        <span class="mx-3">|</span> 
+                        <span class="mx-2">|</span> 
                         <i class="fa-solid fa-calendar me-2"></i> 25 July, 2025
                     </div>
                     <h5 class="fw-bold mt-2">KALAM</h5>
@@ -810,11 +913,11 @@ body {
                     <img src="./../../images/KPK-Valleys/Swat/Mahodand-lake-kalam.jpg" class="card-img-top" alt="3-Day Swat Trip">
                 </div>
                 <div class="card-body text-center">
-                    <div class="trip-info d-flex justify-content-center align-items-center opacity-50">
+                    <div class="trip-info d-flex justify-content-center align-items-center opacity-50 card-date-responsive">
                         <i class="fa-solid fa-clock me-2"></i> 3 Days 
-                        <span class="mx-3">|</span> 
+                        <span class="mx-2">|</span> 
                         <i class="fa-solid fa-users me-2"></i> Max 25 People
-                        <span class="mx-3">|</span> 
+                        <span class="mx-2">|</span> 
                         <i class="fa-solid fa-calendar me-2"></i> 04 Aug, 2025
                     </div>
                     <h5 class="fw-bold mt-2">MAHODAND LAKE</h5>
@@ -835,11 +938,11 @@ body {
                     <img src="./../../images/KPK-Valleys/Swat/Malam-Jabba.jpg" class="card-img-top" alt="5-Day Swat Trip">
                 </div>
                 <div class="card-body text-center">
-                    <div class="trip-info d-flex justify-content-center align-items-center opacity-50">
+                    <div class="trip-info d-flex justify-content-center align-items-center opacity-50 card-date-responsive">
                         <i class="fa-solid fa-clock me-2"></i> 5 Days 
-                        <span class="mx-3">|</span> 
+                        <span class="mx-2">|</span> 
                         <i class="fa-solid fa-users me-2"></i> Max 30 People
-                        <span class="mx-3">|</span> 
+                        <span class="mx-2">|</span> 
                         <i class="fa-solid fa-calendar me-2"></i> 10 May, 2025
                     </div>
                     <h5 class="fw-bold mt-2">MALAMJABBA</h5>
