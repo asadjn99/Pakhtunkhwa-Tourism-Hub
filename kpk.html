@@ -283,6 +283,35 @@ body {
     transform: translateY(-2px);
 
 }
+@media (max-width: 768px) {
+   
+    
+   .btn-primary-custom {
+   background-color: #DF6951 !important;
+   border: none;
+   color: white !important;
+   font-size: .8rem;
+   /* font-weight: 600; */
+   padding: 10px 20px !important;
+   letter-spacing: 1px;
+   /* border-radius: 10px !important; */
+   transition: all 0.3s ease-in-out !important;
+}
+
+
+   .btn-secondary-custom {
+   background-color: #28a745 !important;
+   border: none;
+   color: rgb(255, 255, 255) !important;
+   font-size: .8rem;
+   /* font-weight: 600; */
+   padding: 10px 20px !important;
+   letter-spacing: 1px;
+   /* border-radius: 10px !important;  */
+   transition: all 0.3s ease-in-out;
+}
+}
+
 
 
 
@@ -292,8 +321,7 @@ body {
 
 .hero-kpk {
     background: url('./images/Kpk.jpg') no-repeat center center/cover;
-    height: 80vh;
-    /* margin-top: 30px !important; */
+    height: 93vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -347,6 +375,11 @@ body {
         font-size: 12px;
     }
 }
+/* Hero ends here */
+
+
+
+
 
 
 
@@ -513,6 +546,91 @@ body {
     .fs-responsive { font-size: 1.5rem !important; }
 }
 
+
+.hero-modern {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #FF6B6B, #28A745, #20C997);
+    background-size: 600% 600%;
+    animation: gradientFlow 12s ease infinite;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-modern .container{
+    margin-top: 100px !important;
+  }
+  
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+    .hero-modern h1 {
+        font-size: 3rem;
+    
+        font-weight: bold;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }  
+    @media (max-width: 768px) {
+        .hero-modern h1 {
+            font-size: 1.7rem;
+        }
+        .hero-modern p {
+            font-size: 1rem;
+        }
+        
+    }
+
+
+
+
+
+
+
+
+
+
+    .masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.masonry-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.masonry-img:hover {
+  transform: scale(1.05);
+}
+
+/* Vary heights for natural layout */
+.masonry-img.short {
+  height: 120px;
+}
+.masonry-img.normal {
+  height: 160px;
+}
+.masonry-img.tall {
+  height: 220px;
+}
+.masonry-img.wide {
+  height: 180px;
+  grid-column: span 2;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .masonry-img.wide {
+    grid-column: span 1;
+  }
+}
+
     </style>
 </head>
 <body>
@@ -566,7 +684,7 @@ body {
             </ul>
           </li>
   
-          <li class="nav-item"><a class="nav-link" href="./upcoming-trips.html">Upcoming Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="./upcoming-trips.html">Upcoming Trips</a></li>
           <li class="nav-item"><a class="nav-link" href="./aboutus.html">About Us</a></li>
           <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
         </ul>
@@ -582,7 +700,7 @@ body {
 
 <!-- <div class="container p-4"></div> -->
 
-
+<script type="text">
 <!-- Hero Section for KPK -->
 <section class="hero-kpk d-flex align-items-center justify-content-center text-white text-center position-relative">
     <div class="overlay"></div> <!-- Dark overlay for better text visibility -->
@@ -602,12 +720,97 @@ body {
 <!-- End of Hero Section for KPK -->
 
 
+
+
+<!-- Hero Section for Tourism Website -->
+<section class="hero-section bg-light text-center py-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold">
+        Radiant Revelries,<br />
+        Sparking Summer <span class="text-primary">PARTIES EASY!</span>
+      </h1>
+      <p class="lead mt-3 mb-4">
+        Lorem ipsum dolor sit amet consectetur. Consectetur nunc in dui pulvinar cursus. Sit magna mauris.
+      </p>
+      
+      <!-- CTA Buttons -->
+      <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+        <a class="btn btn-primary-custom mt-3 p-3 p-md-2 p-sm-1" href="https://wa.me/+923075993029" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="btn btn-secondary-custom mt-3 p-3 p-md-2 p-sm-1" href="tel:+923075993029" role="button">
+          <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+      </div>
+  
+      <!-- Image Row -->
+      <div class="row mt-5">
+        <div class="col-6 col-sm-4 col-md-2 mb-3">
+          <img src="./images/Kpk.jpg" alt="Destination 1" class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 mb-3">
+          <img src="./images/Kpk.jpg" alt="Destination 2" class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 mb-3">
+          <img src="./images/Kpk.jpg" alt="Destination 3" class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 mb-3">
+          <img src="./images/Kpk.jpg" alt="Destination 4" class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 mb-3">
+          <img src="./images/Kpk.jpg" alt="Destination 5" class="img-fluid rounded shadow" />
+        </div>
+      </div>
+    </div>
+  </section>
+  </script>
+
+
+  <!-- Hero Section for Tourism Website -->
+<section class="hero-modern text-white text-center d-flex align-items-center justify-content-center">
+    <div class="container mt-4">
+      <h1 class="display-4 fw-bold mt-4">
+        Discover<br />
+       <span class="custom-color">Khyber Pakhtunkhwa!</span>
+      </h1>
+      <p class="lead mt-3 col-sm-12 col-lg-7 mx-auto mb-4">
+        It's renowned for its natural beauty, rich cultural heritage, and historical significance. The province offers diverse landscapes, from majestic mountains to lush valleys, making it a popular destination for tourism and adventure. 
+      </p>
+      
+      <!-- CTA Buttons -->
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a class="btn btn-primary-custom mt-0 mt-lg-4 p-2 mb-lg-0 mb-3" href="https://wa.me/+923075993029" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="btn btn-secondary-custom mt-0 mt-lg-4 p-2 mb-lg-0 mb-3" href="tel:+923075993029" role="button">
+          <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+      </div>
+  
+      <!-- Masonry Image Grid -->
+  <div class="masonry-grid mt-1 px-3 px-md-5 ">
+    <img src="./images/KPK-Valleys/Swat/Gabin_Jabba_1.jpg" alt="KPK 1" class="masonry-img tall" />
+    <img src="./images/KPK-Valleys/Galiyat Valley.jpg" alt="KPK 2" class="masonry-img short" />
+    <img src="./images/KPK-Valleys/naran-kaghan.jpg" alt="KPK 3" class="masonry-img wide" />
+    <img src="./images/KPK-Valleys/Swat/Malam-Jabba-5.webp" alt="KPK 4" class="masonry-img hort" />
+    <img src="./images/Kpk.jpg" alt="KPK 5" class="masonry-img tall" />
+    <!-- <img src="./images/Kpk.jpg" alt="KPK 6" class="masonry-img short" /> -->
+  </div>
+
+  </section>
+  
+
+  
+  
+
+
+
 <!-- Breadcrumb Navigation -->
-<nav aria-label="breadcrumb ">
+<!-- <nav aria-label="breadcrumb ">
     <ol class="breadcrumb mt-2 mx-3">
-        <li class="breadcrumb-item " aria-current="page"><a href="kpk.html" class="text-decoration-none custom-color fw-bold">Khyber Pakhtunkhwa</a></li>
+        <li class="breadcrumb-item " aria-current="page"><a href="kpk.html" class="text-decoration-none custom-color fw-bold">Pakhtunkhwa</a></li>
     </ol>
-</nav>
+</nav> -->
 
 
 <!-- KPK Valleys Section -->
