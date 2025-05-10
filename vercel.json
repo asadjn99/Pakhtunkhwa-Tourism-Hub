@@ -1,12 +1,4 @@
 {
-  "ignore": [
-    ".firebase/",
-    ".firebaserc",
-    "firebase.json",
-    "firebase/",
-    "functions/",
-    "public/"
-  ],
   "rewrites": [
     { "source": "/", "destination": "/index.html" }
   ]
