@@ -1,0 +1,1255 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pakhtunkhwa</title>
+    <!-- <link rel="icon" href="./images/logo12.png" type="image/png"> -->
+    <link rel="icon" href="./images/icon-pk.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--  -->
+     <!-- Font awesome | back-to-top icons and more -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+ 
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
+body {
+  font-family: "Barlow", sans-serif !important;
+}
+
+        #custom-trip-btn {
+            font-size: 14px;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+        .custom-color{
+            color: #DF6951 !important;
+        }
+        .custom-background{
+            background-color: #DF6951 !important;
+        }
+ 
+
+
+
+
+
+     
+/* Navbar start here................. */
+
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* prevent jump effect */
+  }
+}
+
+
+/* Dropdown item hover effect */
+/* .dropdown-item:hover {
+  background-color: #DF6951 !important;
+  color: white !important;
+} */
+
+/* Default navbar styles */
+.navbar {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.navbar .nav-link:hover {
+  color: white !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #DF6951 !important;
+  color: white !important;
+}
+
+.btn-outline-light:hover {
+  background-color: #DF6951 !important;
+  color: white !important;
+  border-color: #DF6951 !important;
+}
+
+ .dropdown-menu {
+  background-color: white !important;
+  border-radius: 0.25rem;
+}
+/*
+.dropdown-item {
+  padding: 10px 20px;
+} */
+
+
+
+/* Small screen styles */
+@media (max-width: 991px) {
+  /* Ensure dropdown menu visibility on small screens */
+  .dropdown-menu {
+    display: none;  /* Hide by default */
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  /* Show dropdown menu when toggled */
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  /* Navbar collapse styles */
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-left: 15px;
+  }
+
+  .navbar-nav .nav-link {
+    /* color: white !important; */
+    font-size: 16px;
+  }
+  .dropdown-menu .dropdown-item{
+    color: black !important;
+    background-color: white !important;
+  }
+
+  #custom-trip-btn {
+    display: block !important;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+
+
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+
+
+
+/* Navbar when scrolled */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Dropdown hover effect */
+/* .navbar .nav-link:hover, .dropdown-item:hover {
+  color: #DF6951 !important;
+} */
+
+/* Ensure proper visibility on small screens */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: static;
+    margin: 0;
+  }
+
+  /* .dropdown-item {
+    color: white !important;
+    background-color: black;
+  } */
+
+  #custom-trip-btn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    
+  }
+}
+/* navbar customize btn font size */
+#primary-btn-nav{
+        font-size: 14px !important;
+    }
+    @media (max-width: 768px){
+        #primary-btn-nav{
+            margin-top: 5px !important;
+            padding: 5px 75px !important;
+            font-size: 13x !important;
+        }
+    }
+
+
+.active-nav-link{ 
+  border-bottom: 3px solid #DF6951 !important;
+      padding-bottom: 5px !important;
+}
+.active-nav-link-bg{
+    background-color: #DF6951 !important;
+}
+
+/* Nabar end here */
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Custom button */
+        .custom-btn {
+        width: 100%; 
+    }
+    @media (min-width: 992px) {
+        .custom-btn {
+            width: 25%; 
+        }
+    }
+        .hero {
+            height: 100vh;
+            background-image: url('./images/bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
+        
+        
+/* Custom Button Styles */
+.btn-primary-custom {
+    /* padding: 12px 30px; */
+    /* background: linear-gradient(135deg,  #FF9800, #E68900); */
+    background-color: #DF6951 !important;
+    border: none;
+    color: white !important;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px !important;
+    letter-spacing: 1px;
+    /* border-radius: 10px; */
+    transition: all 0.3s ease-in-out;
+}
+.btn-primary-custom:hover {
+    background-color: #C65540 !important;
+    transform: translateY(-2px);
+    color: white !important;
+}
+/* Secondary Button */
+.btn-secondary-custom {
+    /* padding: 12px 30px; */
+    background-color: #28a745 !important;
+    border: none;
+    color: rgb(255, 255, 255) !important;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px !important;
+    letter-spacing: 1px;
+    /* border-radius: 10px; */
+    transition: all 0.3s ease-in-out;
+}
+.btn-secondary-custom:hover {
+    background-color: #269740 !important;
+    transform: translateY(-2px);
+
+}
+@media (max-width: 768px) {
+   
+    
+   .btn-primary-custom {
+   background-color: #DF6951 !important;
+   border: none;
+   color: white !important;
+   font-size: .8rem;
+   /* font-weight: 600; */
+   padding: 10px 20px !important;
+   letter-spacing: 1px;
+   /* border-radius: 10px !important; */
+   transition: all 0.3s ease-in-out !important;
+}
+
+
+   .btn-secondary-custom {
+   background-color: #28a745 !important;
+   border: none;
+   color: rgb(255, 255, 255) !important;
+   font-size: .8rem;
+   /* font-weight: 600; */
+   padding: 10px 20px !important;
+   letter-spacing: 1px;
+   /* border-radius: 10px !important;  */
+   transition: all 0.3s ease-in-out;
+}
+}
+
+
+
+
+
+
+/* kpk */
+
+.hero-kpk {
+    background: url('./images/Kpk.jpg') no-repeat center center/cover;
+    height: 93vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0px 0;
+}
+.hero-kpk .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+}
+.hero-kpk h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.hero-kpk p {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+/* Responsive Fixes */
+@media (max-width: 992px) { /* Tablets */
+    .hero-kpk {
+        height: 50vh;
+        padding: 60px 0;
+    }
+    .hero-kpk h1 {
+        font-size: 2.5rem;
+    }
+    .hero-kpk p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .hero-kpk {
+        height: 80vh;
+        padding: 40px 0;
+    }
+    .hero-kpk h1 {
+        font-size: 2rem;
+    }
+    .hero-kpk p {
+        font-size: 1rem;
+    }
+    .hero-kpk .btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+/* Hero ends here */
+
+
+
+
+
+
+
+/* National Tours card design   | International Countries */
+.tour-card {
+    position: relative;
+    overflow: hidden;
+    /* border-radius: 15px; */
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.tour-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tour-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tour-card:hover img {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(100%);
+    pointer-events: none;
+}
+
+/*  overlay on hover show hoga for larger screens */
+.tour-card:hover .card-overlay {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* overlay visible hoga on mobile */
+@media (max-width: 768px) {
+    .tour-card .card-overlay {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+        pointer-events: auto !important;
+    }
+}
+
+
+
+
+        
+
+
+/* Customer Reviews design */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #DF6951; 
+            border-radius: 50%; 
+            
+        }
+        /* hover effect for arrows */
+        .carousel-control-prev-icon:hover,
+        .carousel-control-next-icon:hover {
+            background-color: black;
+        }
+        /* arrow size */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 40px;
+            height: 40px;
+        }
+    
+/* Khyber Pakhtunkhwa Valleys section design */
+        .kpk-section {
+    /* background: linear-gradient(to right, #004d40, #00796b); */
+    /* background-color: #28a745; */
+    background-color: white;
+    padding: 60px 0;
+    color: white;
+    }
+
+    .kpk-section h2 {
+        color: #fff;
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+
+    .valley-card {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    overflow: hidden; /* Ensures image stays inside the card */
+    position: relative; /* Helps control overflow behavior */
+}
+
+.valley-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+}
+
+
+.valley-card img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit; /* Ensures image corners match card corners */
+    transition: transform 0.3s ease-in-out;
+}
+
+.valley-card:hover img {
+    transform: scale(1.1);
+}
+
+
+
+
+    .valley-info {
+        flex: 1;
+        padding: 20px;
+    }
+
+    .valley-info h3 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .valley-info p {
+        font-size: 1.1rem;
+}
+
+
+
+
+/* Responsive Font Size Utilities */
+.fs-xs-6  { font-size: 0.75rem !important; }  /* Extra small */
+.fs-sm-5  { font-size: 1.1rem !important; }     /* Small */
+.fs-md-4  { font-size: 1.25rem !important; }  /* Medium */
+.fs-lg-3  { font-size: 1.5rem !important; }   /* Large */
+.fs-xl-2  { font-size: 2rem !important; }     /* Extra large */
+
+@media (max-width: 576px) {
+    .fs-responsive { font-size: 1rem !important; }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    .fs-responsive { font-size: 1.25rem !important; }
+}
+@media (min-width: 769px) {
+    .fs-responsive { font-size: 1.5rem !important; }
+}
+
+
+.hero-modern {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #FF6B6B, #28A745, #20C997);
+    background-size: 600% 600%;
+    animation: gradientFlow 12s ease infinite;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-modern .container{
+    margin-top: 100px !important;
+  }
+  
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+    .hero-modern h1 {
+        font-size: 3rem;
+    
+        font-weight: bold;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }  
+    @media (max-width: 768px) {
+        .hero-modern h1 {
+            font-size: 1.7rem;
+        }
+        .hero-modern p {
+            font-size: 1rem;
+        }
+        
+    }
+
+
+
+
+
+
+
+
+
+
+    .masonry-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  align-items: end;
+}
+
+.masonry-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s;
+}
+
+.masonry-img:hover {
+  transform: scale(1.05);
+}
+
+/* Vary heights for natural layout */
+.masonry-img.short {
+  height: 120px;
+}
+.masonry-img.normal {
+  height: 160px;
+}
+.masonry-img.tall {
+  height: 220px;
+}
+.masonry-img.wide {
+  height: 180px;
+  grid-column: span 2;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .masonry-img.wide {
+    grid-column: span 1;
+  }
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar start here............... -->
+<nav id="home" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="./../../index.html">
+        <img src="./images/logo.png" style="width: 120px;" alt="logo">
+      </a>
+  
+      <!-- Hamburger Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto fw-bold fs-sm-5">
+          <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+  
+          <!-- National Tours Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active-nav-link" href="#" id="nationalDropdown" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+              National Tours
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="nationalDropdown">
+              <li><a class="dropdown-item  custom-background active-nav-link-bg" style="background-color: #DF6951 !important; color: white !important;" href="#">Khyber Pakhtunkhwa</a></li>
+              <li><a class="dropdown-item" href="#balochistan">Balochistan</a></li>
+              <li><a class="dropdown-item" href="#sindh">Sindh</a></li>
+              <li><a class="dropdown-item" href="#punjab">Punjab</a></li>
+              <li><a class="dropdown-item" href="#gilgit-baltistan">Gilgit-Baltistan</a></li>
+              <li><a class="dropdown-item" href="#azad-kashmir">Azad Kashmir</a></li>
+            </ul>
+          </li>
+  
+          <!-- Foreign Tours Dropdown -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="foreignDropdown" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Foreign Tours
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="foreignDropdown">
+              <li><a class="dropdown-item" href="#dubai">Dubai</a></li>
+              <li><a class="dropdown-item" href="#malaysia">Malaysia</a></li>
+              <li><a class="dropdown-item" href="#turkey">Turkey</a></li>
+              <li><a class="dropdown-item" href="#singapore">Singapore</a></li>
+              <li><a class="dropdown-item" href="#other">Other</a></li>
+            </ul>
+          </li>
+  
+          <li class="nav-item"><a class="nav-link" href="./upcoming-trips.html">Upcoming Trips</a></li>
+          <li class="nav-item"><a class="nav-link" href="./aboutus.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="./gallery.html">Gallery</a></li>
+        </ul>
+  
+        <!-- Custom Trip Button -->
+        <a id="primary-btn-nav" class="btn btn-primary-custom fw-bold" href="form.html">Build Your Trip</a>
+
+      </div>
+    </div>
+  </nav>
+  <!-- Navbar end here............... -->
+
+
+<!-- <div class="container p-4"></div> -->
+
+<script type="text">
+<!-- Hero Section for KPK -->
+<section class="hero-kpk d-flex align-items-center justify-content-center text-white text-center position-relative">
+    <div class="overlay"></div> <!-- Dark overlay for better text visibility -->
+    <div class="container position-relative mt-5">
+        <h1 class="fw-bold display-3 display-md-4 display-sm-5 mt-5">Discover Khyber Pakhtunkhwa</h1>
+        <p class="lead fw-semibold mt-3 fs-4 fs-md-5 fs-sm-6">Where history, culture, and breathtaking landscapes meet</p>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+            <a class="btn btn-primary-custom mt-3 p-3 p-md-2 p-sm-1" href="https://wa.me/+923075993029" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+            <a class="btn btn-secondary-custom mt-3 p-3 p-md-2 p-sm-1" href="tel:+923075993029" role="button">
+                <i class="fa-solid fa-phone"></i> Call Now
+            </a>
+        </div>
+    </div>
+</section>
+<!-- End of Hero Section for KPK -->
+
+
+
+
+<!-- Hero Section for Tourism Website -->
+<section class="hero-section bg-light text-center py-5">
+    <div class="container">
+      <h1 class="display-4 fw-bold">
+        Radiant Revelries,<br />
+        Sparking Summer <span class="text-primary">PARTIES EASY!</span>
+      </h1>
+      <p class="lead mt-3 mb-4">
+        Lorem ipsum dolor sit amet consectetur. Consectetur nunc in dui pulvinar cursus. Sit magna mauris.
+      </p>
+      
+      <!-- CTA Buttons -->
+      <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+        <a class="btn btn-primary-custom mt-3 p-3 p-md-2 p-sm-1" href="https://wa.me/+923075993029" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="btn btn-secondary-custom mt-3 p-3 p-md-2 p-sm-1" href="tel:+923075993029" role="button">
+          <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+      </div>
+  
+      <!-- Image Row -->
+      <div class="row mt-5">
+        <div class="col-6 col-sm-4 col-md-2 mb-3">
+          <img src="./images/Kpk.jpg" alt="Destination 1" class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 mb-3">
+          <img src="./images/Kpk.jpg" alt="Destination 2" class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 mb-3">
+          <img src="./images/Kpk.jpg" alt="Destination 3" class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 mb-3">
+          <img src="./images/Kpk.jpg" alt="Destination 4" class="img-fluid rounded shadow" />
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 mb-3">
+          <img src="./images/Kpk.jpg" alt="Destination 5" class="img-fluid rounded shadow" />
+        </div>
+      </div>
+    </div>
+  </section>
+  </script>
+
+
+  <!-- Hero Section for Tourism Website -->
+<section class="hero-modern text-white text-center d-flex align-items-center justify-content-center">
+    <div class="container mt-4">
+      <h1 class="display-4 fw-bold mt-4">
+        Discover<br />
+       <span class="custom-color">Khyber Pakhtunkhwa!</span>
+      </h1>
+      <p class="lead mt-3 col-sm-12 col-lg-7 mx-auto mb-4">
+        It's renowned for its natural beauty, rich cultural heritage, and historical significance. The province offers diverse landscapes, from majestic mountains to lush valleys, making it a popular destination for tourism and adventure. 
+      </p>
+      
+      <!-- CTA Buttons -->
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <a class="btn btn-primary-custom mt-0 mt-lg-4 p-2 mb-lg-0 mb-3" href="https://wa.me/+923075993029" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp
+        </a>
+        <a class="btn btn-secondary-custom mt-0 mt-lg-4 p-2 mb-lg-0 mb-3" href="tel:+923075993029" role="button">
+          <i class="fa-solid fa-phone"></i> Call Now
+        </a>
+      </div>
+  
+      <!-- Masonry Image Grid -->
+  <div class="masonry-grid mt-1 px-3 px-md-5 ">
+    <img src="./images/KPK-Valleys/Swat/Gabin_Jabba_1.jpg" alt="KPK 1" class="masonry-img tall" />
+    <img src="./images/KPK-Valleys/Galiyat Valley.jpg" alt="KPK 2" class="masonry-img short" />
+    <img src="./images/KPK-Valleys/naran-kaghan.jpg" alt="KPK 3" class="masonry-img wide" />
+    <img src="./images/KPK-Valleys/Swat/Malam-Jabba-5.webp" alt="KPK 4" class="masonry-img hort" />
+    <img src="./images/Kpk.jpg" alt="KPK 5" class="masonry-img tall" />
+    <!-- <img src="./images/Kpk.jpg" alt="KPK 6" class="masonry-img short" /> -->
+  </div>
+
+  </section>
+  
+
+  
+  
+
+
+
+<!-- Breadcrumb Navigation -->
+<!-- <nav aria-label="breadcrumb ">
+    <ol class="breadcrumb mt-2 mx-3">
+        <li class="breadcrumb-item " aria-current="page"><a href="kpk.html" class="text-decoration-none custom-color fw-bold">Pakhtunkhwa</a></li>
+    </ol>
+</nav> -->
+
+
+<!-- KPK Valleys Section -->
+<section id="kpk-valleys" class="kpk-section py-4 mt-0">
+    <div class="container">
+        <h2 class="mb-4 mb-md-4 mt-4 fw-bold fs-2 text-start custom-color text-center">Pakhtunkhwa Valleys</h2>
+        <hr class="w-25 mx-auto" style="border-top: 2px solid #28A745;">
+        <div class="row g-4">
+
+            <!-- Swat Valley -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a href="./kpk-valleys/swat/swat.html" class="card-link text-decoration-none">
+                <div class="card valley-card h-100 shadow">
+                    <img src="images/KPK-Valleys/swat-valley.webp" class="card-img-top" alt="Swat Valley"> 
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Swat Valley</h3>
+                        <p class="card-text">Mini Switzerland of Pakistan, filled with lush green landscapes, rivers, and snowy peaks.</p>
+                        <!-- <a href="./kpk-valleys/swat/swat.html" class="btn btn-primary-custom">Explore</a> -->
+                    </div>
+                </div>
+                </a>
+            </div>
+            <!-- Naran Kaghan -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <!-- <a href="./kpk-valleys/swat/swat.html" class="card-link text-decoration-none"> -->
+                <a href="./comming-soon.html" class="card-link text-decoration-none">
+                <div class="card valley-card h-100 shadow">
+                    <img src="images/KPK-Valleys/naran-kaghan.jpg" class="card-img-top" alt="Swat Valley">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Naran Kaghan</h3>
+                        <p class="card-text">Famous for beautiful lakes like Saif-ul-Malook and the breathtaking scenery of the valley.</p>
+                        <!-- <a href="swat.html" class="btn btn-primary-custom">Explore</a> -->
+                    </div>
+                </div>
+                </a>
+            </div>
+            <!-- Swat Valley -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a href="./comming-soon.html" class="card-link text-decoration-none">
+                <div class="card valley-card h-100 shadow">
+                    <img src="images/KPK-Valleys/chitral.jpg" class="card-img-top" alt="Swat Valley">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Chitral Valley</h3>
+                        <p class="card-text">Home to the Kalash Valley, historical sites, and stunning mountains.</p>
+                        <!-- <a href="swat.html" class="btn btn-primary-custom">Explore</a> -->
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <!-- Kumrat Valley -->
+            <!-- <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card valley-card h-100 shadow">
+                    <img src="images/KPK-Valleys/kumrat-valley.webp" class="card-img-top" alt="Kumrat Valley">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Kumrat Valley</h3>
+                        <p class="card-text">Known for its dense forests, crystal-clear rivers, and scenic beauty.</p>
+                        <a href="kumrat.html" class="btn btn-primary-custom">Explore</a>
+                    </div>
+                </div>
+            </div> -->
+
+
+            <!-- Dir Valley -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a href="./comming-soon.html" class="card-link text-decoration-none">
+                <div class="card valley-card h-100 shadow">
+                    <img src="images/KPK-Valleys/kumrat valley.jpg" class="card-img-top" alt="Dir Valley">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Dir Valley</h3>
+                        <p class="card-text">Surrounded by high mountains, beautiful rivers, and cultural heritage.</p>
+                        <!-- <a href="dir.html" class="btn btn-primary-custom">Explore</a> -->
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <!-- Shangla Valley -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a href="./comming-soon.html" class="card-link text-decoration-none">
+                <div class="card valley-card h-100 shadow">
+                    <img src="images/KPK-Valleys/shangla.jpg" class="card-img-top" alt="Shangla Valley">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Shangla Valley</h3>
+                        <p class="card-text">A peaceful valley with mesmerizing views, forests, and cool weather.</p>
+                        <!-- <a href="shangla.html" class="btn btn-primary-custom">Explore</a> -->
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <!-- Allai Valley -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a href="./comming-soon.html" class="card-link text-decoration-none">
+                <div class="card valley-card h-100 shadow">
+                    <img src="images/KPK-Valleys/Allai Valley.jpg" class="card-img-top" alt="Allai Valley">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Allai Valley</h3>
+                        <p class="card-text">A hidden gem with lush green landscapes, waterfalls, and a peaceful environment.</p>
+                        <!-- <a href="allai.html" class="btn btn-primary-custom">Explore</a> -->
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <!-- Torghar Valley -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a href="./comming-soon.html" class="card-link text-decoration-none">
+                <div class="card valley-card h-100 shadow">
+                    <img src="images/KPK-Valleys/Torghar Valley.jpg" class="card-img-top" alt="Torghar Valley">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Torghar Valley</h3>
+                        <p class="card-text">A remote valley with untouched natural beauty and diverse wildlife.</p>
+                        <!-- <a href="torghar.html" class="btn btn-primary-custom">Explore</a> -->
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <!-- Galiyat Valley -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a href="./comming-soon.html" class="card-link text-decoration-none">
+                <div class="card valley-card h-100 shadow">
+                    <img src="images/KPK-Valleys/Galiyat Valley.jpg" class="card-img-top" alt="Galiyat Valley">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">Galiyat Valley</h3>
+                        <p class="card-text">A tourist-favorite region with scenic hill stations like Nathia Gali, Donga Gali, and Ayubia.</p>
+                        <!-- <a href="galiyat.html" class="btn btn-primary-custom">Explore</a> -->
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            
+        </div>
+    </div>
+</section>
+<!-- End of KPK Valleys Section -->
+
+
+
+
+<!-- National Tours -->
+<section id="national-tours" class="bg-white">
+    <div class="container text-center mt-4">
+        <!-- <h2 class="mb-5 fw-bold fs-1 text-center">Explore Pakistan</h2> -->
+        <h2 class="mb-2 mb-md-4 mt-4 fw-bold fs-2 text-start custom-color text-center">Explore Pakistan</h2>
+        <hr class="w-25 mx-auto" style="border-top: 2px solid #28A745;">
+        <div class="row g-4">
+
+            <!-- KPK - The Largest -->
+            <div class="col-lg-6 col-md-12" id="kpk">
+                <a href="kpk.html" class="text-decoration-none">
+                    <div class="tour-card">
+                        <img src="images/Kpk.jpg" class="rounded" alt="KPK">
+                        <div class="card-overlay">
+                            <h4>Khyber Pakhtunkhwa</h4>
+                            <p>Explore breathtaking landscapes!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Balochistan -->
+            <div class="col-lg-3 col-md-6 col-sm-12" id="balochistan">
+                <a href="./comming-soon.html" class="text-decoration-none">
+                    <div class="tour-card">
+                        <img src="images/balochistan.jpg" class="rounded" alt="Balochistan">
+                        <div class="card-overlay">
+                            <h4>Balochistan</h4>
+                            <p>Golden beaches & mountains!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Punjab -->
+            <div class="col-lg-3 col-md-6 col-sm-12" id="punjab">
+                <a href="./comming-soon.html" class="text-decoration-none">
+                    <div class="tour-card">
+                        <img src="images/Punjab.jpg" class="rounded" alt="Punjab">
+                        <div class="card-overlay">
+                            <h4>Punjab</h4>
+                            <p>Rich culture & heritage!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Sindh -->
+            <div class="col-lg-4 col-md-6 col-sm-12" id="sindh">
+                <a href="./comming-soon.html" class="text-decoration-none">
+                    <div class="tour-card">
+                        <img src="images/sindh.jpg" class="rounded" alt="Sindh">
+                        <div class="card-overlay">
+                            <h4>Sindh</h4>
+                            <p>Historical & coastal beauty!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- AJK -->
+            <div class="col-lg-4 col-md-6 col-sm-12" id="azad-kashmir">
+                <a href="./comming-soon.html" class="text-decoration-none">
+                    <div class="tour-card">
+                        <img src="images/azad kashmir.jpg" class="rounded" alt="AJK">
+                        <div class="card-overlay">
+                            <h4>Azad Kashmir</h4>
+                            <p>Paradise on earth!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    
+            <!-- Gilgit-Baltistan -->
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <a href="./comming-soon.html" class="text-decoration-none" id="gilgit-baltistan">
+                    <div class="tour-card">
+                        <img src="images/gilgit baltistan.jpg" class="rounded" alt="Gilgit-Baltistan">
+                        <div class="card-overlay">
+                            <h4>Gilgit-Baltistan</h4>
+                            <p>Majestic mountains & lakes!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        
+    </div>
+</section>
+<!-- End of National Tours -->
+
+
+<!-- International Tours Section -->
+<section>
+    <div class="container text-center mt-3 mt-md-4">
+        <!-- <h2 class="mb-5 fw-bold fs-1 text-center">Explore the World</h2> -->
+        <h2 class="mb-2 mb-md-4 mt-0 mt-md-4 fw-bold fs-2 text-start custom-color text-center">Explore the World</h2>
+        <hr class="w-25 mx-auto" style="border-top: 2px solid #28A745;">
+        <div class="row g-4">
+            
+            <!-- Dubai -->
+            <div class="col-lg-4 col-md-6 col-sm-12" id="dubai">
+                <a href="./comming-soon.html" class="text-decoration-none">
+                    <div class="tour-card">
+                        <img src="images/Countries/dubai.jpg" class="rounded" alt="Dubai">
+                        <div class="card-overlay">
+                            <h4>Dubai</h4>
+                            <p>Luxury, skyscrapers & desert safari!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Malaysia -->
+            <div class="col-lg-4 col-md-6 col-sm-12" id="malaysia">
+                <a href="./comming-soon.html" class="text-decoration-none">
+                    <div class="tour-card">
+                        <img src="images/Countries/malaysia.jpg" class="rounded" alt="Malaysia">
+                        <div class="card-overlay">
+                            <h4>Malaysia</h4>
+                            <p>Rainforests, beaches & modern cities!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Turkey -->
+            <div class="col-lg-4 col-md-6 col-sm-12" id="turkey">
+                <a href="./comming-soon.html" class="text-decoration-none">
+                    <div class="tour-card">
+                        <img src="images/Countries/turkey1.png" class="rounded" alt="Turkey">
+                        <div class="card-overlay">
+                            <h4>Turkey</h4>
+                            <p>History, culture & breathtaking landscapes!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Singapore -->
+            <div itemid="other" class="col-lg-6 col-md-6 col-sm-12" id="other">
+                <a href="./comming-soon.html" class="text-decoration-none">
+                    <div class="tour-card">
+                        <img src="./images/Countries/singapore.jpg" class="rounded" alt="Other Destinations">
+                        <div class="card-overlay">
+                            <h4>Singapore</h4>
+                            <p>Modern skyline & vibrant culture!</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Other Countries -->
+            <div id="singapore" class="col-lg-6 col-md-6 col-sm-12" id="other">
+                <a href="./comming-soon.html" class="text-decoration-none">
+                    <div class="tour-card">
+                        <img src="images/Countries/europe.jpg" class="rounded" alt="Other Destinations">
+                        <div class="card-overlay">
+                            <h4>Other Destinations</h4>
+                            <p>Europe, Asia & more exotic places!</p>
+                        </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- End of Foreign Tours Section -->
+
+
+
+
+<div class="container p-5"></div>
+<div class="container p-5"></div>
+<div class="container p-5"></div>
+
+
+
+
+<!-- Footer -->
+<footer class="p-4 bg-dark text-white text-center position-relative">
+    <!-- About | Contact | Map  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-start">
+                <img src="./images/logo.png" style="width: 120px;" alt="logo">
+                <p class="mt-3 fw-light text-white-50"> 
+                    Pakhtunkhwa Tourism Hub – your gateway to unforgettable adventures! Discover breathtaking destinations, plan seamless trips, and explore the rich culture and landscapes of Pakhtunkhwa. From sightseeing and group tours to hiking, camping, and solo journeys, we bring you the best travel experiences with ease and comfort.
+                </p>
+            </div>
+            <div class="col-md-4">
+
+        <!-- Map here -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d616.8613250576617!2d71.4813661250838!3d34.020035223282584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1742396871453!5m2!1sen!2s" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            </div>
+            <div class="col-md-4 text-start">
+                <p class="lead fw-bold">Contact Info</p>
+                <p class="text-white-50">Pakhtunkwa Tourism Hub, Peshawar 25130, Khyber Pakhtunkhwa, Pakistan</p>
+                <p class="">+92 307 5993029</p>
+                <p class="">+92 331 3238210</p>
+                <!-- Social Media Icons -->
+                <p class="lead mt-4">
+                    <a href="https://www.facebook.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-facebook text-white"></i>
+                    </a>
+                    <a href="https://www.instagram.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.twitter.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </p> 
+                <!-- End of Social Media Icons -->
+            </div>
+        </div>
+    </div>
+    <hr>
+
+<!-- Copyright and devloper -->
+    <div class="row justify-content-center">
+        <!-- Copyright sec -->
+        <div class="col-md-4">
+            <p class="p-0 m-0"><span class="text-white-50">Copyright &copy; 2025</span> Pakhtunkwa Tourism Hub</p>
+        <a href="#" class="position-absolute bottom-0 end-0 p-3">
+            <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+        </div>
+        <!-- Developer sec -->
+        <div class="col-md-4 m-0">
+            <p class="m-0 p-0 text-white-50">Developed by <a href="https://www.facebook.com/asadjn99" target="_blank" class="text-white">Asad Ullah</a></p>
+        </div>
+    </div>
+
+    <!-- back to home/top icon -->
+    <a href="#" id="backToTop" class="position-fixed bottom-3 end-3 p-3 text-white">
+        <i class="bi bi-arrow-up-circle h1"></i>
+    </a>
+</footer>
+
+
+<script>
+    // Change Navbar Background on Scroll
+    window.addEventListener("scroll", function () {
+        let navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+    // End Navbar Background Change on Scroll
+
+    // Back to Home Button
+    document.getElementById("backToTop").addEventListener("click", function (event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    // End Back to Home Button
+
+
+
+
+
+//  toggle the navbar on hamburger click
+document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item').forEach(link => {
+  link.addEventListener('click', function () {
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+
+    if (bsCollapse && window.innerWidth < 992) {
+      bsCollapse.hide(); // Close the navbar
+    }
+  });
+});
+
+
+
+    // Back to Home Button
+    document.getElementById("backToTop").addEventListener("click", function (event) {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+  
+
+</script>
+
+<script src="./scripts/form.js"></script>
+<script src="./scripts/contact-form.js"></script>
+<!-- Icons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
+
+</body>
+</html>

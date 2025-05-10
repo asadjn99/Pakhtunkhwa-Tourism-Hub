@@ -1,0 +1,1007 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pakhtunkhwa Tourism Hub</title>
+    <!-- <link rel="icon" href="./images/logo12.png" type="image/png"> -->
+    <link rel="icon" href="./images/icon-pk.png" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
+    <!--  -->
+     <!-- Font awesome | back-to-top icons and more -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+<!-- broadcrumb sticky -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- lightbox -->
+     <link href="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/css/lightbox.min.css" rel="stylesheet" />
+
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
+body {
+  font-family: "Barlow", sans-serif !important;
+}
+
+#custom-trip-btn {
+            font-size: 14px;
+            padding: 8px 16px;
+            background-color: #DF6951;
+            color: white;
+            border: none;
+            transition: background-color 0.3s ease !important;
+            border-radius: 0 !important;
+        }
+        
+        #custom-trip-btn:hover {
+            background-color: #c6533d;
+        }
+        .custom-color{
+            color: #DF6951 !important;
+        }
+        .custom-background{
+            background-color: #DF6951 !important;
+        }
+    
+
+
+/* Navbar start here................. */
+
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; /* prevent jump effect */
+  }
+}
+
+
+/* Dropdown item hover effect */
+.dropdown-item:hover {
+  background-color: #DF6951 !important;
+  color: white !important;
+}
+
+/* Default navbar styles */
+.navbar {
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+.navbar .nav-link:hover {
+  color: white !important;
+  border-bottom: 3px solid #DF6951 !important;
+    padding-bottom: 5px !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #DF6951 !important;
+  color: white !important;
+}
+
+.btn-outline-light:hover {
+  background-color: #DF6951 !important;
+  color: white !important;
+  border-color: #DF6951 !important;
+}
+
+ .dropdown-menu {
+  background-color: white !important;
+  border-radius: 0.25rem;
+}
+/*
+.dropdown-item {
+  padding: 10px 20px;
+} */
+
+
+
+/* Small screen styles */
+@media (max-width: 991px) {
+  /* Ensure dropdown menu visibility on small screens */
+  .dropdown-menu {
+    display: none;  /* Hide by default */
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.95);
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  /* Show dropdown menu when toggled */
+  .dropdown-menu.show {
+    display: block;
+  }
+
+  /* Navbar collapse styles */
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    padding-left: 15px;
+  }
+
+  .navbar-nav .nav-link {
+    /* color: white !important; */
+    font-size: 16px;
+  }
+  .dropdown-menu .dropdown-item{
+    color: black !important;
+    background-color: white !important;
+  }
+
+  #custom-trip-btn {
+    display: block !important;
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+
+
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+
+
+
+/* Navbar when scrolled */
+.navbar.scrolled {
+  background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
+/* Dropdown hover effect */
+/* .navbar .nav-link:hover, .dropdown-item:hover {
+  color: #DF6951 !important;
+} */
+
+/* Ensure proper visibility on small screens */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.95);
+    padding: 20px;
+  }
+
+  .navbar-nav .dropdown-menu {
+    position: static;
+    margin: 0;
+  }
+
+  /* .dropdown-item {
+    color: white !important;
+    background-color: black;
+  } */
+
+  #custom-trip-btn {
+    display: block;
+    width: 100% !important;
+    margin-top: 20px;
+    text-align: center;
+    
+  }
+}
+
+/* navbar customize btn font size */
+#primary-btn-nav{
+        font-size: 14px !important;
+    }
+
+    @media (max-width: 768px){
+        #primary-btn-nav{
+            margin-top: 5px !important;
+            padding: 5px 75px !important;
+            font-size: 13x !important;
+        }
+    }
+
+
+.active-nav-link{ 
+  border-bottom: 3px solid #DF6951 !important;
+      padding-bottom: 5px !important;
+}
+
+
+/* Nabar end here ..............*/
+
+
+
+
+
+
+
+
+
+/* Custom button Contact us form */
+        .custom-btn {
+        width: 100%; /* Full width */
+    }
+    @media (min-width: 992px) { /* Large screens (lg) */
+        .custom-btn {
+            width: 25% ; /* Set to 25% on large screens */
+        }
+    }
+        .hero {
+            height: 100vh;
+            background-image: url('./images/bg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+        }
+        
+
+/* kpk */
+
+.hero-kpk {
+    background: url('./../../images/KPK-Valleys/Swat/Kalam2.jpeg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0px 0;
+}
+.hero-kpk .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+}
+.hero-kpk h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.hero-kpk p {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+/* Responsive Fixes */
+@media (max-width: 992px) { /* Tablets */
+    .hero-kpk {
+        height: 50vh;
+        padding: 60px 0;
+    }
+    .hero-kpk h1 {
+        font-size: 2.5rem;
+    }
+    .hero-kpk p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) { /* Mobile */
+    .hero-kpk {
+        height: 80vh;
+        padding: 40px 0;
+    }
+    .hero-kpk h1 {
+        font-size: 2rem;
+    }
+    .hero-kpk p {
+        font-size: 1rem;
+    }
+    .hero-kpk .btn {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+}
+
+
+/* Custom Button Styles */
+.btn-primary-custom {
+    background-color: #DF6951 !important;
+    border: none;
+    color: rgb(255, 255, 255) !important;
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 10px 20px !important;
+    letter-spacing: 1px;
+    /* border-radius: 10px !important;  */
+    transition: all 0.3s ease-in-out;
+}
+.btn-primary-custom:hover {
+    background-color: #C65540 !important;
+    transform: translateY(-2px);
+    color: white !important;
+}
+/* Secondary Button */
+.btn-secondary-custom {
+    background-color: #28a745 !important;
+    border: none;
+    color: rgb(255, 255, 255) !important;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 20px !important;
+    letter-spacing: 1px;
+    /* border-radius: 10px !important;  */
+    transition: all 0.3s ease-in-out;
+}
+.btn-secondary-custom:hover {
+    background-color: #269740 !important;
+    transform: translateY(-2px);
+
+}
+
+
+
+
+/* Gallery for previous trip  */
+.gallery-img {
+  object-fit: cover;
+  height: 200px;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+}
+video {
+  height: 200px;
+  object-fit: cover;
+}
+/* End of gallery */
+
+
+
+/* Customer Reviews design */
+.carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #DF6951; 
+            border-radius: 50%; 
+            
+        }
+        /* hover effect for arrows */
+        .carousel-control-prev-icon:hover,
+        .carousel-control-next-icon:hover {
+            background-color: #C65540;
+        }
+        /* arrow size ba dlta na cntrol kw*/
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            width: 40px;
+            height: 40px;
+        }
+/* End Testimonials Sec Design */
+
+
+
+
+/* Responsive Font Size Utilities */
+.fs-xs-6  { font-size: 0.75rem !important; }  /* Extra small */
+.fs-sm-5  { font-size: 1.1rem !important; }     /* Small */
+.fs-md-4  { font-size: 1.25rem !important; }  /* Medium */
+.fs-lg-3  { font-size: 1.5rem !important; }   /* Large */
+.fs-xl-2  { font-size: 2rem !important; }     /* Extra large */
+
+@media (max-width: 576px) {
+    .fs-responsive { font-size: 1rem !important; }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+    .fs-responsive { font-size: 1.25rem !important; }
+}
+@media (min-width: 769px) {
+    .fs-responsive { font-size: 1.5rem !important; }
+}
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<nav id="home" class="navbar navbar-expand-lg navbar-dark bg-success shadow-sm sticky-top">
+    <div class="container">
+        <!-- Logo and Toggle Button Wrapper -->
+        <div class="d-flex flex-grow-1 w-lg-50 w-sm-100">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#home">
+                <img src="./../../images/logo.png" style="width: 120px;" alt="logo">
+            </a>
+
+            <!-- Navbar Toggle Button -->
+            <button class="navbar-toggler custom-hamburger ms-auto p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav gap-1 me-auto fw-bold fs-sm-5">
+                <li class="nav-item">
+                    <a class="nav-link" href="../../index.html">Home</a>
+                </li>
+
+                <!-- National Tours Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="nationalDropdown" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">National Tours</a>
+                    <ul class="dropdown-menu" aria-labelledby="nationalDropdown">
+                        <li><a class="dropdown-item" href="#kpk">Khyber Pakhtunkhwa</a></li>
+                        <li><a class="dropdown-item" href="#balochistan">Balochistan</a></li>
+                        <li><a class="dropdown-item" href="#sindh">Sindh</a></li>
+                        <li><a class="dropdown-item" href="#punjab">Punjab</a></li>
+                        <li><a class="dropdown-item" href="#gilgit-baltistan">Gilgit-Baltistan</a></li>
+                        <li><a class="dropdown-item" href="#azad-kashmir">Azad Kashmir</a></li>
+                    </ul>
+                </li>
+
+                <!-- Foreign Tours Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="foreignDropdown" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">Foreign Tours</a>
+                    <ul class="dropdown-menu" aria-labelledby="foreignDropdown">
+                        <li><a class="dropdown-item" href="#dubai">Dubai</a></li>
+                        <li><a class="dropdown-item" href="#malaysia">Malaysia</a></li>
+                        <li><a class="dropdown-item" href="#turkey">Turkey</a></li>
+                        <li><a class="dropdown-item" href="#other">Other</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="./../../upcoming-trips.html">Upcoming Trips</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../../aboutus.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./../../gallery.html">Gallery</a>
+                </li>
+            </ul>
+
+            <!-- Custom Trip Button -->
+            <a id="trip-btn" class="btn nav-link btn-primary-custom fw-small" href="form.html">Build Your Trip</a>
+        </div>
+    </div>
+</nav>
+<!-- Navbar end -->
+
+
+
+
+
+
+<!-- Trip details section -->
+<div class="container">
+    <div class="container my-5 p-4 shadow rounded bg-light">
+
+        <!-- Trip Title and Status -->
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h2 class="fw-bold custom-color">MALAMJABBA - 5 Day Ski Trip</h2>
+          <span class="badge rounded-pill bg-danger px-3 py-2 fs-6">Completed</span>
+        </div>
+      
+        <!-- Hero Image | Image Gallery Carousel -->
+         
+        <div class="mb-5">
+            <!-- <h4 class="mb-3 fw-bold custom-color">Trip Gallery</h4> -->
+            <div id="tripGallery" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner rounded shadow">
+                <div class="carousel-item active">
+                      <img src="./../../images/KPK-Valleys/Swat/Malam-Jabba-6.jpg" class="d-block w-100" alt="Snow Skiing" style="max-height: 450px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="./../../images/KPK-Valleys/Swat/Malam-Jabba-5.webp" class="d-block w-100" alt="Snow Skiing" style="max-height: 450px; object-fit: cover;">
+                </div>
+                <div class="carousel-item">
+                  <img src="./../../images/KPK-Valleys/Swat/Malam-Jabba-5.webp" class="d-block w-100" alt="Snow Skiing" style="max-height: 450px; object-fit: cover;">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#tripGallery" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#tripGallery" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
+      
+        <!-- Trip Description -->
+        <div class="mb-5">
+          <p class="fs-5 text-muted">
+            <span class="me-2 custom-color"><i class="bi bi-check-circle-fill"></i></span>
+            Relive the magic of Malam Jabba! Though this trip has concluded, you can explore its moments, itinerary, and travelers' stories.
+          </p>
+        </div>
+      
+        <!-- Image Gallery  -->
+        <section class="trip-gallery container py-5">
+            <h4 class="mb-4 fw-bold custom-color">Trip Gallery</h4>
+            <div class="row g-3">
+          
+              <!-- Image 1 -->
+              <div class="col-6 col-md-4 col-lg-3">
+              <a href="./../../images/KPK-Valleys/Swat/Malam-Jabba-6.jpg" data-lightbox="trip-gallery">
+                <img src="./../../images/KPK-Valleys/Swat/Malam-Jabba-6.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Snow Skiing" />
+              </a>
+              </div>            
+          
+              <!-- Image 2 -->
+              <div class="col-6 col-md-4 col-lg-3">
+              <a href="./../../images/KPK-Valleys/Swat/Malam-Jabba-6.jpg" data-lightbox="trip-gallery">
+                <img src="./../../images/KPK-Valleys/Swat/Malam-Jabba-6.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Snow Skiing" />
+              </a>
+              </div>
+              <!-- Image 3 -->
+              <div class="col-6 col-md-4 col-lg-3">
+              <a href="./../../images/KPK-Valleys/Swat/malam-jabba 2.jpg" data-lightbox="trip-gallery">
+                <img src="./../../images/KPK-Valleys/Swat/malam-jabba 2.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Snow Skiing" />
+              </a>
+              </div>            
+          
+              <!-- Image 4 -->
+              <div class="col-6 col-md-4 col-lg-3">
+              <a href="./../../images/KPK-Valleys/Swat/Malam-Jabba-6.jpg" data-lightbox="trip-gallery">
+                <img src="./../../images/KPK-Valleys/Swat/Malam-Jabba-6.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Snow Skiing" />
+              </a>
+              </div>
+
+
+              <!-- Image 5 -->
+              <a href="./../../images/KPK-Valleys/Swat/Malam-Jabba.jpg" data-lightbox="trip-gallery">
+                <img src="./../../images/KPK-Valleys/Swat/Malam-Jabba.jpg" class="img-fluid rounded shadow-sm gallery-img" alt="Snow Skiing" />
+              </a>
+              
+          
+              <!-- Video  -->
+              <div class="col-6 col-md-4 col-lg-3" >
+                <video class="img-fluid rounded shadow-sm" controls poster="./../../images/KPK-Valleys/Swat/Malam-Jabba-5.webp" style="width: 100%; height: 200px; object-fit: cover;">
+                  <source src="./../../images/aboutus-tourism1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video >
+              </div>
+          
+              <!--  more images/videos below -->
+          
+            </div>
+          </section>
+        <!-- End of Image Gallery Carousel -->          
+      
+
+        <!-- Trip Itinerary Trip Plan -->
+        <div class="mb-5">
+          <h4 class="mb-3 fw-bold custom-color">Itinerary</h4>
+          <div class="row g-3">
+            <div class="col-md-3">
+              <div class="bg-white p-3 rounded shadow text-center h-100">
+                <strong>Day 1</strong><br> Arrival & Welcome
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="bg-white p-3 rounded shadow text-center h-100">
+                <strong>Day 2</strong><br> Skiing Adventure
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="bg-white p-3 rounded shadow text-center h-100">
+                <strong>Day 3</strong><br> Local Exploration
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="bg-white p-3 rounded shadow text-center h-100">
+                <strong>Day 4</strong><br> Return Journey
+              </div>
+            </div>
+          </div>
+        </div>
+      
+
+        <!-- Testimonials Section -->
+        <!-- Testimonials Section -->
+<section id="testimonials" class="py-5 bg-light mt-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Travelers Reviews</h2>
+
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
+            <div class="carousel-inner">
+                <!-- 1st Review Slide -->
+                <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-12 text-center px-4">
+                            <img src="./../../images/asadjn99-pic.jpg" alt="Traveler 1" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
+                            <p class="lead">"Skiing in Malam Jabba was a dream come true! The snow-covered mountains and the warm hospitality made it perfect."</p>
+                            <h5 class="fw-bold">Sarah Khan</h5>
+                            <p class="text-muted">Malamjabba</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2nd Review Slide -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-12 text-center px-4">
+                            <img src="./../../images/asadjn99-pic.jpg" alt="Traveler 2" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
+                            <p class="lead">"I took my family on this trip, and we loved every second! Clean hotels, great guides, and stunning views."</p>
+                            <h5 class="fw-bold">Tariq Mehmood</h5>
+                            <p class="text-muted">Malamjabba</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3rd Review Slide -->
+                <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-12 text-center px-4">
+                            <img src="./../../images/asadjn99-pic.jpg" alt="Traveler 3" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
+                            <p class="lead">"From chairlifts to snow treks, Malam Jabba exceeded my expectations. Highly organized and unforgettable experience!"</p>
+                            <h5 class="fw-bold">Hina Baloch</h5>
+                            <p class="text-muted">Malamjabba</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+<!-- End Testimonials Section -->
+
+      
+
+        
+          
+          
+
+
+        <!-- Newsletter CTA -->
+        <!-- <div class="text-center mt-4 p-4 bg-primary text-white rounded shadow">
+          <h5>Don’t miss our next adventure!</h5>
+          <p>Subscribe now to stay updated with new trips, offers, and early-bird discounts.</p>
+          <a href="/newsletter" class="btn btn-light text-primary fw-bold px-4">Join Our Newsletter</a>
+        </div> -->
+      
+      </div>
+      
+</div>
+
+
+
+
+
+
+<div class="container p-5"></div>
+
+<!-- Footer -->
+<footer id="footer" class="p-4 bg-dark text-white text-center position-relative">
+    <!-- About | Contact | Map  -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-start">
+                <img src="./../../images/logo.png" style="width: 120px;" alt="logo">
+                <p class="mt-3 fw-light text-white-50 p-0"> 
+                    Pakhtunkhwa Tourism Hub – your gateway to unforgettable adventures! Discover breathtaking destinations, plan seamless trips, and explore the rich culture and landscapes of Pakhtunkhwa. From sightseeing and group tours to hiking, camping, and solo journeys, we bring you the best travel experiences with ease and comfort.
+                </p>
+            </div>
+            <div class="col-md-4">
+
+        <!-- Map here -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d616.8613250576617!2d71.4813661250838!3d34.020035223282584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1742396871453!5m2!1sen!2s" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+            </div>
+            <div class="col-md-4 text-start">
+                <p class="lead fw-bold p-0">Contact Info</p>
+                <p class="p-0 text-white-50">Pakhtunkwa Tourism Hub, Peshawar 25130, Khyber Pakhtunkhwa, Pakistan</p>
+                <p class="p-0">+92 307 5993029</p>
+                <p class="p-0">+92 331 3238210</p>
+                <!-- Social Media Icons -->
+                <p class="lead mt-4 p-0">
+                    <a href="https://www.facebook.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-facebook text-white"></i>
+                    </a>
+                    <a href="https://www.instagram.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.twitter.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </p> 
+                <!-- End of Social Media Icons -->
+            </div>
+        </div>
+    </div>
+    <hr>
+
+<!-- Copyright and devloper -->
+    <div class="row justify-content-center">
+        <!-- Copyright sec -->
+        <div class="col-md-4">
+            <p class="p-0 m-0 text-white-50">Copyright &copy; 2025 Pakhtunkwa Tourism Hub</p>
+        <a href="#" class="position-absolute bottom-0 end-0 p-3">
+            <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+        </div>
+        <!-- Developer sec -->
+        <div class="col-md-4 m-0">
+            <p class="m-0 p-0 text-white-50">Developed by <a href="https://www.facebook.com/asadjn99" target="_blank" class="text-white">Asad Ullah</a></p>
+        </div>
+    </div>
+
+    <!-- back to home/top icon -->
+    <a href="#" id="backToTop" class="position-fixed bottom-3 end-3 p-3 text-white">
+        <i class="bi bi-arrow-up-circle h1"></i>
+    </a>
+</footer>
+
+
+<script>
+    // Change Navbar Background on Scroll
+    window.addEventListener("scroll", function () {
+        let navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+    // End Navbar Background Change on Scroll
+
+    // Back to Home Button
+    document.getElementById("backToTop").addEventListener("click", function (event) {
+        event.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+    // End Back to Home Button
+
+
+
+
+
+// Booking Form
+
+let pricePerPerson = 9999; //  price per person (in PKR)
+
+function updateTotalPrice() {
+    let persons = document.getElementById("persons").value;
+    if (persons >= 1 && persons <= 15) {
+        let totalPrice = persons * pricePerPerson;
+        document.getElementById("total-price").textContent = "₨ " + totalPrice;
+    } else {
+        document.getElementById("total-price").textContent = "₨ 0";
+    }
+}
+
+function proceedBooking() {
+    // Hide previous error messages
+    resetErrors();
+
+    // Get values from the form
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let tripName = document.getElementById("trip-name").value.trim();
+    let persons = document.getElementById("persons").value.trim();
+    let totalPrice = document.getElementById("total-price").textContent.trim();
+
+    let isValid = true;
+
+    // Validate fields and show inline errors
+    if (name === "") {
+        document.getElementById("name-error").classList.remove("d-none");
+        isValid = false;
+    }
+
+    if (email === "" || !validateEmail(email)) {
+        document.getElementById("email-error").classList.remove("d-none");
+        isValid = false;
+    }
+
+    if (phone === "" || !validatePhone(phone)) {
+        document.getElementById("phone-error").classList.remove("d-none");
+        isValid = false;
+    }
+
+    if (persons === "" || totalPrice === "₨ 0") {
+        document.getElementById("persons-error").classList.remove("d-none");
+        isValid = false;
+    }
+
+    if (!isValid) {
+        return; // Stop further processing if validation fails
+    }
+
+    // Set the trip name for submission as I want 
+    document.getElementById("trip-name").value = "Kalash Valley Trip";
+
+    // Hide the form and show payment options
+    document.getElementById("booking-form").classList.add("d-none");
+    document.getElementById("payment-methods").classList.remove("d-none");
+}
+
+function validateEmail(email) {
+    // Simple email validation regex
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return emailRegex.test(email);
+}
+
+function validatePhone(phone) {
+    // Simple phone validation regex
+    const phoneRegex = /^[0-9]{10,15}$/;
+    return phoneRegex.test(phone);
+}
+
+function resetErrors() {
+    // Reset all error messages
+    document.querySelectorAll(".error-message").forEach((error) => {
+        error.classList.add("d-none");
+    });
+}
+
+function submitPayment() {
+    let paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+    let tid = document.getElementById("tid").value.trim();
+    let persons = document.getElementById("persons").value;
+
+    if (!paymentMethod) {
+        document.getElementById("payment-error").classList.remove("d-none");
+        return;
+    }
+
+    if (tid === "") {
+        document.getElementById("tid-error").classList.remove("d-none");
+        return;
+    }
+
+    let submitButton = document.querySelector(".submit-payment-btn");
+    let spinner = document.getElementById("loadingSpinner");
+    let successMessage = document.getElementById("success-message");
+    let errorMessage = document.getElementById("error-message");
+    let bookingForm = document.getElementById("booking-form");
+    let paymentMethods = document.getElementById("payment-methods");
+
+    submitButton.disabled = true;
+    spinner.classList.remove("d-none");
+    spinner.style.visibility = "visible";
+
+    //  Calculate Total Price 
+    let pricePerPerson = 9999;
+    let totalPrice = persons * pricePerPerson;  
+
+    let formData = {
+        formType: "tripBooking",
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        trip_name: document.getElementById("trip-name").value,
+        persons: persons,
+        total_price: totalPrice,  
+        payment_method: paymentMethod.value,
+        tid: tid
+    };
+
+    // console.log("Form Data Sent:", formData); // Debugging (Check in Console)
+
+    let sheetURL = "https://script.google.com/macros/s/AKfycbxyDqyPxLv95147lVj3imPzYqvAK8ANNuq2VjnBaDjuEJYx2IlMnboaWDIT09KweVbPJA/exec";
+
+    fetch(sheetURL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+    })
+    .then(() => {
+        document.getElementById("booking-form").reset();
+        paymentMethods.classList.add("d-none");
+        bookingForm.classList.remove("d-none");
+
+        successMessage.classList.remove("d-none");
+
+        setTimeout(() => {
+            successMessage.classList.add("d-none");
+        }, 3000);
+    })
+    .catch(() => {
+        errorMessage.classList.remove("d-none");
+    })
+    .finally(() => {
+        submitButton.disabled = false;
+        spinner.style.visibility = "hidden"; // Hide spinner after processing
+        spinner.classList.add("d-none");
+    });
+}
+
+// End Booking Form
+
+
+
+
+
+
+
+
+
+// broadcrumb navigation
+function showTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(tab => {
+            tab.classList.add('d-none');
+        });
+        document.getElementById(tabId).classList.remove('d-none');
+        
+        document.querySelectorAll('.breadcrumb-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        document.querySelector(`.breadcrumb-item[onclick="showTab('${tabId}')"]`).classList.add('active');
+    }
+// End of broadcrumb navigation
+// bread crumb sticky
+        document.addEventListener("DOMContentLoaded", function () {
+            const breadcrumb = document.getElementById("breadcrumb");
+            const viewportHeight = window.innerHeight; // Get 100vh height
+
+            window.addEventListener("scroll", function () {
+                const scrollY = window.scrollY;
+
+                if (scrollY >= viewportHeight * 0.99) { // When scrolled 90% of 100vh
+                    breadcrumb.classList.add("sticky");
+                } else {
+                    breadcrumb.classList.remove("sticky");
+                }
+            });
+        });
+
+// Image Modal / gallery script to enlarge/view images/update 
+document.querySelectorAll('.gallery-img').forEach(img => {
+    img.addEventListener('click', function () {
+        document.getElementById('modalImage').src = this.src;
+    });
+});
+
+
+
+</script>
+
+<script src="./scripts/form.js"></script>
+<script src="./scripts/contact-form.js"></script>
+<!-- Icons -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+<!-- lightbox -->
+<script src="https://cdn.jsdelivr.net/npm/lightbox2@2/dist/js/lightbox.min.js"></script>
+
+
+
+</body>
+</html>

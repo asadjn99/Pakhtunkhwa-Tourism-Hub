@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - PK</title>
+    <link rel="icon" href="./images/icon-pk.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+  
+
+  
+  @import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
+  body {
+    font-family: "Barlow", sans-serif !important;
+  }
+  
+           #custom-trip-btn {
+              font-size: 14px;
+              padding: 8px 16px;
+              background-color: #DF6951;
+              color: white;
+              border: none;
+              transition: background-color 0.3s ease !important;
+              border-radius: 0 !important;
+          }
+          
+          #custom-trip-btn:hover {
+              background-color: #c6533d;
+          }
+          .custom-color{
+              color: #DF6951 !important;
+          }
+          .custom-background{
+              background-color: #DF6951 !important;
+          }
+      
+  
+  
+  
+  
+  
+  /* Navbar start here................. */
+  
+  @media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0; /* prevent jump effect */
+    }
+  }
+  
+  
+  /* Dropdown item hover effect */
+  .dropdown-item:hover {
+    background-color: #DF6951 !important;
+    color: white !important;
+  }
+  
+  /* Default navbar styles */
+  .navbar {
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+  }
+  
+  .navbar .nav-link:hover {
+    color: white !important;
+    border-bottom: 3px solid #DF6951 !important;
+      padding-bottom: 5px !important;
+  }
+  
+  .dropdown-menu .dropdown-item:hover {
+    background-color: #DF6951 !important;
+    color: white !important;
+  }
+  
+  .btn-outline-light:hover {
+    background-color: #DF6951 !important;
+    color: white !important;
+    border-color: #DF6951 !important;
+  }
+  
+   .dropdown-menu {
+    background-color: white !important;
+    border-radius: 0.25rem;
+  }
+  /*
+  .dropdown-item {
+    padding: 10px 20px;
+  } */
+  
+  
+  
+  /* Small screen styles */
+  @media (max-width: 991px) {
+    /* Ensure dropdown menu visibility on small screens */
+    .dropdown-menu {
+      display: none;  /* Hide by default */
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.95);
+      margin-left: 10px;
+      margin-bottom: 10px;
+      width: 100%;
+      box-shadow: none;
+    }
+  
+    /* Show dropdown menu when toggled */
+    .dropdown-menu.show {
+      display: block;
+    }
+  
+    /* Navbar collapse styles */
+    .navbar-collapse {
+      background-color: rgba(0, 0, 0, 0.95);
+      padding: 20px;
+      border-radius: 0;
+      width: 100%;
+    }
+  
+    .navbar-nav {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px !important;
+      padding-left: 15px; 
+    }
+  
+    .dropdown-menu .dropdown-item{
+      color: black !important;
+      background-color: white !important;
+    }
+  
+    #custom-trip-btn {
+      display: block !important;
+      width: 100%;
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+  
+  
+  
+  .dropdown-menu {
+    display: none;
+  }
+  
+  .dropdown-menu.show {
+    display: block;
+  }
+  
+  
+  
+  
+  /* Navbar when scrolled */
+  .navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+  }
+  
+  
+  
+  /* Ensure proper visibility on small screens */
+  @media (max-width: 991px) {
+    .navbar-collapse {
+      background-color: rgba(0, 0, 0, 0.95);
+      padding: 20px;
+    }
+  
+    .navbar-nav .dropdown-menu {
+      position: static;
+      margin: 0;
+    }
+  
+    /* .dropdown-item {
+      color: white !important;
+      background-color: black;
+    } */
+  
+    #custom-trip-btn {
+      display: block;
+      width: 100% !important;
+      margin-top: 20px;
+      text-align: center;
+      
+    }
+  }
+  
+  /* navbar customize btn font size */
+  #primary-btn-nav{
+          font-size: 14px !important;
+      }
+  
+      @media (max-width: 768px){
+          #primary-btn-nav{
+              margin-top: 5px !important;
+              padding: 5px 75px !important;
+              font-size: 13x !important;
+          }
+      }
+  
+  
+  .active-nav-link{ 
+    border-bottom: 3px solid #DF6951 !important;
+    padding-bottom: 5px !important;
+  }
+  
+  
+  /* Nabar end here ..............*/
+  
+  
+
+  /* Hero section for gallery */
+
+  
+.hero-clean {
+  background: linear-gradient(120deg, #FF6B6B, #28A745, #20C997);
+  background-size: 600% 600%;
+  animation: gradientFlow 12s ease infinite;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  padding: 4rem 1rem 0;
+  /* border-radius: 20px; */
+  margin: 2rem auto;
+  width: 100%;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.hero-clean h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+
+}
+
+
+
+.hero-clean p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .hero-clean h1 {
+    font-size: 2.5rem;
+  }
+  .hero-clean p {
+    font-size: 0.9rem;
+  }
+  
+}
+
+.hero-image-group {
+  margin-top: 3rem;
+}
+
+.tilted-img {
+  width: 180px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.img1 { transform: rotate(-8deg); }
+.img2 { transform: rotate(-4deg); }
+.img3 { transform: rotate(4deg); }
+.img4 { transform: rotate(8deg); }
+
+.tilted-img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .tilted-img {
+    width: 140px;
+    height: 180px;
+    margin-bottom: 1rem;
+  }
+
+  .hero-clean h1 {
+    font-size: 2rem;
+  }
+}
+
+
+  /* End of gallery hero section */
+  
+  
+          
+          
+  /* Custom Button Styles */
+  .btn-primary-custom {
+      background-color: #DF6951 !important;
+      border: none;
+      color: white !important;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 10px 20px !important;
+      letter-spacing: 1px;
+      /* border-radius: 10px !important; */
+      transition: all 0.3s ease-in-out !important;
+  }
+  .btn-primary-custom:hover {
+      background-color: #C65540 !important;
+      transform: translateY(-2px);
+      color: white !important;
+  }
+  /* Secondary Button */
+  .btn-secondary-custom {
+      background-color: #28a745 !important;
+      border: none;
+      color: rgb(255, 255, 255) !important;
+      font-size: 1rem;
+      font-weight: 600;
+      padding: 10px 20px !important;
+      letter-spacing: 1px;
+      /* border-radius: 10px !important;  */
+      transition: all 0.3s ease-in-out;
+  }
+  .btn-secondary-custom:hover {
+      background-color: #269740 !important;
+      transform: translateY(-2px);
+  
+  }
+  
+  @media (max-width: 768px) {
+     
+      
+      .btn-primary-custom {
+      background-color: #DF6951 !important;
+      border: none;
+      color: white !important;
+      font-size: .8rem;
+      /* font-weight: 600; */
+      padding: 10px 20px !important;
+      letter-spacing: 1px;
+      /* border-radius: 10px !important; */
+      transition: all 0.3s ease-in-out !important;
+  }
+  
+  
+      .btn-secondary-custom {
+      background-color: #28a745 !important;
+      border: none;
+      color: rgb(255, 255, 255) !important;
+      font-size: .8rem;
+      font-weight: 600;
+      padding: 10px 20px !important;
+      letter-spacing: 1px;
+      /* border-radius: 10px !important;  */
+      transition: all 0.3s ease-in-out;
+  }
+  }
+  
+  
+  
+  
+  
+  /* Contact us form in the bottom of the page */
+  form {
+              padding: 20px;
+              width: 100%;
+              /* max-width: 450px; */
+              margin: 0 auto;
+              background-color: #f9f9f9;
+              box-shadow: 0 4px 8px rgba(223, 105, 81, 0.1);
+              border-radius: 8px;
+          }
+          /* label {
+              font-weight: bold;
+              display: block;
+              margin-top: 10px;
+              font-size: 16px;
+              color: #333;
+          } */
+          #contact .row input,
+          #contact .row textarea {
+              width: 100%;
+              padding: 6px;
+              margin-top: 8px;
+              border: 1px solid #f0a090 ;
+              border-radius: 0 !important;
+              font-size: 16px;
+              color: #333;
+              box-sizing: border-box;
+          }
+          input:focus {
+              border-color: #DF6951;
+              outline: none !important;
+          }
+  /* Success Toast/popup message for contact us form */
+      #tripSuccessToast {
+      z-index: 1050; 
+      position: fixed; 
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto; 
+      max-width: 90%;
+      min-width: 250px; 
+      text-align: center; 
+      padding: 10px; 
+  }
+   /* Toast Header */
+   .toast-header {
+      background-color: #DF6951 !important;
+      color: white !important;
+      font-weight: bold;
+      border-radius: 5px 5px 0 0;
+  }
+  
+   /* Toast Body */
+   .toast-body {
+      background-color: #fff !important;
+      color: #333 !important;
+      border-radius: 0 0 5px 5px;
+      padding: 10px;
+      font-size: 16px;
+  }
+      /* Toast Close Button */
+      .btn-close {
+          color: white !important;
+          opacity: 1 !important;
+      }
+  
+  
+  
+  
+  /* End of Contact us form */
+          
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    body {
+      font-family: "Barlow", sans-serif;
+      font-size: 1.125rem;
+      line-height: 1.5;
+      color: #787878;
+      background: #fff;
+      text-rendering: optimizeLegibility;
+    }
+    
+    /* Arrow Container */
+  .modal-arrows {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-50%);
+    z-index: 1000;
+  }
+  .modal-content {
+    width: 80vw;
+    height: 80vh;
+    object-fit: contain;
+    animation: zoomIn 0.3s ease-in-out;
+    max-width: 90vw;
+    max-height: 90vh;
+    margin: auto;
+  }
+  
+  /* Arrows */
+  .modal-arrow {
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    transition: color 0.3s;
+  }
+  
+  .modal-arrow:hover {
+    color: #DF6951;
+  }
+  
+    
+    @keyframes zoomIn {
+      from { transform: scale(0.8); }
+      to { transform: scale(1); }
+    }
+    
+    .close-btn {
+      position: absolute;
+      top: 50px;
+      right: 150px;
+      color: #DF6951 !important;
+      font-size: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+    }
+    
+    .close-btn:hover {
+      cursor:  pointer;
+      color: #ccc;
+    }
+    
+    /* Masonry Gallery */
+    .masonry-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      grid-auto-rows: 200px;
+      gap: 15px;
+    }
+    
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    
+    .gallery-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+    
+    /* Size modifiers */
+    .gallery-item.wide {
+      grid-column: span 2;
+    }
+    
+    .gallery-item.tall {
+      grid-row: span 2;
+    }
+    
+    .gallery-item.full {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    
+    .gallery-heading {
+      text-align: center;
+      margin: 2rem 0;
+      color: #333;
+    }
+    
+    /* Responsive Tweaks */
+    @media screen and (max-width: 768px) {
+      .gallery-item.wide,
+      .gallery-item.tall,
+      .gallery-item.full {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+      }
+    
+      .modal-content {
+        max-width: 95vw;
+        max-height: 65vh;
+      }
+      .modal-arrow {
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        user-select: none;
+        transition: color 0.3s;
+      }
+    
+      .nav {
+        font-size: 30px;
+      }
+    
+      .close-btn {
+        font-size: 35px;
+        right: 20px;
+      }
+    }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* GAllery Add */
+    .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  
+  .gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    padding: 8px;
+  }
+  
+  .gallery-title {
+    color: white;
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* Video css */
+  .gallery-video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+  }
+  .gallery-video {
+    border-radius: 12px;
+    object-fit: cover;
+    height: 100%;
+  }
+  /* Video css end */
+  
+  
+  
+  
+  
+  
+  /* Responsive Font Size Utilities */
+  .fs-xs-6  { font-size: 0.75rem !important; }  /* Extra small */
+  .fs-sm-5  { font-size: 1.1rem !important; }     /* Small */
+  .fs-md-4  { font-size: 1.25rem !important; }  /* Medium */
+  .fs-lg-3  { font-size: 1.5rem !important; }   /* Large */
+  .fs-xl-2  { font-size: 2rem !important; }     /* Extra large */
+  
+  @media (max-width: 576px) {
+      .fs-responsive { font-size: 1rem !important; }
+  }
+  @media (min-width: 577px) and (max-width: 768px) {
+      .fs-responsive { font-size: 1.25rem !important; }
+  }
+  @media (min-width: 769px) {
+      .fs-responsive { font-size: 1.5rem !important; }
+  }
+  
+  
+  
+  
+    </style>
+</head>
+<body>
+
+<!-- Navbar start here............... -->
+<nav id="home" class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="./../../index.html">
+      <img src="./images/logo.png" style="width: 120px;" alt="logo">
+    </a>
+
+    <!-- Hamburger Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav gap-1 mx-auto fw-bold fs-sm-5">
+        <li class="nav-item"><a class="nav-link" href="./index.html">Home</a></li>
+
+        <!-- National Tours Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="nationalDropdown" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            National Tours
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="nationalDropdown">
+            <li><a class="dropdown-item" href="./kpk.html">Khyber Pakhtunkhwa</a></li>
+            <li><a class="dropdown-item" href="./pak-provinces/balochistan.html">Balochistan</a></li>
+            <li><a class="dropdown-item" href="./pak-provinces/sindh.html">Sindh</a></li>
+            <li><a class="dropdown-item" href="./pak-provinces/punjab.html">Punjab</a></li>
+            <li><a class="dropdown-item" href="./pak-provinces/baltistan.html">Gilgit-Baltistan</a></li>
+            <li><a class="dropdown-item" href="./pak-provinces/kashmir.html">Azad Kashmir</a></li>
+          </ul>
+        </li>
+
+        <!-- Foreign Tours Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="foreignDropdown" role="button"
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Foreign Tours
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="foreignDropdown">
+            <li><a class="dropdown-item" href="#dubai">Dubai</a></li>
+            <li><a class="dropdown-item" href="#malaysia">Malaysia</a></li>
+            <li><a class="dropdown-item" href="#turkey">Turkey</a></li>
+            <li><a class="dropdown-item" href="#singapore">Singapore</a></li>
+            <li><a class="dropdown-item" href="#other">Other</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="./upcoming-trips.html">Upcoming Trips</a></li>
+        <li class="nav-item"><a class="nav-link" href="./aboutus.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link active active-nav-link" href="./gallery.html">Gallery</a></li>
+      </ul>
+
+      <!-- Custom Trip Button -->
+      <a id="primary-btn-nav" class="btn nav-link btn-primary-custom fw-small" href="form.html">Build Your Trip</a>
+    </div>
+  </div>
+</nav>
+
+
+
+
+<section class="hero-clean text-center m-0">
+  <div class="container py-5 mt-5">
+    <!-- <h2 class="fw-light text-uppercase">Pakhtunkhwa Tourism Hub</h2> -->
+    <h1 class="fw-bold display-4 mb-3">Discover the Beauty Through Our Lens</h1>
+    <p class="lead mb-4 col-sm-8 mx-auto">
+      Every photo tells a story—from peaceful mountains to vibrant local life. Dive into our gallery and feel the real beauty of Pakhtunkhwa through our eyes.
+    </p>
+
+    <!-- CTA Buttons -->
+    <!-- CTA Buttons -->
+    <div class="d-flex flex-wrap justify-content-center gap-3">
+      <a class="btn btn-primary-custom mt-0 mt-lg-4 p-2 mb-lg-0 mb-3" href="https://wa.me/+923075993029" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+      <a class="btn btn-secondary-custom mt-0 mt-lg-4 p-2 mb-lg-0 mb-3" href="tel:+923075993029" role="button">
+        <i class="fa-solid fa-phone"></i> Call Now
+      </a>
+    </div>
+
+    <!-- Image Group -->
+    <div class="hero-image-group d-flex justify-content-center flex-wrap gap-3">
+      <img src="./images/Kpk.jpg" class="tilted-img img1" alt="KPK Image 1" />
+      <img src="./images/Kpk.jpg" class="tilted-img img2" alt="KPK Image 2" />
+      <img src="./images/Kpk.jpg" class="tilted-img img3" alt="KPK Image 3" />
+      <img src="./images/Kpk.jpg" class="tilted-img img4" alt="KPK Image 4" />
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+<!-- <div class="containe p-5"></div> -->
+<!-- <div class="containe p-5"></div> -->
+<!-- <div class="containe p-5"></div> -->
+
+
+<!-- Gallery Section start here -->
+  <section class="gallery-section container">
+    <h2 class="gallery-heading fw-bold display-5">Explore the Beauty</h2>
+    <p class="text-center">Discover the breathtaking landscapes and vibrant culture of Pakistan through our curated gallery.</p>
+
+    <!-- ! - Nature pics -->
+    <h3 class="custom-color text-start mt-4 display-6 fw-bold">Nature</h3>
+    <div class="masonry-gallery mt-1">
+      <div class="gallery-item tall"><img src="./images/Gallery/Nature/1.webp" onclick="openModal(0)" class="gallery-img" alt=""></div>
+      <div class="gallery-item wide"><img src="./images/Gallery/Nature/2.jpg" onclick="openModal(1)" class="gallery-img" alt=""></div>
+      <div class="gallery-item"><img src="./images/Gallery/Nature/3.avif" onclick="openModal(2)" class="gallery-img" alt=""></div>
+      <div class="gallery-item tall"><img src="./images/Gallery/Nature/6" onclick="openModal(5)" class="gallery-img" alt=""></div>
+      <div class="gallery-item "><img src="./images/Gallery/Nature/5.jpg" onclick="openModal(4)" class="gallery-img" alt=""></div>
+      <div class="gallery-item wide"><img src="./images/Gallery/Nature/4" onclick="openModal(3)" class="gallery-img" alt=""></div>
+      <div class="gallery-item wide"><img src="./images/Gallery/Nature/7" onclick="openModal(6)" class="gallery-img" alt=""></div>
+    </div>
+    <!-- Nature pics Ends -->
+
+    <!-- ! - Nature pics -->
+    <h3 class="custom-color text-start mt-4 display-6 fw-bold">Mountains</h3>
+    <div class="masonry-gallery mt-1">
+      <div class="gallery-item tall"><img src="./images/Gallery/mountains/1.jpg" onclick="openModal(7)" class="gallery-img" alt=""></div>
+      <div class="gallery-item wide"><img src="./images/Gallery/mountains/2.jpg" onclick="openModal(8)" class="gallery-img" alt=""></div>
+      <div class="gallery-item tall"><img src="./images/Gallery/mountains/3.jpg" onclick="openModal(9)" class="gallery-img" alt=""></div>
+      <div class="gallery-item wide"><img src="./images/Gallery/mountains/2.jpg" onclick="openModal(8)" class="gallery-img" alt=""></div>
+    </div>
+    <!-- Nature pics Ends -->
+
+
+
+
+
+
+
+    
+
+  </section>
+<!-- Gallery Section start here -->
+
+
+
+
+<!-- Video Section start here -->
+<section>
+    <div class="container">
+      <!-- Video Section start here -->
+      <h2 class="gallery-heading fw-bold display-6 custom-color text-start mb-4">Video Highlights</h2>
+      
+      <div class="row g-4"> <!-- Bootstrap row with gap -->
+        
+        <!-- Video 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="gallery-item">
+            <video class="gallery-video w-100" controls autoplay poster="images/azad kashmir.jpg">
+              <source src="./images/Gallery/videos/nature.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+  
+        <!-- Video 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="gallery-item">
+            <video class="gallery-video w-100" controls poster="images/asadjn99-pic.jpg">
+              <source src="./images/Gallery/videos/nature.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+</section>
+  
+
+
+<!-- Modal -->
+<div id="galleryModal" class="modal">
+  <span class="close-btn" onclick="closeModal()">&times;</span>
+
+  <!-- Arrows Wrapper -->
+  <div class="modal-arrows">
+    <span class="modal-arrow modal-prev" onclick="prevImage()">&#10094;</span>
+    <span class="modal-arrow modal-next" onclick="nextImage()">&#10095;</span>
+  </div>
+
+  <img id="modalImage" class="modal-content" />
+</div>
+<!-- Modal end here -->
+
+<script>
+    const images = [
+      './images/Gallery/Nature/1.webp',
+      './images/Gallery/Nature/2.jpg',
+      './images/Gallery/Nature/3.avif',
+      './images/Gallery/Nature/4',
+      './images/Gallery/Nature/5.jpg',
+      './images/Gallery/Nature/6',
+      './images/Gallery/Nature/7',
+    // nature ends here 7 images 6
+
+      './images/Gallery/mountains/1.jpg',
+      './images/Gallery/mountains/2.jpg',
+      './images/Gallery/mountains/3.jpg',
+  //mountains ends here 3 images 9
+      
+    ];
+    let currentIndex = 0;
+    
+    const modal = document.getElementById("galleryModal");
+    const modalImg = document.getElementById("modalImage");
+    
+    function openModal(index) {
+      currentIndex = index;
+      modal.style.display = "flex";
+      modalImg.src = images[currentIndex];
+    }
+    
+    function closeModal() {
+      modal.style.display = "none";
+    }
+    
+    function nextImage() {
+      if (currentIndex < images.length - 1) {
+        currentIndex++;
+        modalImg.src = images[currentIndex];
+      }
+    }
+    
+    function prevImage() {
+      if (currentIndex > 0) {
+        currentIndex--;
+        modalImg.src = images[currentIndex];
+      }
+    }
+    
+    // Keyboard navigation
+    document.addEventListener("keydown", function (e) {
+      if (modal.style.display === "flex") {
+        if (e.key === "ArrowRight") nextImage();
+        if (e.key === "ArrowLeft") prevImage();
+        if (e.key === "Escape") closeModal();
+      }
+    });
+    
+    // Touch navigation for mobile
+    let startX = 0;
+    modalImg.addEventListener("touchstart", (e) => {
+      startX = e.touches[0].clientX;
+    });
+    
+    modalImg.addEventListener("touchend", (e) => {
+      let endX = e.changedTouches[0].clientX;
+      if (startX - endX > 50) nextImage();       // swipe left
+      else if (endX - startX > 50) prevImage();  // swipe right
+    });
+</script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="p-1 p-md-5">
+  <div class="container  p-0 ">
+      <h3 class="text-center">Get in Touch</h3>
+      <form onsubmit="validateContactForm(event)" method="POST" id="contactForm2" class="mt-4" novalidate>
+          <!-- Hidden Field to Identify the Form Type -->
+          <input type="hidden" name="formType" value="contactForm2">
+      
+          <div class="row g-4 mx-auto">
+              <div class="col-md-4 p-0 p-md-3 ">
+                  <input type="text" name="name" id="contactName" placeholder="Full Name" required class="form-control">
+              </div>
+              <div class="col-md-4 p-0  p-md-3">
+                  <input type="email" name="email" id="contactEmail" placeholder="Email" required class="form-control">
+              </div>
+              <div class="col-md-4 p-0  p-md-3">
+                  <input type="text" name="contact" id="contactPhone" placeholder="Phone" class="form-control">
+              </div>
+              <div class="col-md-12 p-0 p-md-3 ">
+                  <textarea name="message" id="contactMessage" class="form-control" rows="3" placeholder="Your Message"></textarea>
+              </div>
+          </div>
+          <div class="text-center mt-4">
+              <button type="submit" class="btn btn-primary-custom custom-btn py-1 fw-normal d-block mx-auto rounded-0">
+                  <span id="loadingSpinner2" class="spinner-border spinner-border-sm d-none"></span>
+                  Send Message
+              </button>
+          </div>
+      </form>
+      <div id="tripSuccessToast" class="toast m-3 p-3" role="alert" aria-live="assertive" aria-atomic="true">
+          <div class="toast-header bg-success text-white">
+              <strong class="me-auto">Thank you for reaching out!</strong>
+              <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+          </div>
+          <div class="toast-body custom-color">
+              We've received your message and will get back to you as soon as possible. Stay tuned! 😊
+          </div>
+      </div>
+      <!-- <p id="contactSuccessMessage" class="text-success d-none">Your message has been sent successfully!</p> -->
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="p-4 bg-dark text-white text-center position-relative">
+  <!-- About | Contact | Map  -->
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4 text-start">
+              <img src="./images/logo.png" style="width: 120px;" alt="logo">
+              <p class="mt-3 fw-light text-white-50"> 
+                  Pakhtunkhwa Tourism Hub – your gateway to unforgettable adventures! Discover breathtaking destinations, plan seamless trips, and explore the rich culture and landscapes of Pakhtunkhwa. From sightseeing and group tours to hiking, camping, and solo journeys, we bring you the best travel experiences with ease and comfort.
+              </p>
+          </div>
+          <div class="col-md-4">
+
+      <!-- Map here -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d616.8613250576617!2d71.4813661250838!3d34.020035223282584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1742396871453!5m2!1sen!2s" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+          </div>
+          <div class="col-md-4 text-start">
+              <p class="lead fw-bold">Contact Info</p>
+              <p class="text-white-50">Pakhtunkwa Tourism Hub, Peshawar 25130, Khyber Pakhtunkhwa, Pakistan</p>
+              <p class="">+92 307 5993029</p>
+              <p class="">+92 331 3238210</p>
+              <!-- Social Media Icons -->
+              <p class="lead mt-4">
+                  <a href="https://www.facebook.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                      <i class="fab fa-facebook text-white"></i>
+                  </a>
+                  <a href="https://www.instagram.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://www.twitter.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/pakhtunkwatourismhub" target="_blank" class="text-white me-3">
+                      <i class="fab fa-linkedin"></i>
+                  </a>
+              </p> 
+              <!-- End of Social Media Icons -->
+          </div>
+      </div>
+  </div>
+  <hr>
+
+<!-- Copyright and devloper -->
+  <div class="row justify-content-center">
+      <!-- Copyright sec -->
+      <div class="col-md-4">
+          <p class="p-0 m-0 text-white-50">Copyright &copy; 2025 Pakhtunkwa Tourism Hub</p>
+      <a href="#" class="position-absolute bottom-0 end-0 p-3">
+          <i class="bi bi-arrow-up-circle h1"></i>
+      </a>
+      </div>
+      <!-- Developer sec -->
+      <div class="col-md-4 m-0">
+          <p class="m-0 p-0 text-white-50">Developed by <a href="https://www.facebook.com/asadjn99" target="_blank" class="text-white">Asad Ullah</a></p>
+      </div>
+  </div>
+
+  <!-- back to home/top icon -->
+  <a href="#" id="backToTop" class="position-fixed bottom-3 end-3 p-3 text-white">
+      <i class="bi bi-arrow-up-circle h1"></i>
+  </a>
+</footer>
+
+
+<script>
+  // Change Navbar Background on Scroll
+  window.addEventListener("scroll", function () {
+    let navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+
+
+  
+
+//  toggle the navbar on hamburger click
+  document.querySelectorAll('.nav-link:not(.dropdown-toggle), .dropdown-item').forEach(link => {
+link.addEventListener('click', function () {
+  const navbarCollapse = document.querySelector('.navbar-collapse');
+  const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+
+  if (bsCollapse && window.innerWidth < 992) {
+    bsCollapse.hide(); // Close the navbar
+  }
+});
+});
+
+
+
+
+
+
+
+
+  // Back to Home Button
+  document.getElementById("backToTop").addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+
+
+<script src="./scripts/form.js"></script>
+<script src="./scripts/contact-form.js"></script>
+<!-- Icons -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
