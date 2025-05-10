@@ -1,0 +1,10 @@
+{
+  "ignore": [
+    ".firebase/",
+    ".firebaserc",
+    "firebase.json",
+    "public/",     
+    "firebase/",   
+    "functions/"
+  ]
+}
