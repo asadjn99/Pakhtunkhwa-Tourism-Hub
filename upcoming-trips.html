@@ -13,6 +13,8 @@
 
     <!-- Firebase App -->
     <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
     <!-- Firebase Auth -->
     <script src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js"></script>
 
@@ -751,6 +753,8 @@ body {
               <li><a class="dropdown-item" href="#azad-kashmir">Azad Kashmir</a></li>
             </ul>
           </li>
+
+          
   
           <!-- Foreign Tours Dropdown -->
           <li class="nav-item dropdown">
@@ -759,11 +763,9 @@ body {
               Foreign Tours
             </a>
             <ul class="dropdown-menu" aria-labelledby="foreignDropdown">
-              <li><a class="dropdown-item" href="#dubai">Dubai</a></li>
-              <li><a class="dropdown-item" href="#malaysia">Malaysia</a></li>
-              <li><a class="dropdown-item" href="#turkey">Turkey</a></li>
-              <li><a class="dropdown-item" href="#singapore">Singapore</a></li>
-              <li><a class="dropdown-item" href="#other">Other</a></li>
+                <li><a class="dropdown-item" href="#dubai">Middle East</a></li>
+              <li><a class="dropdown-item" href="#malaysia">South Asia</a></li>
+              <li><a class="dropdown-item" href="#singapore">Europe Tours</a></li>
             </ul>
           </li>
   
@@ -774,6 +776,11 @@ body {
   
         <!-- Custom Trip Button -->
         <a id="primary-btn-nav" class="btn btn-primary-custom fw-bold" href="form.html">Build Your Trip</a>
+        <!-- Logout btn -->
+        <a id="logoutBtn" class="fw-bold text-white text-decoration-none ms-3 d-none" href="#">Logout</a>
+        <!-- <a id="authLink" class="fw-bold text-white text-decoration-none ms-3" href="login.html">Login</a> -->
+
+
 
       </div>
     </div>
@@ -874,10 +881,17 @@ body {
 
 
 
+<!-- <button id="logoutBtn" class="btn btn-danger d-none">Logout</button> -->
+
+
+
+
+
+
 <!-- Swat Valley Trip Packages Section -->
  <section>
 <div class="container mt-4">
-    <h2 class="fw-bold mb-4">Swat Valley</h2>
+    <h2 class="fw-bold mb-4">Upcoming Trips</h2>
 
     
     <div class="row g-4">
@@ -900,7 +914,12 @@ body {
                     <h5 class="fw-bold mt-2">KALAM</h5>
                     <p class="custom-color fw-bold fs-5">PKR 9,999</p>
                     <p class="card-text">Explore the heart of Swat, with mesmerizing rivers, pine forests, and stunning landscapes that make Kalam a must-visit destination.</p>
-                    <a href="./upcomming-trips/kalam-3days.html" class="btn btn-primary-custom w-100">Explore</a>
+                    <!-- <a href="#" class="btn btn-primary-custom w-100" onclick="checkLoginAndRedirect('upcomming-trips/kalam-3days.html')">Explore</a> -->
+<!-- <a href="../login.html?redirect=upcomming-trips/kalam-3days.html" class="btn btn-primary-custom w-100">Explore</a> -->
+
+                     <a href="./upcomming-trips/kalam-3days.html" onclick="handleBooking(event, './upcomming-trips/kalam-3days.html')" class="btn btn-primary-custom w-100">Explore</a>
+
+                    <!-- <a  href="./upcomming-trips/kalam-3days.html" class="btn btn-primary-custom w-100">Explore</a> -->
                 </div>
             </div>
         </div>
@@ -924,7 +943,11 @@ body {
                     <p class="custom-color fw-bold fs-5">PKR 11,999</p>
                     <p class="card-text">A journey to the stunning alpine lake, surrounded by towering mountains and lush greenery, offering a truly magical experience.</p>
                     <!-- <a href="./mahodand-trip3.html" class="btn btn-primary-custom w-100">Explore</a> -->
-                    <a href="./upcomming-trips/mahodand-3days.html" class="btn btn-primary-custom w-100">Explore</a>
+                    <!-- <a onclick="handleBooking()" href="./upcomming-trips/mahodand-3days.html" class="btn btn-primary-custom w-100">Explore</a> -->
+                     <a href="./upcomming-trips/mahodand-3days.html" onclick="handleBooking(event, './upcomming-trips/mahodand-3days.html')" class="btn btn-primary-custom w-100">Explore</a>
+
+                     <!-- <a href="#" onclick="handleBooking(event, './upcomming-trips/mahodand-3days.html')" class="btn btn-primary-custom w-100">Explore</a> -->
+
                 </div>
             </div>
         </div>
@@ -958,6 +981,58 @@ body {
 </div>
 </section>
 <!-- End Swat Valley Trip Packages Section -->
+
+
+<!-- Login with Google + Logout Handler -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+  import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCqMITaVwZH6ltFsx1CYQzwR8wnG3IFGdc",
+    authDomain: "pkth-management.firebaseapp.com",
+    projectId: "pkth-management",
+    storageBucket: "pkth-management.firebasestorage.app",
+    messagingSenderId: "465847001645",
+    appId: "1:465847001645:web:56caf6a10c3e10d0054ea4"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+
+  // Handle booking
+  window.handleBooking = function(event, path) {
+    event.preventDefault();
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        window.location.href = path;
+      } else {
+        localStorage.setItem('redirectAfterLogin', path);
+        window.location.href = 'login.html';
+      }
+    });
+  };
+
+  // Show logout link only if logged in
+  const logoutBtn = document.getElementById("logoutBtn");
+  if (logoutBtn) {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        logoutBtn.classList.remove("d-none");
+      } else {
+        logoutBtn.classList.add("d-none");
+      }
+    });
+
+    logoutBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      signOut(auth).then(() => {
+        window.location.href = "upcoming-trips.html";
+      });
+    });
+  }
+</script>
+
 
 
 

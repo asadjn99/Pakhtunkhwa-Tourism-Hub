@@ -18,6 +18,15 @@
     <!--  -->
      <!-- Font awesome | back-to-top icons and more -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+
+    <!-- Firebase App (the core Firebase SDK) -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
+
+
+
+    
  
 <style>
 @import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
@@ -851,11 +860,9 @@ body {
               Foreign Tours
             </a>
             <ul class="dropdown-menu" aria-labelledby="foreignDropdown">
-              <li><a class="dropdown-item" href="#dubai">Dubai</a></li>
-              <li><a class="dropdown-item" href="#malaysia">Malaysia</a></li>
-              <li><a class="dropdown-item" href="#turkey">Turkey</a></li>
-              <li><a class="dropdown-item" href="#singapore">Singapore</a></li>
-              <!-- <li><a class="dropdown-item" href="#other">Other</a></li> -->
+              <li><a class="dropdown-item" href="#dubai">Middle East</a></li>
+              <li><a class="dropdown-item" href="#malaysia">South Asia</a></li>
+              <li><a class="dropdown-item" href="#singapore">Europe Tours</a></li>
             </ul>
           </li>
           <!-- foreign tours dd end -->
@@ -868,8 +875,8 @@ body {
             </a>
             <ul class="dropdown-menu" aria-labelledby="adminDropdown">
                 <!-- Login Buttons -->
-                 <li><a class="dropdown-item" href="./public/login-admin.html">Main Admin Login</a></li>
-                 <li><a class="dropdown-item" href="./public/login.html">Hotel Admin Login</a></li>
+                 <li><a class="dropdown-item" href="./public/login-admin.html">Main Admin</a></li>
+                 <li><a class="dropdown-item" href="./public/login.html">Hotel Admin</a></li>
             </ul>
           </li>
           <!-- ADminlogin end -->
@@ -1183,7 +1190,7 @@ body {
                     <div class="tour-card">
                         <img src="images/Countries/dubai.jpg" class="rounded" alt="Dubai">
                         <div class="card-overlay">
-                            <h4>Dubai</h4>
+                            <h4>Middle East</h4>
                             <p>Luxury, skyscrapers & desert safari!</p>
                         </div>
                     </div>
@@ -1196,7 +1203,7 @@ body {
                     <div class="tour-card">
                         <img src="images/Countries/malaysia.jpg" class="rounded" alt="Malaysia">
                         <div class="card-overlay">
-                            <h4>Malaysia</h4>
+                            <h4>South Asia</h4>
                             <p>Rainforests, beaches & modern cities!</p>
                         </div>
                     </div>
@@ -1222,7 +1229,7 @@ body {
                     <div class="tour-card">
                         <img src="./images/Countries/singapore.jpg" class="rounded" alt="Other Destinations">
                         <div class="card-overlay">
-                            <h4>Singapore</h4>
+                            <h4>Europe Tours</h4>
                             <p>Modern skyline & vibrant culture!</p>
                         </div>
                     </div>
@@ -1645,6 +1652,18 @@ body {
 
  
 
+<script>
+  const firebaseConfig = {
+        apiKey: "AIzaSyCqMITaVwZH6ltFsx1CYQzwR8wnG3IFGdc",
+        authDomain: "pkth-management.firebaseapp.com",
+        projectId: "pkth-management",
+        storageBucket: "pkth-management.appspot.com",
+        messagingSenderId: "465847001645",
+        appId: "1:465847001645:web:56caf6a10c3e10d0054ea4"
+      };
 
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+</script>
 </body>
 </html>

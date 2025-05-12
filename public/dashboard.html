@@ -127,7 +127,7 @@
 
 
   <body class="bg-light">
-</script>
+
     <!-- Navbar -->
     <div class="nav">
       <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow-sm fixed-top">
@@ -298,11 +298,20 @@ function showHotelInfo(data) {
       const app = firebase.initializeApp(firebaseConfig);
       const auth = firebase.auth();
       const db = firebase.firestore();
+
+      // Check if the user is logged in
+        firebase.auth().onAuthStateChanged(function(user) {
+          if (!user) {
+            window.location.href = "login.html"; 
+          } else {
+            console.log("User is logged in: ", user.email);
+          }
+        });
   
       // Checks if the user is authenticated and loads rooms if authenticated
       auth.onAuthStateChanged(user => {
-        if (!user) window.location.href = "login.html";  // Redirect if not logged in
-        else loadRooms(user.uid);  // Load rooms for authenticated user
+        if (!user) window.location.href = "login.html";  // yaha send krega if not logged in
+        else loadRooms(user.uid);  // Load rooms for authentic user
       });
 
 
@@ -321,6 +330,8 @@ firebase.auth().onAuthStateChanged(user => {
     });
   }
 });
+
+
 
 // Ends here
 
