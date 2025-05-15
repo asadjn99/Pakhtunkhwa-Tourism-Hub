@@ -1114,6 +1114,10 @@ body {
                 
                     <!-- Hidden input for trip name change in js--> 
                     <input type="hidden" id="trip-name" name="trip_name" readonly>
+
+                    <!-- <label for="trip-date">Trip Date:</label>
+                    <input type="date" id="trip-date" name="trip_date" required> -->
+                      <div class="g-recaptcha my-3" data-sitekey="6LfOJDwrAAAAANeDyMM3Ll2W0RuRihsZHOtgBBaY"></div>
                 
                     <button class="btn-primary-custom" type="button" onclick="proceedBooking()">Proceed</button>
                    
@@ -1285,7 +1289,8 @@ body {
 
 
 
-
+<!-- For Captcha -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
 <div class="container p-5"></div>
@@ -1457,6 +1462,24 @@ function resetErrors() {
         error.classList.add("d-none");
     });
 }
+
+
+
+// Captcha Validation
+document.getElementById("booking-form").addEventListener("submit", function (e) {
+  var response = grecaptcha.getResponse();
+  if (response.length === 0) {
+    e.preventDefault();
+    alert("Please verify that you are not a robot.");
+    return false;
+  }
+});
+// End Captcha Validation
+
+
+
+
+
 
 function submitPayment() {
     let paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
