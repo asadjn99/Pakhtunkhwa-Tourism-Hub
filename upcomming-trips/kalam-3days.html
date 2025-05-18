@@ -909,6 +909,8 @@ body {
 </section>
 <!-- End of Hero Section for Swat -->
 
+
+
 <script type="text">
 
 <!-- Breadcrumb Navigation -->
@@ -922,7 +924,7 @@ body {
 <!-- End of Breadcrumb Navigation -->
 </script>
 
-   
+   <!-- <script type="text"> -->
 <!-- Booking information and Form Section -->
 <section>
     <div class="container mt-4">
@@ -1122,7 +1124,7 @@ body {
                 
                     <!-- Hidden input for trip name change in js--> 
                     <input type="hidden" id="trip-name" name="trip_name" readonly>
-
+<!-- Captcha Validation -->
                       <div class="g-recaptcha my-3" data-sitekey="6LfOJDwrAAAAANeDyMM3Ll2W0RuRihsZHOtgBBaY"></div>
                     <span id="recaptcha-error" class="error-message d-none">Please complete the reCAPTCHA.</span>
                     <span id="recaptcha-success" class="success-message d-none">reCAPTCHA verified successfully.</span>
@@ -1405,6 +1407,53 @@ function updateTotalPrice() {
     }
 }
 // change the name here
+// function proceedBooking() {
+//     // Hide previous error messages
+//     resetErrors();
+
+//     // Get values from the form
+//     let name = document.getElementById("name").value.trim();
+//     let email = document.getElementById("email").value.trim();
+//     let phone = document.getElementById("phone").value.trim();
+//     let tripName = document.getElementById("trip-name").value.trim();
+//     let persons = document.getElementById("persons").value.trim();
+//     let totalPrice = document.getElementById("total-price").textContent.trim();
+
+//     let isValid = true;
+
+//     // Validate fields and show inline errors
+//     if (name === "") {
+//         document.getElementById("name-error").classList.remove("d-none");
+//         isValid = false;
+//     }
+
+//     if (email === "" || !validateEmail(email)) {
+//         document.getElementById("email-error").classList.remove("d-none");
+//         isValid = false;
+//     }
+
+//     if (phone === "" || !validatePhone(phone)) {
+//         document.getElementById("phone-error").classList.remove("d-none");
+//         isValid = false;
+//     }
+
+//     if (persons === "" || totalPrice === "₨ 0") {
+//         document.getElementById("persons-error").classList.remove("d-none");
+//         isValid = false;
+//     }
+
+//     if (!isValid) {
+//         return; // Stop further processing if validation fails
+//     }
+
+//     // Set the trip name for submission as I/we want  ..................................................
+//     document.getElementById("trip-name").value = "Kalam";
+
+//     // Hide the form and show payment options
+//     document.getElementById("booking-form").classList.add("d-none");
+//     document.getElementById("payment-methods").classList.remove("d-none");
+// }
+
 function proceedBooking() {
     // Hide previous error messages
     resetErrors();
@@ -1444,6 +1493,18 @@ function proceedBooking() {
         return; // Stop further processing if validation fails
     }
 
+    // *** New Captcha validation block ***
+    var response = grecaptcha.getResponse();
+    if (response.length === 0) {
+        document.getElementById("recaptcha-error").classList.remove("d-none");
+        document.getElementById("recaptcha-success").classList.add("d-none");
+        return; // Stop here if captcha not verified
+    } else {
+        document.getElementById("recaptcha-error").classList.add("d-none");
+        document.getElementById("recaptcha-success").classList.remove("d-none");
+    }
+    // *** End captcha validation ***
+
     // Set the trip name for submission as I/we want  ..................................................
     document.getElementById("trip-name").value = "Kalam";
 
@@ -1451,6 +1512,8 @@ function proceedBooking() {
     document.getElementById("booking-form").classList.add("d-none");
     document.getElementById("payment-methods").classList.remove("d-none");
 }
+
+
 
 function validateEmail(email) {
     // Simple email validation regex
@@ -1471,16 +1534,18 @@ function resetErrors() {
     });
 }
 
-// Captcha Validation
-document.getElementById("booking-form").addEventListener("submit", function (e) {
-  var response = grecaptcha.getResponse();
-  if (response.length === 0) {
-    e.preventDefault();
-    alert("Please verify that you are not a robot.");
-    return false;
-  }
-});
-// End Captcha Validation
+// // Captcha Validation
+// document.getElementById("booking-form").addEventListener("submit", function (e) {
+//   var response = grecaptcha.getResponse();
+//   if (response.length === 0) {
+//     e.preventDefault();
+//     alert("Please verify that you are not a robot.");
+//     return false;
+//   }
+// });
+// // End Captcha Validation
+
+
 
 
 
