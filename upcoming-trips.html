@@ -716,6 +716,45 @@ body {
 .hero-modern {
   padding-top: 60px; /* adjust if your navbar is taller/shorter */
 }
+
+
+
+
+
+/* Default outline styles */
+.btn-outline-available {
+  border: 1px solid #28A745 !important;
+  color: #28A745 !important;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.btn-outline-available:hover {
+  background-color: #28A745 !important;
+  color: white !important;
+}
+
+.btn-outline-previous {
+  border: 1px solid #DF6951 !important;
+  color: #DF6951 !important;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+.btn-outline-previous:hover {
+  background-color: #DF6951 !important;
+  color: white !important;
+}
+
+/* Active styles */
+.btn-available-active {
+  background-color: #28A745 !important;
+  color: white !important;
+}
+.btn-previous-active {
+  background-color: #DF6951 !important;
+  color: white !important;
+}
+
+
     </style>
 </head>
 <body>
@@ -878,6 +917,31 @@ body {
     </div>
 </section>
 
+<!-- <div class="d-flex justify-content-center mb-4 gap-3">
+  <button onclick="showTrips('available')" class="btn btn-outline-available active px-4 py-2 fw-semibold">
+    Available Trips
+  </button>
+  <button onclick="showTrips('previous')" class="btn btn-outline-previous active px-4 py-2 fw-semibold">
+    Previous Trips
+  </button>
+</div> -->
+
+<!-- <h2 id="trip-heading" class="text-center mb-4 fw-bold">Upcoming Trips</h2>
+
+<div class="d-flex justify-content-center mb-4 gap-3">
+  <button id="availableBtn" onclick="showTrips('available')" class="btn btn-outline-available px-4 py-2 fw-semibold">
+    Available Trips
+  </button>
+  <button id="previousBtn" onclick="showTrips('previous')" class="btn btn-outline-previous px-4 py-2 fw-semibold">
+    Previous Trips
+  </button>
+</div>
+
+<div id="trip-cards" class="row"></div> -->
+
+
+
+<!-- <div id="trip-cards" class="row"></div> -->
 
 
 
@@ -886,14 +950,14 @@ body {
 
 
 
-
-
+<!-- previous trips handle manually -->
+<script type="text">
 <!-- Swat Valley Trip Packages Section -->
  <section>
 <div class="container mt-4">
     <h2 class="fw-bold mb-4">Upcoming Trips</h2>
 
-    
+    <div class="trip-main">
     <div class="row g-4">
         <!-- 3-Day Swat Trip -->
         <div class="col-md-4">
@@ -975,12 +1039,134 @@ body {
                 </div>
             </div>
         </div>
-
+</div>
 
     </div>
 </div>
 </section>
 <!-- End Swat Valley Trip Packages Section -->
+</script>
+
+
+
+
+
+
+
+<!-- Swat Valley Trip Packages Section -->
+<section>
+  <div class="container mt-4">
+
+    
+    <!-- Trip buttons for previous/available -->
+    <div class="d-flex justify-content-center mb-4 gap-3">
+      <button id="availableBtn"  class="btn btn-outline-available px-4 py-2 fw-semibold">
+        Available Trips
+      </button>
+      <button id="previousBtn"  class="btn btn-outline-previous px-4 py-2 fw-semibold">
+        Previous Trips
+      </button>
+    </div>
+    <!-- Dynamic Heading Mean that btn chnage krne pe heading change hoga -->
+        <h2 id="trip-heading" class="fw-bold mb-4">Upcoming Trips</h2>
+
+
+    <!-- Trip cards yaha pr load hoge -->
+    <div class="trip-main">
+      <div class="row g-4" id="trip-cards">
+        <!-- Cards will be dynamically inserted here by JS -->
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- End Swat Valley Trip Packages Section -->
+
+
+
+<!-- Render trips from Upcoming Trips JSON -->
+<script type="module">
+    
+  let allTrips = [];
+
+  // Fetch upcoming trips data
+fetch('upcoming-trips.json')
+  .then(response => response.json())
+  .then(data => {
+    allTrips = data;
+    showTrips('available');
+  });
+// ye trips ko based on type (available or previous) show kregaaa
+
+function showTrips(type) {
+  const container = document.getElementById('trip-cards');
+  container.innerHTML = '';
+  const today = new Date();
+
+  const filtered = allTrips.filter(trip => {
+    const tripDate = new Date(trip.date);
+    return type === 'available' ? tripDate >= today : tripDate < today;
+  });
+
+  // Update heading text
+  document.getElementById('trip-heading').innerText = 
+    type === 'available' ? 'Upcoming Trips' : 'Previous Trips';
+
+  // Toggle active classes for changing styles
+  document.getElementById('availableBtn').classList.remove('btn-available-active');
+  document.getElementById('previousBtn').classList.remove('btn-previous-active');
+
+  document.getElementById('availableBtn').addEventListener('click', () => showTrips('available'));
+document.getElementById('previousBtn').addEventListener('click', () => showTrips('previous'));
+
+
+  if (type === 'available') {
+    document.getElementById('availableBtn').classList.add('btn-available-active');
+  } else {
+    document.getElementById('previousBtn').classList.add('btn-previous-active');
+  }
+
+  // Generate cards (same as your existing logic)
+  filtered.forEach(trip => {
+    const tripDate = new Date(trip.date);
+    const badge = tripDate >= today
+      ? '<span class="badge bg-success text-white fs-6 position-absolute top-0 start-0 z-index-10">Available...</span>'
+      : '<span class="badge bg-warning text-dark fs-6 position-absolute top-0 start-0 z-index-10">Previous</span>';
+
+    const card = `
+      <div class="col-md-4 mb-4">
+        <div class="card tour-card shadow border-0 bg-white">
+          <div class="image-wrapper position-relative">
+            ${badge}
+            <img src="${trip.image}" class="card-img-top" alt="${trip.title}">
+          </div>
+          <div class="card-body text-center">
+            <div class="trip-info d-flex justify-content-center align-items-center opacity-50 card-date-responsive">
+              <i class="fa-solid fa-clock me-2"></i> ${trip.days} Days 
+              <span class="mx-2">|</span> 
+              <i class="fa-solid fa-users me-2"></i> Max ${trip.people} People
+              <span class="mx-2">|</span> 
+              <i class="fa-solid fa-calendar me-2"></i> ${trip.date}
+            </div>
+            <h5 class="fw-bold mt-2">${trip.title}</h5>
+            <p class="custom-color fw-bold fs-5">${trip.price}</p>
+            <p class="card-text">${trip.description}</p>
+            <a href="#" onclick="handleBooking(event, '${trip.link}')" class="btn btn-primary-custom w-100">Explore</a>
+
+          </div>
+        </div>
+      </div>
+    `;
+
+    container.innerHTML += card;
+  });
+}
+
+
+</script>
+
+
+
 
 
 <!-- Login with Google + Logout Handler -->
@@ -1032,10 +1218,6 @@ body {
     });
   }
 </script>
-
-
-
-
 
 
 

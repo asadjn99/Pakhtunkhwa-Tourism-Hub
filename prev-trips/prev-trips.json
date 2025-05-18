@@ -1,0 +1,56 @@
+{
+  "tours": [
+    {
+      "id": "malamjabba-p-trip5",
+      "title": "MALAMJABBA - 5 Day Ski Trip",
+      "status": "Completed",
+      "heroImages": [
+        "./../../images/KPK-Valleys/Swat/Malam-Jabba-6.jpg",
+        "./../../images/KPK-Valleys/Swat/Malam-Jabba-5.webp",
+        "./../../images/KPK-Valleys/Swat/Malam-Jabba-5.webp"
+      ],
+      "description": "Relive the magic of Malam Jabba! Though this trip has concluded, you can explore its moments, itinerary, and travelers' stories.",
+      "description2": "Relive the magic of Malam Jabba! Though this trip has concluded, you can explore its moments, itinerary, and travelers' stories.",
+      "gallery": [
+        "./../../images/KPK-Valleys/Swat/Malam-Jabba-6.jpg",
+        "./../../images/KPK-Valleys/Swat/Malam-Jabba-6.jpg",
+        "./../../images/KPK-Valleys/Swat/malam-jabba 2.jpg",
+        "./../../images/KPK-Valleys/Swat/Malam-Jabba-6.jpg",
+        "./../../images/KPK-Valleys/Swat/Malam-Jabba.jpg"
+      ],
+      "video": {
+        "src": "./../../images/aboutus-tourism1.mp4",
+        "poster": "./../../images/KPK-Valleys/Swat/Malam-Jabba-5.webp"
+      },
+      "itinerary": [
+        { "day": 1, "activity": "Arrival & Welcome" },
+        { "day": 2, "activity": "Skiing Adventure" },
+        { "day": 3, "activity": "Local Exploration" },
+        { "day": 4, "activity": "Return Journey" }
+      ],
+      "testimonials": [
+        {
+          "img": "./../../images/male-icon.png",
+          "text": "Skiing in Malam Jabba was a dream come true! The snow-covered mountains and the warm hospitality made it perfect.",
+          "name": "Malik Hashir",
+          "location": "Malamjabba"
+        },
+        {
+          "img": "./../../images/asadjn99-pic.jpg",
+          "text": "I took my family on this trip, and we loved every second! Clean hotels, great guides, and stunning views.",
+          "name": "Asad JN",
+          "location": "Malamjabba"
+        },
+        {
+          "img": "./../../images/female-icon.png",
+          "text": "From chairlifts to snow treks, Malam Jabba exceeded my expectations. Highly organized and unforgettable experience!",
+          "name": "Hina Baloch",
+          "location": "Malamjabba"
+        }
+      ]
+    }
+    
+
+    
+  ]
+}

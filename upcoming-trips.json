@@ -1,0 +1,37 @@
+[
+  {
+  "title": "KALAM",
+  "image": "../../images/KPK-Valleys/Swat/Kalam2.jpeg",
+  "days": 3,
+  "people": 20,
+  "date": "2025-07-25",
+  "price": "PKR 9,999",
+  "description": "Explore the heart of Swat, with mesmerizing rivers, pine forests, and stunning landscapes that make Kalam a must-visit destination.",
+  "link": "./upcomming-trips/kalam-3days.html",
+  "status": "Available"
+},
+{
+    "title": "MAHODAND LAKE",
+    "image": "./../../images/KPK-Valleys/Swat/Mahodand-lake-kalam.jpg",
+    "days": 3,
+    "people": 25,
+    "date": "2025-08-04",
+    "price": "PKR 11,999",
+    "description": "A journey to the stunning alpine lake, surrounded by towering mountains and lush greenery, offering a truly magical experience.",
+    "link": "./upcomming-trips/mahodand-3days.html",
+    "status": "Available"
+  },
+  {
+    "title": "MALAMJABBA",
+    "image": "./../../images/KPK-Valleys/Swat/Malam-Jabba.jpg",
+    "days": 5,
+    "people": 30,
+    "date": "2025-05-10",
+    "price": "PKR 21,999",
+    "description": "Enjoy the thrill of Pakistan’s famous ski resort, featuring snow-capped peaks, adventure activities, and a peaceful retreat into nature.",
+    "link": "./prev-trips/malamjabba-p-trip5.html",
+    "status": "Previous"
+  }
+ 
+ 
+]

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Pakhtunkhwa Tourism Hub</title>
     <!-- <link rel="icon" href="./images/logo12.png" type="image/png"> -->
-    <link rel="icon" href="./images/icon-pk.png" type="image/png">
+    <link rel="icon" href="./../images/icon-pk.png" type="image/png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> -->
@@ -486,7 +486,7 @@ video {
 
 
 
-
+<script type="text">
 <!-- Trip details section -->
 <div class="container">
     <div class="container my-5 p-4 shadow rounded bg-light">
@@ -691,6 +691,208 @@ video {
       </div>
       
 </div>
+</script>
+
+
+
+
+
+<!-- Script to fetch from json -->
+<script>
+
+    // JSON se ID leke agar "ese file jeske andar abhi hai" file-name se match kre tu data detch krta hai
+  const fileName = window.location.pathname
+    .split("/")
+    .pop()
+    .replace(".html", "");
+
+  fetch("./prev-trips.json")
+    .then((response) => response.json())
+    .then((data) => {
+      const trip = data.tours.find((t) => t.id === fileName);
+
+      if (trip) {
+        renderTripDetails(trip); // Your rendering function
+      } else {
+        document.body.innerHTML = "<h2>Trip Not Found</h2>";
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching trip data:", error);
+    });
+
+
+// fetch("./prev-trips.json")
+//   .then((response) => response.json())
+//   .then((data) => {
+//     renderTripDetails(data);
+//   })
+//   .catch((error) => {
+//     console.error("Error fetching trip data:", error);
+//   });
+
+function renderTripDetails(trip) {
+  const container = document.getElementById("tripDetailsContainer");
+
+  // Title and Status
+  let html = `
+    <div class="container my-5 p-4 shadow rounded bg-light">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="fw-bold custom-color">${trip.title}</h2>
+        <span class="badge rounded-pill bg-danger px-3 py-2 fs-6">${trip.status}</span>
+      </div>
+  `;
+
+  // Hero Carousel
+  html += `
+    <div class="mb-5">
+      <div id="tripGallery" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner rounded shadow">
+  `;
+  trip.heroImages.forEach((img, index) => {
+    html += `
+      <div class="carousel-item ${index === 0 ? "active" : ""}">
+        <img src="${img}" class="d-block w-100" alt="Trip image" style="max-height: 450px; object-fit: cover;">
+      </div>
+    `;
+  });
+  html += `
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#tripGallery" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#tripGallery" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  `;
+
+  // Description
+  html += `
+    <div class="mb-5">
+      <p class="fs-5 text-muted">
+        <span class="me-2 custom-color"><i class="bi bi-check-circle-fill"></i></span>
+        ${trip.description}
+      </p>
+    </div>
+  `;
+//   If description2 add karna chahe tu
+//   html += `
+//     <div class="mb-5">
+//       <p class="fs-5 text-muted">
+//         <span class="me-2 custom-color"><i class="bi bi-check-circle-fill"></i></span>
+//         ${trip.description2}
+//       </p>
+//     </div>
+//   `;
+
+  // Gallery Section
+  html += `
+    <section class="trip-gallery container py-5">
+      <h4 class="mb-4 fw-bold custom-color">Trip Gallery</h4>
+      <div class="row g-3">
+  `;
+  trip.gallery.forEach(img => {
+    html += `
+      <div class="col-6 col-md-4 col-lg-3">
+        <a href="${img}" data-lightbox="trip-gallery">
+          <img src="${img}" class="img-fluid rounded shadow-sm gallery-img" alt="Gallery image" />
+        </a>
+      </div>
+    `;
+  });
+  // Video in gallery
+  html += `
+    <div class="col-6 col-md-4 col-lg-3">
+      <video class="img-fluid rounded shadow-sm" controls poster="${trip.video.poster}" style="width: 100%; height: 200px; object-fit: cover;">
+        <source src="${trip.video.src}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  `;
+
+  html += `
+      </div>
+    </section>
+  `;
+
+  // Itinerary Section
+  html += `
+    <div class="mb-5">
+      <h4 class="mb-3 fw-bold custom-color">Itinerary</h4>
+      <div class="row g-3">
+  `;
+  trip.itinerary.forEach(item => {
+    html += `
+      <div class="col-md-3">
+        <div class="bg-white p-3 rounded shadow text-center h-100">
+          <strong>Day ${item.day}</strong><br> ${item.activity}
+        </div>
+      </div>
+    `;
+  });
+  html += `</div></div>`;
+
+  // Testimonials Section
+  html += `
+    <section id="testimonials" class="py-5 bg-light mt-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Travelers Reviews</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" data-bs-wrap="true">
+          <div class="carousel-inner">
+  `;
+
+  trip.testimonials.forEach((t, i) => {
+    html += `
+      <div class="carousel-item ${i === 0 ? "active" : ""}">
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-12 text-center px-4">
+            <img src="${t.img}" alt="Traveler ${i + 1}" class="rounded-circle mb-3" style="width: 80px; height: 80px;">
+            <p class="lead">"${t.text}"</p>
+            <h5 class="fw-bold">${t.name}</h5>
+            <p class="text-muted">${t.location}</p>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+
+  html += `
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+  `;
+
+  // Close main container div
+  html += `</div>`;
+
+  container.innerHTML = html;
+}
+
+// Call the function with your trip data
+renderTripDetails(tripData);
+
+
+
+</script>
+
+<div class="container" id="tripDetailsContainer"></div>
+
+<!-- <script src="path-to-your-js-file.js"></script> -->
+
+
 
 
 
